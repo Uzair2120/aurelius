@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="obsidian">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Allocation Tiers & Membership — Capital Minimums | AURELIUS</title>
+  <meta name="description" content="Strictly capped at 150 principal memberships globally. Explore Tier I, II, and III capital tiers and calculate 10-year compounded fee savings.">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!-- TOP TELEMETRY BAR -->
+  <aside class="telemetry-bar" aria-label="Live Telemetry">
+    <div class="container-wide">
+      <div class="telemetry-group">
+        <span class="telemetry-item">
+          <span class="telemetry-dot" aria-hidden="true"></span>
+          <span class="label">GLOBAL ALLOCATION REGISTRY:</span>
+          <span class="val">138 / 150 MEMBERSHIPS OCCUPIED</span>
+        </span>
+        <span class="telemetry-item">
+          <span class="label">CAPITAL FLOOR:</span>
+          <span class="val">$100M LIQUID MINIMUM</span>
+        </span>
+      </div>
+
+      <div class="telemetry-group secondary-telemetry">
+        <span class="telemetry-item"><span class="label">UTC:</span> <span class="val" id="clock-utc">18:00:00</span></span>
+        <span class="telemetry-item"><span class="label">ZRH:</span> <span class="val" id="clock-zrh">20:00:00</span></span>
+        <span class="telemetry-item"><span class="label">SGP:</span> <span class="val" id="clock-sgp">02:00:00</span></span>
+        <span class="telemetry-item"><span class="label">NYC:</span> <span class="val" id="clock-nyc">14:00:00</span></span>
+      </div>
+
+      <div class="telemetry-group">
+        <button class="theme-toggle-btn" type="button" aria-label="Toggle Obsidian and Ivory Theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <span class="theme-label">IVORY</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <div class="container-wide">
+      <a href="index.html" class="brand-logo" aria-label="AURELIUS Homepage">
+        <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polygon points="16 2, 30 26, 2 26" />
+          <circle cx="16" cy="16" r="3" fill="currentColor" />
+        </svg>
+        <span class="brand-name">AURELIUS</span>
+        <span class="brand-tag">QUANTITATIVE</span>
+      </a>
+
+      <!-- Desktop Mega-Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <div class="nav-item">
+          <a href="architecture.html" class="nav-link">Platform <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
+          <div class="mega-dropdown">
+            <a href="architecture.html" class="dropdown-link"><div class="dropdown-title"><span>The Aurelius Core</span><span class="page-num">02</span></div><div class="dropdown-desc">5-layer adversarial multi-agent reasoning stack.</div></a>
+            <a href="advisory-suite.html" class="dropdown-link"><div class="dropdown-title"><span>Autonomous Advisory Suite</span><span class="page-num">03</span></div><div class="dropdown-desc">Voice synthesis briefings & encrypted execution.</div></a>
+            <a href="security-enclave.html" class="dropdown-link"><div class="dropdown-title"><span>Zero-Knowledge Enclave</span><span class="page-num">04</span></div><div class="dropdown-desc">Air-gapped Zurich bunker & dedicated silicon.</div></a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="family-offices.html" class="nav-link">Sovereign Solutions <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
+          <div class="mega-dropdown wide">
+            <a href="family-offices.html" class="dropdown-link"><div class="dropdown-title"><span>Family Office Integration</span><span class="page-num">05</span></div><div class="dropdown-desc">Unified ledger consolidating 10+ custodians.</div></a>
+            <a href="sovereign-tax.html" class="dropdown-link"><div class="dropdown-title"><span>Cross-Border Tax Arbitrage</span><span class="page-num">06</span></div><div class="dropdown-desc">Residency day-counts & treaty optimization.</div></a>
+            <a href="alternative-assets.html" class="dropdown-link"><div class="dropdown-title"><span>Alternative & Illiquid Assets</span><span class="page-num">07</span></div><div class="dropdown-desc">Aviation, superyachts, freeports & PE pacing.</div></a>
+            <a href="dynasty-estate.html" class="dropdown-link"><div class="dropdown-title"><span>Dynasty & Succession AI</span><span class="page-num">08</span></div><div class="dropdown-desc">100-year multi-generational trust modeling.</div></a>
+            <a href="geopolitical-risk.html" class="dropdown-link" style="grid-column: span 2;"><div class="dropdown-title"><span>Geopolitical Risk & Tail Hedging</span><span class="page-num">09</span></div><div class="dropdown-desc">Black-swan telemetry and sanctions immunity.</div></a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="simulator.html" class="nav-link">Intelligence &amp; Lab <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
+          <div class="mega-dropdown">
+            <a href="simulator.html" class="dropdown-link"><div class="dropdown-title"><span>Monte Carlo Wealth Lab</span><span class="page-num">10</span></div><div class="dropdown-desc">500-path stochastic modeling sandbox.</div></a>
+            <a href="case-studies.html" class="dropdown-link"><div class="dropdown-title"><span>Anonymized Principal Ledgers</span><span class="page-num">11</span></div><div class="dropdown-desc">Verified Swiss banking secrecy outcomes.</div></a>
+            <a href="intelligence.html" class="dropdown-link"><div class="dropdown-title"><span>Quantitative Intelligence</span><span class="page-num">12</span></div><div class="dropdown-desc">Institutional monographs & macro dispatches.</div></a>
+            <a href="dispatch-article.html" class="dropdown-link"><div class="dropdown-title"><span>Whitepaper Monograph No. 14</span><span class="page-num">13</span></div><div class="dropdown-desc">Autonomous tax-loss harvesting in private debt.</div></a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="charter.html" class="nav-link active">Institution <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
+          <div class="mega-dropdown">
+            <a href="charter.html" class="dropdown-link"><div class="dropdown-title"><span>Institutional Charter & Ethics</span><span class="page-num">14</span></div><div class="dropdown-desc">The 5 immutable fiduciary manifesto rules.</div></a>
+            <a href="membership.html" class="dropdown-link"><div class="dropdown-title"><span>Allocation Tiers & Access</span><span class="page-num">15</span></div><div class="dropdown-desc">Strictly capped at 150 global principals.</div></a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cmd-trigger-btn" type="button" aria-label="Open Command Palette">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span>Command</span>
+          <kbd>⌘K</kbd>
+        </button>
+        <a href="client-terminal.html" class="btn btn-secondary btn-sm btn-mono">Terminal</a>
+        <a href="request-briefing.html" class="btn btn-primary btn-sm btn-mono">Briefing</a>
+        <button class="mobile-nav-toggle" type="button" aria-label="Open Mobile Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-pillar-title">Pillar I: Platform</div>
+    <a href="architecture.html" class="mobile-drawer-link">02 — The Aurelius Core</a>
+    <a href="advisory-suite.html" class="mobile-drawer-link">03 — Autonomous Advisory Suite</a>
+    <a href="security-enclave.html" class="mobile-drawer-link">04 — Security &amp; Zero-Knowledge Enclave</a>
+
+    <div class="mobile-pillar-title">Pillar II: Sovereign Solutions</div>
+    <a href="family-offices.html" class="mobile-drawer-link">05 — Family Office Integration</a>
+    <a href="sovereign-tax.html" class="mobile-drawer-link">06 — Sovereign Tax &amp; Jurisdictions</a>
+    <a href="alternative-assets.html" class="mobile-drawer-link">07 — Alternative &amp; Illiquid Assets</a>
+    <a href="dynasty-estate.html" class="mobile-drawer-link">08 — Dynasty &amp; Succession AI</a>
+    <a href="geopolitical-risk.html" class="mobile-drawer-link">09 — Geopolitical Risk &amp; Tail Hedging</a>
+
+    <div class="mobile-pillar-title">Pillar III: Intelligence &amp; Lab</div>
+    <a href="simulator.html" class="mobile-drawer-link">10 — Monte Carlo Wealth Lab</a>
+    <a href="case-studies.html" class="mobile-drawer-link">11 — Anonymized Principal Ledgers</a>
+    <a href="intelligence.html" class="mobile-drawer-link">12 — Quantitative Intelligence</a>
+    <a href="dispatch-article.html" class="mobile-drawer-link">13 — Whitepaper Monograph No. 14</a>
+
+    <div class="mobile-pillar-title">Pillar IV: Institution</div>
+    <a href="charter.html" class="mobile-drawer-link">14 — Institutional Charter &amp; Ethics</a>
+    <a href="membership.html" class="mobile-drawer-link active">15 — Allocation Tiers &amp; Pricing</a>
+    <a href="request-briefing.html" class="mobile-drawer-link">16 — Request Private Briefing</a>
+    <a href="client-terminal.html" class="mobile-drawer-link" style="color: var(--accent-primary); font-weight: 600;">17 — Live Client Terminal</a>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+    
+    <header class="page-hero">
+      <div class="container-wide">
+        <div class="page-eyebrow">
+          <span class="badge badge-accent">PILLAR IV // ALLOCATION PROTOCOL</span>
+          <span>CAPPED REGISTRY // $100M+ MINIMUM</span>
+        </div>
+        <h1 class="page-title">
+          Capital Tiers &amp; Allocation Protocol.
+        </h1>
+        <p class="page-lead">
+          To eliminate market-impact alpha decay and preserve direct cryptographic access to the quantitative engineering team, Aurelius accepts a strictly capped cohort of 150 sovereign principals globally. Access is priced as a flat annual technology license—never an AUM percentage fee.
+        </p>
+      </div>
+    </header>
+
+    <!-- SECTION 1: INTERACTIVE TIER COMPARISON (3 Tiers) -->
+    <section class="section-py border-b">
+      <div class="container-wide">
+        <div style="margin-bottom: var(--space-8);">
+          <div class="page-eyebrow">MEMBERSHIP ARCHITECTURE</div>
+          <h2>Three Institutional Deployment Tiers</h2>
+          <p class="lead">Engineered to match balance sheet complexity, multi-custodian breadth, and air-gapped cryptographic requirements.</p>
+        </div>
+
+        <div class="swiss-grid" style="grid-template-columns: repeat(3, 1fr);">
+          
+          <!-- Tier I -->
+          <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div class="card-eyebrow">TIER I // PRINCIPAL</div>
+              <h3 style="font-size: 1.75rem; margin-bottom: 4px;">$100M – $500M</h3>
+              <div class="mono" style="font-size: 11px; color: var(--accent-primary); margin-bottom: var(--space-4);">LIQUID AUM RANGE</div>
+              <p style="font-size: 13.5px; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-4);">
+                Engineered for individual ultra-high-net-worth founders and single-family offices requiring institutional-grade execution across up to 3 custodian banks.
+              </p>
+              <ul style="display: flex; flex-direction: column; gap: var(--space-2); font-size: 13px; color: var(--text-secondary); border-top: 1px solid var(--border-hairline); padding-top: var(--space-3);">
+                <li>&#10003; Cloud-Isolated Dedicated ZK Enclave</li>
+                <li>&#10003; Up to 3 Connected Custodian Desks (FIX)</li>
+                <li>&#10003; 5-Agent Adversarial Consensus Suite</li>
+                <li>&#10003; Sub-200ms Voice Synthesis Interface</li>
+                <li>&#10003; Continuous Direct Index Loss Harvesting</li>
+                <li>&#10003; Flat Infrastructure Fee: $450,000 / Year</li>
+              </ul>
+            </div>
+            <div style="margin-top: var(--space-6);">
+              <a href="request-briefing.html" class="btn btn-outline btn-mono" style="width: 100%;">Apply for Tier I &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Tier II -->
+          <div class="card" style="border-color: var(--accent-primary); background-color: var(--bg-tertiary); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+                <span class="card-eyebrow" style="color: var(--accent-primary);">TIER II // FAMILY OFFICE</span>
+                <span class="badge badge-accent">FLAGSHIP</span>
+              </div>
+              <h3 style="font-size: 1.75rem; margin-bottom: 4px;">$500M – $2.5B</h3>
+              <div class="mono" style="font-size: 11px; color: var(--accent-primary); margin-bottom: var(--space-4);">LIQUID AUM RANGE</div>
+              <p style="font-size: 13.5px; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-4);">
+                Full single-family office neural ledger. Consolidates unlimited international banking relationships, private equity pacing, and cross-border statutory residency tracking.
+              </p>
+              <ul style="display: flex; flex-direction: column; gap: var(--space-2); font-size: 13px; color: var(--text-primary); border-top: 1px solid var(--border-hairline); padding-top: var(--space-3);">
+                <li>&#10003; Dedicated Zurich Alpine Bunker Hardware Rack</li>
+                <li>&#10003; Unlimited Custodians &amp; Private Equity SPVs</li>
+                <li>&#10003; Multi-Jurisdictional Statutory Day-Count Tracker</li>
+                <li>&#10003; Aviation &amp; Superyacht Operating Cost Modeler</li>
+                <li>&#10003; 24/7 Dedicated Quantitative Architect Team</li>
+                <li>&#10003; Flat Infrastructure Fee: $1,200,000 / Year</li>
+              </ul>
+            </div>
+            <div style="margin-top: var(--space-6);">
+              <a href="request-briefing.html" class="btn btn-primary btn-mono" style="width: 100%;">Apply for Tier II &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Tier III -->
+          <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div class="card-eyebrow">TIER III // SOVEREIGN DYNASTY</div>
+              <h3 style="font-size: 1.75rem; margin-bottom: 4px;">$2.5B – $10B+</h3>
+              <div class="mono" style="font-size: 11px; color: var(--accent-primary); margin-bottom: var(--space-4);">SOVEREIGN PRINCIPAL</div>
+              <p style="font-size: 13.5px; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-4);">
+                Bespoke sovereign wealth deployment. Complete on-premise hardware appliance, custom quantitative modeling, and direct diplomatic chokepoint telemetry.
+              </p>
+              <ul style="display: flex; flex-direction: column; gap: var(--space-2); font-size: 13px; color: var(--text-secondary); border-top: 1px solid var(--border-hairline); padding-top: var(--space-3);">
+                <li>&#10003; On-Premise Air-Gapped Supercomputer Monoblock</li>
+                <li>&#10003; Dedicated 4-Person Quantitative Engineering Pod</li>
+                <li>&#10003; Custom Geopolitical Threat Model Integration</li>
+                <li>&#10003; Physical Zurich &amp; Singapore Vault Telemetry</li>
+                <li>&#10003; Biometric Hardware Kill-Switch Authority</li>
+                <li>&#10003; Custom Sovereign License (Bespoke Contract)</li>
+              </ul>
+            </div>
+            <div style="margin-top: var(--space-6);">
+              <a href="request-briefing.html" class="btn btn-outline btn-mono" style="width: 100%;">Diplomatic Intake &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: INTERACTIVE FEE SAVINGS CALCULATOR (AUM % vs Flat Fee) -->
+    <section class="section-py border-b" style="background-color: var(--bg-secondary);">
+      <div class="container-wide">
+        <div style="margin-bottom: var(--space-6);">
+          <div class="page-eyebrow">FIDUCIARY ADVANTAGE CALCULATOR</div>
+          <h2>10-Year Compounded Fee Savings Simulator</h2>
+          <p class="lead">Compare the traditional 75 bps Private Bank AUM percentage fee against Aurelius flat annual infrastructure licensing over a 10-year horizon.</p>
+        </div>
+
+        <div class="swiss-grid" style="grid-template-columns: 1.1fr 0.9fr; align-items: center;">
+          <div class="card" style="background-color: var(--bg-tertiary);">
+            <div class="form-group">
+              <div class="input-range-header">
+                <span class="form-label" style="margin: 0;">Portfolio Balance ($M USD):</span>
+                <span class="range-val-badge" id="fee-aum-badge">$1,000M ($1.0B USD)</span>
+              </div>
+              <input type="range" class="input-range" id="fee-aum-slider" min="100" max="5000" step="50" value="1000">
+              <span class="form-hint">Adjust net worth to calculate compounded fee drag.</span>
+            </div>
+
+            <div class="table-container" style="border: none; margin-top: var(--space-4);">
+              <table class="swiss-table">
+                <thead>
+                  <tr>
+                    <th>Fee Model</th>
+                    <th>Annual Fee</th>
+                    <th>10-Year Compounded Cost</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Traditional Bank (75 bps)</strong></td>
+                    <td id="fee-bank-annual" class="mono" style="color: var(--signal-negative);">$7,500,000 / yr</td>
+                    <td id="fee-bank-10yr" class="mono" style="color: var(--signal-negative);">$104,200,000</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Aurelius Flat License</strong></td>
+                    <td id="fee-aurelius-annual" class="mono" style="color: var(--signal-positive);">$1,200,000 / yr</td>
+                    <td id="fee-aurelius-10yr" class="mono" style="color: var(--signal-positive);">$14,500,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card" style="background-color: var(--bg-tertiary); text-align: center; padding: var(--space-8);">
+            <div class="stat-label" style="justify-content: center;">10-YEAR NET CAPITAL PRESERVED</div>
+            <div class="stat-value" id="fee-savings-val" style="font-size: 2.8rem; color: var(--signal-positive); margin: var(--space-3) 0;">
+              +$89.7M
+            </div>
+            <p class="stat-desc" style="max-width: 380px; margin: 0 auto; line-height: 1.6;">
+              Compounded capital retained purely by eliminating the misaligned percentage AUM fee structure and reinvesting fee savings at 6.0% real return.
+            </p>
+            <div style="margin-top: var(--space-6);">
+              <a href="request-briefing.html" class="btn btn-primary btn-mono">Lock In Allocation Seat &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: 4-STAGE ONBOARDING PROTOCOL -->
+    <section class="section-py">
+      <div class="container-wide">
+        <div style="margin-bottom: var(--space-8);">
+          <div class="page-eyebrow">DISCREET INTAKE CADENCE</div>
+          <h2>The 4-Stage Onboarding Protocol</h2>
+          <p class="lead">A discreet, rigorous 14-day sequence executed under non-disclosure and Swiss banking secrecy.</p>
+        </div>
+
+        <div class="swiss-grid onboarding-protocol-grid">
+          <div class="card">
+            <div class="stat-label">STAGE 01 // DAY 1–3</div>
+            <h4 style="font-size: 1.25rem; margin-bottom: 6px;">Zero-Knowledge Intake</h4>
+            <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6;">
+              Verification of $100M+ liquid eligibility via encrypted cryptographic proof or trusted Swiss legal counsel. Zero requirement to disclose specific ticker names.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="stat-label">STAGE 02 // DAY 4–7</div>
+            <h4 style="font-size: 1.25rem; margin-bottom: 6px;">Constitution Formalization</h4>
+            <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6;">
+              Codification of the family constitution, statutory residency rules, marital prenups, and risk tolerances into formal mathematical constraints.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="stat-label">STAGE 03 // DAY 8–11</div>
+            <h4 style="font-size: 1.25rem; margin-bottom: 6px;">Hardware Provisioning</h4>
+            <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6;">
+              Provisioning of dedicated silicon in the Zurich alpine bunker or dispatch of the liquid-cooled titanium appliance via armored diplomatic courier.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="stat-label">STAGE 04 // DAY 12–14</div>
+            <h4 style="font-size: 1.25rem; margin-bottom: 6px;">Custodian FIX Ingestion</h4>
+            <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6;">
+              Initialization of secure FIX 4.4 drop-copies and multi-sig cryptographic authorization keys. Continuous autonomous surveillance activated.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- COMMAND PALETTE MODAL -->
+  <div id="cmd-palette" class="cmd-modal-backdrop" role="dialog" aria-modal="true" aria-label="Command Palette">
+    <div class="cmd-modal">
+      <div class="cmd-header">
+        <svg class="cmd-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" class="cmd-input" placeholder="Search all 17 sovereign pages..." aria-label="Command search">
+        <span class="cmd-esc">ESC</span>
+      </div>
+      <div class="cmd-quick-actions">
+        <button class="cmd-chip" data-action="toggle-theme" type="button">Toggle Theme</button>
+        <button class="cmd-chip" data-action="terminal" type="button">Client Terminal</button>
+        <button class="cmd-chip" data-action="simulator" type="button">Monte Carlo Lab</button>
+        <button class="cmd-chip" data-action="briefing" type="button">Request Briefing</button>
+      </div>
+      <div class="cmd-results" role="listbox"></div>
+      <div class="cmd-footer">
+        <div class="cmd-hints"><span>&uarr;&darr; Navigate</span><span>&crarr; Select</span><span>ESC Close</span></div>
+        <span class="mono" style="color: var(--accent-primary);">AURELIUS OS v4.2</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARCHITECTURAL FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container-wide">
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <a href="index.html" class="brand-logo" style="margin-bottom: var(--space-3);">
+              <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="16 2, 30 26, 2 26" /><circle cx="16" cy="16" r="3" fill="currentColor" /></svg>
+              <span class="brand-name">AURELIUS</span>
+            </a>
+            <p>Autonomous Sovereign Wealth Architecture for $100M+ Liquid Net Worth Principals.</p>
+            <div style="margin-top: var(--space-4);"><span class="badge badge-accent">AIR-GAPPED SILICON</span></div>
+          </div>
+          <div>
+            <div class="footer-col-title">Platform</div>
+            <ul class="footer-nav-list">
+              <li><a href="index.html" class="footer-nav-link"><span>Overview</span><span class="page-badge">01</span></a></li>
+              <li><a href="architecture.html" class="footer-nav-link"><span>The Aurelius Core</span><span class="page-badge">02</span></a></li>
+              <li><a href="advisory-suite.html" class="footer-nav-link"><span>Autonomous Advisory</span><span class="page-badge">03</span></a></li>
+              <li><a href="security-enclave.html" class="footer-nav-link"><span>Security &amp; ZK Enclave</span><span class="page-badge">04</span></a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Sovereign Solutions</div>
+            <ul class="footer-nav-list">
+              <li><a href="family-offices.html" class="footer-nav-link"><span>Family Offices</span><span class="page-badge">05</span></a></li>
+              <li><a href="sovereign-tax.html" class="footer-nav-link"><span>Sovereign Tax</span><span class="page-badge">06</span></a></li>
+              <li><a href="alternative-assets.html" class="footer-nav-link"><span>Alternative Assets</span><span class="page-badge">07</span></a></li>
+              <li><a href="dynasty-estate.html" class="footer-nav-link"><span>Dynasty AI</span><span class="page-badge">08</span></a></li>
+              <li><a href="geopolitical-risk.html" class="footer-nav-link"><span>Geopolitical Risk</span><span class="page-badge">09</span></a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Intelligence &amp; Lab</div>
+            <ul class="footer-nav-list">
+              <li><a href="simulator.html" class="footer-nav-link"><span>Monte Carlo Lab</span><span class="page-badge">10</span></a></li>
+              <li><a href="case-studies.html" class="footer-nav-link"><span>Principal Ledgers</span><span class="page-badge">11</span></a></li>
+              <li><a href="intelligence.html" class="footer-nav-link"><span>Quantitative Research</span><span class="page-badge">12</span></a></li>
+              <li><a href="dispatch-article.html" class="footer-nav-link"><span>Monograph No. 14</span><span class="page-badge">13</span></a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Institution</div>
+            <ul class="footer-nav-list">
+              <li><a href="charter.html" class="footer-nav-link"><span>Institutional Charter</span><span class="page-badge">14</span></a></li>
+              <li><a href="membership.html" class="footer-nav-link"><span>Membership Tiers</span><span class="page-badge">15</span></a></li>
+              <li><a href="request-briefing.html" class="footer-nav-link"><span>Request Briefing</span><span class="page-badge">16</span></a></li>
+              <li><a href="client-terminal.html" class="footer-nav-link" style="color: var(--accent-primary);"><span>Live Client Terminal</span><span class="page-badge">17</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-enclaves">
+      <div class="container-wide">
+        <div class="enclaves-grid">
+          <div class="enclave-card"><div class="enclave-city"><span>Zurich Vault</span><span>CH-8001</span></div><div class="enclave-address">Bahnhofstrasse 45, 8001 Zürich, Switzerland</div><div class="enclave-status">&#9679; Air-Gapped Dedicated Alpine Vault</div></div>
+          <div class="enclave-card"><div class="enclave-city"><span>Singapore Hub</span><span>SG-049315</span></div><div class="enclave-address">10 Collyer Quay, Ocean Financial Centre, Singapore</div><div class="enclave-status">&#9679; Asian Family Office Enclave</div></div>
+          <div class="enclave-card"><div class="enclave-city"><span>New York Desk</span><span>US-10153</span></div><div class="enclave-address">767 Fifth Avenue, General Motors Building, NYC</div><div class="enclave-status">&#9679; Institutional Telemetry Node</div></div>
+          <div class="enclave-card"><div class="enclave-city"><span>Geneva Freeport</span><span>CH-1204</span></div><div class="enclave-address">Rue du Rhône 42, 1204 Genève, Switzerland</div><div class="enclave-status">&#9679; Direct Bullion &amp; Freeport Custody</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container-wide">
+        <p class="footer-disclaimer">REGULATORY NOTICE: Aurelius Quantitative Systems AG operates as an autonomous sovereign wealth architecture and technology infrastructure provider. Aurelius does not hold commingled customer deposits, sell proprietary financial products, or accept third-party commissions.</p>
+        <div class="footer-legal-bar">
+          <span>&copy; 2026 AURELIUS QUANTITATIVE SYSTEMS AG. ALL RIGHTS RESERVED. SWISS LAW GOVERNED.</span>
+          <span>ZK ROOT HASH: <span class="footer-hash">0x8e2c7a91bfd59104c8f2a64019de58c14f3b77209d841e2b5e0c679a</span></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/mock-data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Interactive Fee Savings Calculator
+    const sliderAUM = document.getElementById("fee-aum-slider");
+    const badgeAUM = document.getElementById("fee-aum-badge");
+    const bankAnnual = document.getElementById("fee-bank-annual");
+    const bank10yr = document.getElementById("fee-bank-10yr");
+    const aureliusAnnual = document.getElementById("fee-aurelius-annual");
+    const aurelius10yr = document.getElementById("fee-aurelius-10yr");
+    const savingsVal = document.getElementById("fee-savings-val");
+
+    function calculateSavings(aumM) {
+      const aumUSD = aumM * 1e6;
+      badgeAUM.textContent = aumM >= 1000 ? `$${(aumM / 1000).toFixed(2)}B USD` : `$${aumM}M USD`;
+
+      // 75 bps annual fee
+      const bankFeeYear = aumUSD * 0.0075;
+      // 10-year compounded drag assuming 6% gross portfolio growth
+      let compBank = 0;
+      let compAurelius = 0;
+      let curBankNAV = aumUSD;
+      let curAurNAV = aumUSD;
+
+      const aurFeeYear = aumM < 500 ? 450000 : 1200000;
+
+      for (let y = 1; y <= 10; y++) {
+        const bFee = curBankNAV * 0.0075;
+        compBank += bFee;
+        curBankNAV = (curBankNAV - bFee) * 1.06;
+
+        compAurelius += aurFeeYear;
+        curAurNAV = (curAurNAV - aurFeeYear) * 1.06;
+      }
+
+      const diff = curAurNAV - curBankNAV;
+
+      bankAnnual.textContent = `$${(bankFeeYear / 1e6).toFixed(2)}M / yr`;
+      bank10yr.textContent = `$${(compBank / 1e6).toFixed(1)}M`;
+
+      aureliusAnnual.textContent = `$${(aurFeeYear / 1e6).toFixed(2)}M / yr`;
+      aurelius10yr.textContent = `$${(compAurelius / 1e6).toFixed(1)}M`;
+
+      savingsVal.textContent = diff >= 1e9 ? `+$${(diff / 1e9).toFixed(2)}B` : `+$${(diff / 1e6).toFixed(1)}M`;
+    }
+
+    sliderAUM.addEventListener("input", (e) => {
+      calculateSavings(parseInt(e.target.value));
+    });
+
+    calculateSavings(1000);
+  </script>
+</body>
+</html>

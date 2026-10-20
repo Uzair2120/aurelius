@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="obsidian">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Aurelius Core — Adversarial Multi-Agent Architecture | AURELIUS</title>
+  <meta name="description" content="Deep technical breakdown of the proprietary 5-layer adversarial multi-agent reasoning stack and game-theoretic fiduciary consensus engine.">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!-- TOP TELEMETRY BAR -->
+  <aside class="telemetry-bar" aria-label="Live Telemetry">
+    <div class="container-wide">
+      <div class="telemetry-group">
+        <span class="telemetry-item">
+          <span class="telemetry-dot" aria-hidden="true"></span>
+          <span class="label">ZK-ENCLAVE:</span>
+          <span class="val">AIR-GAPPED // 0x8e2c...679a</span>
+        </span>
+        <span class="telemetry-item">
+          <span class="label">ENGINE LATENCY:</span>
+          <span class="val">38.4ms CONSENSUS</span>
+        </span>
+      </div>
+
+      <div class="telemetry-group secondary-telemetry">
+        <span class="telemetry-item"><span class="label">UTC:</span> <span class="val" id="clock-utc">18:00:00</span></span>
+        <span class="telemetry-item"><span class="label">ZRH:</span> <span class="val" id="clock-zrh">20:00:00</span></span>
+        <span class="telemetry-item"><span class="label">SGP:</span> <span class="val" id="clock-sgp">02:00:00</span></span>
+        <span class="telemetry-item"><span class="label">NYC:</span> <span class="val" id="clock-nyc">14:00:00</span></span>
+      </div>
+
+      <div class="telemetry-group">
+        <button class="theme-toggle-btn" type="button" aria-label="Toggle Obsidian and Ivory Theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <span class="theme-label">IVORY</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <div class="container-wide">
+      <a href="index.html" class="brand-logo" aria-label="AURELIUS Homepage">
+        <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polygon points="16 2, 30 26, 2 26" />
+          <line x1="16" y1="2" x2="16" y2="26" stroke-dasharray="2 2" />
+          <circle cx="16" cy="16" r="3" fill="currentColor" />
+        </svg>
+        <span class="brand-name">AURELIUS</span>
+        <span class="brand-tag">QUANTITATIVE</span>
+      </a>
+
+      <!-- Desktop Mega-Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <div class="nav-item">
+          <a href="architecture.html" class="nav-link active">Platform <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
+          <div class="mega-dropdown">
+            <a href="architecture.html" class="dropdown-link"><div class="dropdown-title"><span>The Aurelius Core</span><span class="page-num">02</span></div><div class="dropdown-desc">5-layer adversarial multi-agent reasoning stack.</div></a>
+            <a href="advisory-suite.html" class="dropdown-link"><div class="dropdown-title"><span>Autonomous Advisory Suite</span><span class="page-num">03</span></div><div class="dropdown-desc">Voice synthesis briefings & encrypted execution.</div></a>
+            <a href="security-enclave.html" class="dropdown-link"><div class="dropdown-title"><span>Zero-Knowledge Enclave</span><span class="page-num">04</span></div><div class="dropdown-desc">Air-gapped Zurich bunker & dedicated silicon.</div></a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="family-offices.html" class="nav-link">Sovereign Solutions <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
+          <div class="mega-dropdown wide">
+            <a href="family-offices.html" class="dropdown-link"><div class="dropdown-title"><span>Family Office Integration</span><span class="page-num">05</span></div><div class="dropdown-desc">Unified ledger consolidating 10+ custodians.</div></a>
+            <a href="sovereign-tax.html" class="dropdown-link"><div class="dropdown-title"><span>Cross-Border Tax Arbitrage</span><span class="page-num">06</span></div><div class="dropdown-desc">Residency day-counts & treaty optimization.</div></a>
+            <a href="alternative-assets.html" class="dropdown-link"><div class="dropdown-title"><span>Alternative & Illiquid Assets</span><span class="page-num">07</span></div><div class="dropdown-desc">Aviation, superyachts, freeports & PE pacing.</div></a>
+            <a href="dynasty-estate.html" class="dropdown-link"><div class="dropdown-title"><span>Dynasty & Succession AI</span><span class="page-num">08</span></div><div class="dropdown-desc">100-year multi-generational trust modeling.</div></a>
+            <a href="geopolitical-risk.html" class="dropdown-link" style="grid-column: span 2;"><div class="dropdown-title"><span>Geopolitical Risk & Tail Hedging</span><span class="page-num">09</span></div><div class="dropdown-desc">Black-swan telemetry and sanctions immunity.</div></a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="simulator.html" class="nav-link">Intelligence &amp; Lab <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
+          <div class="mega-dropdown">
+            <a href="simulator.html" class="dropdown-link"><div class="dropdown-title"><span>Monte Carlo Wealth Lab</span><span class="page-num">10</span></div><div class="dropdown-desc">500-path stochastic modeling sandbox.</div></a>
+            <a href="case-studies.html" class="dropdown-link"><div class="dropdown-title"><span>Anonymized Principal Ledgers</span><span class="page-num">11</span></div><div class="dropdown-desc">Verified Swiss banking secrecy outcomes.</div></a>
+            <a href="intelligence.html" class="dropdown-link"><div class="dropdown-title"><span>Quantitative Intelligence</span><span class="page-num">12</span></div><div class="dropdown-desc">Institutional monographs & macro dispatches.</div></a>
+            <a href="dispatch-article.html" class="dropdown-link"><div class="dropdown-title"><span>Whitepaper Monograph No. 14</span><span class="page-num">13</span></div><div class="dropdown-desc">Autonomous tax-loss harvesting in private debt.</div></a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="charter.html" class="nav-link">Institution <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
+          <div class="mega-dropdown">
+            <a href="charter.html" class="dropdown-link"><div class="dropdown-title"><span>Institutional Charter & Ethics</span><span class="page-num">14</span></div><div class="dropdown-desc">The 5 immutable fiduciary manifesto rules.</div></a>
+            <a href="membership.html" class="dropdown-link"><div class="dropdown-title"><span>Allocation Tiers & Access</span><span class="page-num">15</span></div><div class="dropdown-desc">Strictly capped at 150 global principals.</div></a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cmd-trigger-btn" type="button" aria-label="Open Command Palette">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span>Command</span>
+          <kbd>⌘K</kbd>
+        </button>
+        <a href="client-terminal.html" class="btn btn-secondary btn-sm btn-mono">Terminal</a>
+        <a href="request-briefing.html" class="btn btn-primary btn-sm btn-mono">Briefing</a>
+        <button class="mobile-nav-toggle" type="button" aria-label="Open Mobile Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-pillar-title">Pillar I: Platform</div>
+    <a href="architecture.html" class="mobile-drawer-link active">02 — The Aurelius Core</a>
+    <a href="advisory-suite.html" class="mobile-drawer-link">03 — Autonomous Advisory Suite</a>
+    <a href="security-enclave.html" class="mobile-drawer-link">04 — Security &amp; Zero-Knowledge Enclave</a>
+
+    <div class="mobile-pillar-title">Pillar II: Sovereign Solutions</div>
+    <a href="family-offices.html" class="mobile-drawer-link">05 — Family Office Integration</a>
+    <a href="sovereign-tax.html" class="mobile-drawer-link">06 — Sovereign Tax &amp; Jurisdictions</a>
+    <a href="alternative-assets.html" class="mobile-drawer-link">07 — Alternative &amp; Illiquid Assets</a>
+    <a href="dynasty-estate.html" class="mobile-drawer-link">08 — Dynasty &amp; Succession AI</a>
+    <a href="geopolitical-risk.html" class="mobile-drawer-link">09 — Geopolitical Risk &amp; Tail Hedging</a>
+
+    <div class="mobile-pillar-title">Pillar III: Intelligence &amp; Lab</div>
+    <a href="simulator.html" class="mobile-drawer-link">10 — Monte Carlo Wealth Lab</a>
+    <a href="case-studies.html" class="mobile-drawer-link">11 — Anonymized Principal Ledgers</a>
+    <a href="intelligence.html" class="mobile-drawer-link">12 — Quantitative Intelligence</a>
+    <a href="dispatch-article.html" class="mobile-drawer-link">13 — Whitepaper Monograph No. 14</a>
+
+    <div class="mobile-pillar-title">Pillar IV: Institution</div>
+    <a href="charter.html" class="mobile-drawer-link">14 — Institutional Charter &amp; Ethics</a>
+    <a href="membership.html" class="mobile-drawer-link">15 — Allocation Tiers &amp; Pricing</a>
+    <a href="request-briefing.html" class="mobile-drawer-link">16 — Request Private Briefing</a>
+    <a href="client-terminal.html" class="mobile-drawer-link" style="color: var(--accent-primary); font-weight: 600;">17 — Live Client Terminal</a>
+  </div>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: ARCHITECTURE
+       ========================================================================== -->
+  <main id="main-content">
+    
+    <header class="page-hero">
+      <div class="container-wide">
+        <div class="page-eyebrow">
+          <span class="badge badge-accent">PILLAR I // REASONING CORE</span>
+          <span>AIR-GAPPED MULTI-AGENT ENGINE</span>
+        </div>
+        <h1 class="page-title">
+          The Aurelius Core: Deterministic multi-agent reasoning.
+        </h1>
+        <p class="page-lead">
+          Traditional investment committees meet quarterly, burdened by personal bias, product kickbacks, and slow deliberation. Aurelius replaces human latency with a 5-layer adversarial multi-agent stack. Five autonomous AI sub-agents with mathematically conflicting objective functions debate every trade before execution.
+        </p>
+      </div>
+    </header>
+
+    <!-- SECTION 1: 5-LAYER ARCHITECTURE STACK (Interactive CSS Grid & Inspector) -->
+    <section class="section-py border-b">
+      <div class="container-wide">
+        <div style="margin-bottom: var(--space-6);">
+          <div class="page-eyebrow">SYSTEM STACK TOPOLOGY</div>
+          <h2>Interactive 5-Layer Reasoning Architecture</h2>
+          <p class="lead">Click any layer in the stack to inspect its real-time mathematical operations, security posture, and data conduits.</p>
+        </div>
+
+        <div class="grid-12" style="gap: var(--space-8); align-items: start;">
+          <!-- Left: Clickable Stack Layers -->
+          <div style="grid-column: span 7;">
+            <div class="architecture-stack" role="tablist">
+              
+              <div class="arch-layer active" data-layer="layer-5" tabindex="0">
+                <div class="arch-layer-num">LAYER 05 // EGRESS</div>
+                <div>
+                  <div class="arch-layer-name">Execution &amp; Custody Bridge</div>
+                  <div class="arch-layer-desc">Multi-sig FIX 4.4 / FIX 5.0 protocol routing directly to Tier-1 custody desks.</div>
+                </div>
+                <span class="badge badge-emerald">MULTI-SIG</span>
+              </div>
+
+              <div class="arch-layer" data-layer="layer-4" tabindex="0">
+                <div class="arch-layer-num">LAYER 04 // GOVERNANCE</div>
+                <div>
+                  <div class="arch-layer-name">Deterministic Guardrails</div>
+                  <div class="arch-layer-desc">Hard-coded Family Constitution clauses, prenup compliance &amp; statutory limits.</div>
+                </div>
+                <span class="badge badge-accent">ZERO DRIFT</span>
+              </div>
+
+              <div class="arch-layer" data-layer="layer-3" tabindex="0">
+                <div class="arch-layer-num">LAYER 03 // COGNITION</div>
+                <div>
+                  <div class="arch-layer-name">Adversarial Agent Council</div>
+                  <div class="arch-layer-desc">5 specialized AI sub-agents conducting 38ms game-theoretic debate.</div>
+                </div>
+                <span class="badge">GAME THEORETIC</span>
+              </div>
+
+              <div class="arch-layer" data-layer="layer-2" tabindex="0">
+                <div class="arch-layer-num">LAYER 02 // SYNTHESIS</div>
+                <div>
+                  <div class="arch-layer-name">Quantitative World Model</div>
+                  <div class="arch-layer-desc">Macro causal graph, central bank liquidity flows &amp; geopolitical risk vectors.</div>
+                </div>
+                <span class="badge">CAUSAL GRAPH</span>
+              </div>
+
+              <div class="arch-layer" data-layer="layer-1" tabindex="0">
+                <div class="arch-layer-num">LAYER 01 // INGESTION</div>
+                <div>
+                  <div class="arch-layer-name">Custodian Ingestion Layer</div>
+                  <div class="arch-layer-desc">Normalized streaming feeds across UBS, J.P. Morgan, Julius Bär, and private SPVs.</div>
+                </div>
+                <span class="badge badge-emerald">LIVE FEED</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right: Dynamic Layer Inspector Panel -->
+          <div style="grid-column: span 5;">
+            <div id="layer-inspector-card" class="card" style="background-color: var(--bg-secondary); border-color: var(--accent-primary);">
+              <div class="card-eyebrow" id="inspector-tag">LAYER 05 // SPECIFICATION</div>
+              <h3 class="card-title" id="inspector-title">Execution &amp; Custody Bridge</h3>
+              <p class="card-desc" id="inspector-desc" style="margin-bottom: var(--space-4);">
+                Aurelius never holds custody of assets. All trade allocations, sovereign bond rolls, and currency swaps are converted into cryptographically signed Financial Information eXchange (FIX) protocol orders and dispatched directly to client-owned accounts at UBS, J.P. Morgan Private Bank, and Lombard Odier.
+              </p>
+              
+              <div class="callout" style="margin: var(--space-4) 0;">
+                <div class="callout-title" id="inspector-protocol-title">ENCRYPTION &amp; PROTOCOL SPECS</div>
+                <div class="callout-body mono" id="inspector-specs">
+                  Protocol: FIX 4.4 / FIX 5.0 SP2<br>
+                  Signing: Hardware HSM Securosys Primus (Zurich)<br>
+                  Execution Latency: 2.4ms to Swiss Interbank Clearing (SIC)<br>
+                  Retrocessions / Kickbacks: 0.00 bps (Strictly forbidden)
+                </div>
+              </div>
+
+              <div style="display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); border-top: 1px solid var(--border-hairline); padding-top: var(--space-3);">
+                <span>STATUS: ACTIVE RUNTIME</span>
+                <span style="color: var(--signal-positive);">ZK-ATTESTED</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ADVERSARIAL AGENT COUNCIL (Inspect the 5 AI Sub-Agents) -->
+    <section class="section-py border-b" style="background-color: var(--bg-secondary);">
+      <div class="container-wide">
+        <div style="margin-bottom: var(--space-8);">
+          <div class="page-eyebrow">COGNITIVE DIVISION OF LABOR</div>
+          <h2>The 5 Adversarial Sub-Agents</h2>
+          <p class="lead">
+            Every transaction is subjected to simultaneous adversarial interrogation. Click any agent below to inspect its mathematical objective function and live reasoning transcripts.
+          </p>
+        </div>
+
+        <div class="swiss-grid agent-council-grid">
+          
+          <div class="agent-council-card active" data-agent="risk_hawk" onclick="selectAgent('risk_hawk')">
+            <div class="card-eyebrow">AGENT 01</div>
+            <h4 style="font-size: 1.25rem; margin-bottom: var(--space-2);">The Risk Hawk</h4>
+            <p style="font-size: 12.5px; color: var(--text-secondary); margin-bottom: var(--space-3);">Capital Preservation &amp; Tail Risk Defense</p>
+            <div class="agent-objective-formula">max { -VaR_{99.9%} - &lambda; &middot; CVaR }</div>
+            <span class="badge badge-crimson">VETO POWER</span>
+          </div>
+
+          <div class="agent-council-card" data-agent="tax_counsel" onclick="selectAgent('tax_counsel')">
+            <div class="card-eyebrow">AGENT 02</div>
+            <h4 style="font-size: 1.25rem; margin-bottom: var(--space-2);">The Tax Counsel</h4>
+            <p style="font-size: 12.5px; color: var(--text-secondary); margin-bottom: var(--space-3);">Treaties &amp; Residency Arbitrage</p>
+            <div class="agent-objective-formula">min &sum; &tau;_i &middot; &Delta;w_i - &alpha;</div>
+            <span class="badge badge-accent">42 TREATIES</span>
+          </div>
+
+          <div class="agent-council-card" data-agent="liquidity_architect" onclick="selectAgent('liquidity_architect')">
+            <div class="card-eyebrow">AGENT 03</div>
+            <h4 style="font-size: 1.25rem; margin-bottom: var(--space-2);">The Liquidity Architect</h4>
+            <p style="font-size: 12.5px; color: var(--text-secondary); margin-bottom: var(--space-3);">Cash Flow &amp; Capital Call Pacing</p>
+            <div class="agent-objective-formula">L_{t+k} &ge; &sum; Calls_{t+k}</div>
+            <span class="badge badge-emerald">ZERO CASH DRAG</span>
+          </div>
+
+          <div class="agent-council-card" data-agent="macro_strategist" onclick="selectAgent('macro_strategist')">
+            <div class="card-eyebrow">AGENT 04</div>
+            <h4 style="font-size: 1.25rem; margin-bottom: var(--space-2);">The Macro Strategist</h4>
+            <p style="font-size: 12.5px; color: var(--text-secondary); margin-bottom: var(--space-3);">Causal World Graph &amp; Black Swans</p>
+            <div class="agent-objective-formula">arg max E[&Delta;U(&Omega;)]</div>
+            <span class="badge">REGIME MODEL</span>
+          </div>
+
+          <div class="agent-council-card" data-agent="fiduciary_arbiter" onclick="selectAgent('fiduciary_arbiter')">
+            <div class="card-eyebrow">AGENT 05</div>
+            <h4 style="font-size: 1.25rem; margin-bottom: var(--space-2);">The Fiduciary Arbiter</h4>
+            <p style="font-size: 12.5px; color: var(--text-secondary); margin-bottom: var(--space-3);">Family Constitution &amp; Ethics</p>
+            <div class="agent-objective-formula">L_{Fid} = I(Const == True)</div>
+            <span class="badge badge-accent">RATIFIER</span>
+          </div>
+
+        </div>
+
+        <!-- Dynamic Agent Transcript Box -->
+        <div style="margin-top: var(--space-6);">
+          <div class="terminal-card">
+            <div class="terminal-header">
+              <div class="terminal-window-dots">
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+              </div>
+              <span id="agent-transcript-header">AGENT TELEMETRY: THE RISK HAWK // LATENCY: 14MS</span>
+              <span class="badge badge-emerald">SECURE ENCLAVE EXECUTION</span>
+            </div>
+            <div class="terminal-body" id="agent-transcript-body">
+              <p class="line-prompt">> EVALUATING PROPOSED ALLOCATION: ACQUIRE $65M GULFSTREAM G700 VIA UNHEDGED CASH LIQUIDATION</p>
+              <p class="line-agent">[The Risk Hawk]: VETO CONDITIONAL: The proposed $65M Gulfstream acquisition via direct unhedged cash creates an acute 72-hour liquidity squeeze during potential simultaneous capital calls from Blackstone Strategic IV ($14.2M) and Carlyle Europe ($9.8M). I require a synchronized CHF Lombard facility backed by Zurich-vaulted Swiss Confederation bonds.</p>
+              <p class="line-muted">Mathematical Objective Underwritten: max { -VaR_{99.9%} - &lambda; &middot; CVaR }</p>
+              <p class="line-highlight">&#10003; CONSTRAINT ENFORCED: Maximum permissible 30-day liquidity drawdown threshold maintained at &lt; 2.5% of total NAV.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: DETERMINISTIC GOVERNANCE & KILL-SWITCH -->
+    <section class="section-py">
+      <div class="container-wide">
+        <div class="swiss-grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-8);">
+          <div>
+            <div class="page-eyebrow">DETERMINISTIC CONSTITUTIONAL GUARDRAILS</div>
+            <h2>Eliminating LLM Hallucinations in Billion-Dollar Portfolios</h2>
+            <p class="lead">
+              Probabilistic large language models cannot be trusted with sovereign capital execution. Aurelius uses AI agents exclusively for hypothesis generation and contextual synthesis, while all final execution parameters pass through deterministic formal mathematical verifiers.
+            </p>
+            <ul style="margin-top: var(--space-5); display: flex; flex-direction: column; gap: var(--space-4);">
+              <li style="display: flex; gap: var(--space-3);">
+                <span class="mono" style="color: var(--accent-primary);">&#9632;</span>
+                <div>
+                  <strong style="color: var(--text-primary); display: block; margin-bottom: 2px;">Immutable Capital Preservation Bounds</strong>
+                  <span style="font-size: 13.5px; color: var(--text-secondary);">No trade can ever breach the principal's hard-coded max drawdown parameter, even during black-swan market dislocations.</span>
+                </div>
+              </li>
+              <li style="display: flex; gap: var(--space-3);">
+                <span class="mono" style="color: var(--accent-primary);">&#9632;</span>
+                <div>
+                  <strong style="color: var(--text-primary); display: block; margin-bottom: 2px;">Physical Hardware Kill-Switch Authority</strong>
+                  <span style="font-size: 13.5px; color: var(--text-secondary);">The principal and designated family office trustees maintain cryptographically verified physical YubiKey hardware kill-switch authority that instantly severs FIX broker bridges.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="card" style="background-color: var(--bg-tertiary); height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div class="stat-label">REASONING AUDITABILITY</div>
+                <div class="stat-value" style="font-size: 2.2rem;">100<span class="unit">%</span></div>
+                <p class="stat-desc" style="margin-top: var(--space-3); line-height: 1.6;">
+                  Every internal argument between the 5 sub-agents is hashed, timestamped to the millisecond, and recorded onto a local immutable cryptographic ledger. No decision is ever a "black box."
+                </p>
+              </div>
+
+              <div style="margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--border-hairline); display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--space-3);">
+                <a href="advisory-suite.html" class="btn btn-outline btn-sm btn-mono">Next: Advisory Suite &rarr;</a>
+                <a href="security-enclave.html" class="btn btn-primary btn-sm btn-mono">Inspect Hardware Enclave</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- COMMAND PALETTE MODAL -->
+  <div id="cmd-palette" class="cmd-modal-backdrop" role="dialog" aria-modal="true" aria-label="Command Palette">
+    <div class="cmd-modal">
+      <div class="cmd-header">
+        <svg class="cmd-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" class="cmd-input" placeholder="Search all 17 sovereign pages, calculators, modules..." aria-label="Command search">
+        <span class="cmd-esc">ESC</span>
+      </div>
+      <div class="cmd-quick-actions">
+        <button class="cmd-chip" data-action="toggle-theme" type="button">Toggle Theme</button>
+        <button class="cmd-chip" data-action="terminal" type="button">Client Terminal</button>
+        <button class="cmd-chip" data-action="simulator" type="button">Monte Carlo Lab</button>
+        <button class="cmd-chip" data-action="briefing" type="button">Request Briefing</button>
+      </div>
+      <div class="cmd-results" role="listbox"></div>
+      <div class="cmd-footer">
+        <div class="cmd-hints"><span>&uarr;&darr; Navigate</span><span>&crarr; Select</span><span>ESC Close</span></div>
+        <span class="mono" style="color: var(--accent-primary);">AURELIUS OS v4.2</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARCHITECTURAL FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container-wide">
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <a href="index.html" class="brand-logo" style="margin-bottom: var(--space-3);">
+              <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="16 2, 30 26, 2 26" /><circle cx="16" cy="16" r="3" fill="currentColor" /></svg>
+              <span class="brand-name">AURELIUS</span>
+            </a>
+            <p>Autonomous Sovereign Wealth Architecture for $100M+ Liquid Net Worth Principals.</p>
+            <div style="margin-top: var(--space-4);"><span class="badge badge-accent">AIR-GAPPED SILICON</span></div>
+          </div>
+          <div>
+            <div class="footer-col-title">Platform</div>
+            <ul class="footer-nav-list">
+              <li><a href="index.html" class="footer-nav-link"><span>Overview</span><span class="page-badge">01</span></a></li>
+              <li><a href="architecture.html" class="footer-nav-link"><span>The Aurelius Core</span><span class="page-badge">02</span></a></li>
+              <li><a href="advisory-suite.html" class="footer-nav-link"><span>Autonomous Advisory</span><span class="page-badge">03</span></a></li>
+              <li><a href="security-enclave.html" class="footer-nav-link"><span>Security &amp; ZK Enclave</span><span class="page-badge">04</span></a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Sovereign Solutions</div>
+            <ul class="footer-nav-list">
+              <li><a href="family-offices.html" class="footer-nav-link"><span>Family Offices</span><span class="page-badge">05</span></a></li>
+              <li><a href="sovereign-tax.html" class="footer-nav-link"><span>Sovereign Tax</span><span class="page-badge">06</span></a></li>
+              <li><a href="alternative-assets.html" class="footer-nav-link"><span>Alternative Assets</span><span class="page-badge">07</span></a></li>
+              <li><a href="dynasty-estate.html" class="footer-nav-link"><span>Dynasty AI</span><span class="page-badge">08</span></a></li>
+              <li><a href="geopolitical-risk.html" class="footer-nav-link"><span>Geopolitical Risk</span><span class="page-badge">09</span></a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Intelligence &amp; Lab</div>
+            <ul class="footer-nav-list">
+              <li><a href="simulator.html" class="footer-nav-link"><span>Monte Carlo Lab</span><span class="page-badge">10</span></a></li>
+              <li><a href="case-studies.html" class="footer-nav-link"><span>Principal Ledgers</span><span class="page-badge">11</span></a></li>
+              <li><a href="intelligence.html" class="footer-nav-link"><span>Quantitative Research</span><span class="page-badge">12</span></a></li>
+              <li><a href="dispatch-article.html" class="footer-nav-link"><span>Monograph No. 14</span><span class="page-badge">13</span></a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Institution</div>
+            <ul class="footer-nav-list">
+              <li><a href="charter.html" class="footer-nav-link"><span>Institutional Charter</span><span class="page-badge">14</span></a></li>
+              <li><a href="membership.html" class="footer-nav-link"><span>Membership Tiers</span><span class="page-badge">15</span></a></li>
+              <li><a href="request-briefing.html" class="footer-nav-link"><span>Request Briefing</span><span class="page-badge">16</span></a></li>
+              <li><a href="client-terminal.html" class="footer-nav-link" style="color: var(--accent-primary);"><span>Live Client Terminal</span><span class="page-badge">17</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-enclaves">
+      <div class="container-wide">
+        <div class="enclaves-grid">
+          <div class="enclave-card"><div class="enclave-city"><span>Zurich Vault</span><span>CH-8001</span></div><div class="enclave-address">Bahnhofstrasse 45, 8001 Zürich, Switzerland</div><div class="enclave-status">&#9679; Air-Gapped Dedicated Alpine Vault</div></div>
+          <div class="enclave-card"><div class="enclave-city"><span>Singapore Hub</span><span>SG-049315</span></div><div class="enclave-address">10 Collyer Quay, Ocean Financial Centre, Singapore</div><div class="enclave-status">&#9679; Asian Family Office Enclave</div></div>
+          <div class="enclave-card"><div class="enclave-city"><span>New York Desk</span><span>US-10153</span></div><div class="enclave-address">767 Fifth Avenue, General Motors Building, NYC</div><div class="enclave-status">&#9679; Institutional Telemetry Node</div></div>
+          <div class="enclave-card"><div class="enclave-city"><span>Geneva Freeport</span><span>CH-1204</span></div><div class="enclave-address">Rue du Rhône 42, 1204 Genève, Switzerland</div><div class="enclave-status">&#9679; Direct Bullion &amp; Freeport Custody</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container-wide">
+        <p class="footer-disclaimer">REGULATORY NOTICE: Aurelius Quantitative Systems AG operates as an autonomous sovereign wealth architecture and technology infrastructure provider. Aurelius does not hold commingled customer deposits, sell proprietary financial products, or accept third-party commissions.</p>
+        <div class="footer-legal-bar">
+          <span>&copy; 2026 AURELIUS QUANTITATIVE SYSTEMS AG. ALL RIGHTS RESERVED. SWISS LAW GOVERNED.</span>
+          <span>ZK ROOT HASH: <span class="footer-hash">0x8e2c7a91bfd59104c8f2a64019de58c14f3b77209d841e2b5e0c679a</span></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/mock-data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Layer stack inspector interactive data
+    const layerData = {
+      "layer-5": {
+        tag: "LAYER 05 // EGRESS",
+        title: "Execution & Custody Bridge",
+        desc: "Aurelius never holds custody of assets. All trade allocations, sovereign bond rolls, and currency swaps are converted into cryptographically signed Financial Information eXchange (FIX) protocol orders and dispatched directly to client-owned accounts at UBS, J.P. Morgan Private Bank, and Lombard Odier.",
+        protocolTitle: "ENCRYPTION & PROTOCOL SPECS",
+        specs: "Protocol: FIX 4.4 / FIX 5.0 SP2<br>Signing: Hardware HSM Securosys Primus (Zurich)<br>Execution Latency: 2.4ms to Swiss Interbank Clearing (SIC)<br>Retrocessions / Kickbacks: 0.00 bps (Strictly forbidden)"
+      },
+      "layer-4": {
+        tag: "LAYER 04 // GOVERNANCE",
+        title: "Deterministic Guardrails",
+        desc: "All trade proposals emitted by the AI sub-agents pass through an immutable formal verification engine. Hard-coded rules derived from the client's family constitution, prenuptial agreements, and trust deeds cannot be overridden by any model inference.",
+        protocolTitle: "VERIFICATION RULES",
+        specs: "Max Permissible Drawdown: Hard-Coded (-3.0% Max 30-Day)<br>Sanctions & AML Check: Real-time OFAC & SECO filter<br>Kill-Switch Protocol: Physical YubiKey biometrics<br>Auditing: SHA-256 Merkle root tree"
+      },
+      "layer-3": {
+        tag: "LAYER 03 // COGNITION",
+        title: "Adversarial Agent Council",
+        desc: "Five specialized AI sub-agents engage in structured Nash bargaining. No trade can proceed until The Risk Hawk, The Tax Counsel, The Liquidity Architect, The Macro Strategist, and The Fiduciary Arbiter achieve Pareto-optimal equilibrium.",
+        protocolTitle: "CONSENSUS ALGORITHM",
+        specs: "Debate Rounds: 3 iterative passes<br>Consensus Latency: 38.4 milliseconds<br>Agent Architecture: Dedicated transformer reasoning models<br>Memory: Air-gapped vectorized vector ledger"
+      },
+      "layer-2": {
+        tag: "LAYER 02 // SYNTHESIS",
+        title: "Quantitative World Model",
+        desc: "Continuously updates a high-dimensional causal graph representing global sovereign debt markets, central bank balance sheet expansion, cross-border currency reserves, and commodity supply chokepoints.",
+        protocolTitle: "GRAPH CHARACTERISTICS",
+        specs: "Nodes Monitored: 4,820 global macro variables<br>Update Frequency: 100 milliseconds<br>Causal Engine: Structural VAR with bayesian priors<br>Black-Swan Calibration: 1973, 1987, 1998, 2008, 2020 regimes"
+      },
+      "layer-1": {
+        tag: "LAYER 01 // INGESTION",
+        title: "Custodian Ingestion Layer",
+        desc: "Ingests raw SWIFT MT940 statements, FIX order drop-copies, and proprietary API streams across all client custodians. Normalizes fragmented positions, private equity capital calls, and physical bullion weights into a unified real-time balance sheet.",
+        protocolTitle: "INGESTION CHANNELS",
+        specs: "Connected Custodians: UBS, JPM, Julius Bär, Lombard Odier, Goldman Sachs<br>Direct Feeds: SGX & Freeport Vault inventory API<br>Latency: Real-time push notifications<br>Data Sanitization: Homomorphic masking before reasoning"
+      }
+    };
+
+    document.querySelectorAll(".arch-layer").forEach(layer => {
+      layer.addEventListener("click", () => {
+        document.querySelectorAll(".arch-layer").forEach(l => l.classList.remove("active"));
+        layer.classList.add("active");
+
+        const key = layer.getAttribute("data-layer");
+        const data = layerData[key];
+        if (data) {
+          document.getElementById("inspector-tag").textContent = data.tag;
+          document.getElementById("inspector-title").textContent = data.title;
+          document.getElementById("inspector-desc").textContent = data.desc;
+          document.getElementById("inspector-protocol-title").textContent = data.protocolTitle;
+          document.getElementById("inspector-specs").innerHTML = data.specs;
+        }
+      });
+    });
+
+    // Agent selection function
+    function selectAgent(agentId) {
+      document.querySelectorAll(".agent-council-card").forEach(c => c.classList.remove("active"));
+      const card = document.querySelector(`.agent-council-card[data-agent="${agentId}"]`);
+      if (card) card.classList.add("active");
+
+      const agent = AureliusData.adversarialAgents.find(a => a.id === agentId);
+      if (agent) {
+        document.getElementById("agent-transcript-header").textContent = `AGENT TELEMETRY: ${agent.name.toUpperCase()} // LATENCY: 14MS`;
+        document.getElementById("agent-transcript-body").innerHTML = `
+          <p class="line-prompt">> ACTIVE AGENT PROFILE: ${agent.name} (${agent.role})</p>
+          <p class="line-agent">[${agent.name}]: ${agent.sampleTranscript}</p>
+          <p class="line-muted">Mathematical Objective Underwritten: ${agent.formula}</p>
+          <p class="line-highlight">&#10003; OPERATING PHILOSOPHY: ${agent.philosophy}</p>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>

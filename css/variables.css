@@ -1,0 +1,130 @@
+/* ==========================================================================
+   AURELIUS QUANTITATIVE SYSTEMS — DESIGN SYSTEM VARIABLES
+   Institutional Stealth Wealth & Swiss Architectural Precision
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+
+:root {
+  /* ==========================================================================
+     THEME 1: OBSIDIAN (Default Institutional Dark Mode — Sleek, Minimal, Razor Clarity)
+     ========================================================================== */
+  --bg-primary: #0B0C10;          /* Deep Carbon Obsidian */
+  --bg-secondary: #12141A;        /* Elevated Surface — Distinct & Architectural */
+  --bg-tertiary: #1A1D24;         /* Card & Input Surface */
+  --bg-elevated: #232732;         /* Hover / Modal / Active Surface */
+  --bg-glass: rgba(11, 12, 16, 0.92);
+
+  --text-primary: #FFFFFF;        /* Pure Titanium White — Maximum Clarity */
+  --text-secondary: #D0D4DE;      /* High-Contrast Crisp Silver */
+  --text-muted: #9197A6;          /* Visible Slate Architectural Ash (WCAG AA Compliant) */
+  --text-inverse: #0B0C10;        /* Inverted Obsidian */
+
+  --accent-primary: #D8B26E;      /* Luminous Champagne Titanium Gold */
+  --accent-hover: #E8C88A;        /* Brighter Champagne Hover */
+  --accent-subtle: rgba(216, 178, 110, 0.14);
+  --accent-glow: rgba(216, 178, 110, 0.28);
+
+  --border-hairline: rgba(255, 255, 255, 0.14); /* Clearly visible 1px structural grid lines */
+  --border-medium: rgba(255, 255, 255, 0.24);   /* Distinct card & control borders */
+  --border-accent: rgba(216, 178, 110, 0.45);   /* Champagne accent border */
+
+  /* Semantic Financial Accents */
+  --signal-positive: #10B981;     /* Vibrant Institutional Emerald */
+  --signal-positive-bg: rgba(16, 185, 129, 0.14);
+  --signal-warning: #F59E0B;      /* Luminous Amber Ochre */
+  --signal-warning-bg: rgba(245, 158, 11, 0.14);
+  --signal-negative: #EF4444;     /* Crisp Subdued Vermillion */
+  --signal-negative-bg: rgba(239, 68, 68, 0.14);
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Menlo, Monaco, Consolas, monospace;
+
+  /* Typography Scale */
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.84375rem;  /* 13.5px */
+  --text-base: 0.9375rem; /* 15px */
+  --text-md: 1.0625rem;   /* 17px */
+  --text-lg: 1.25rem;     /* 20px */
+  --text-xl: 1.5rem;      /* 24px */
+  --text-2xl: 2rem;       /* 32px */
+  --text-3xl: 2.75rem;    /* 44px */
+  --text-4xl: 3.75rem;    /* 60px */
+  --text-5xl: 5rem;       /* 80px */
+
+  /* Spacing Scale */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+  --space-32: 8rem;     /* 128px */
+
+  /* Structural Rules */
+  --max-width: 1440px;
+  --max-width-narrow: 1040px;
+  --max-width-wide: 1680px;
+  --header-height: 72px;
+  --telemetry-height: 34px;
+  --radius-none: 0px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+
+  /* Motion & Transitions (Institutional cubic-bezier, no bounce) */
+  --ease-institutional: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 160ms var(--ease-institutional);
+  --transition-base: 280ms var(--ease-institutional);
+  --transition-slow: 420ms var(--ease-institutional);
+
+  /* Elevation Shadows */
+  --shadow-subtle: 0 2px 10px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.45);
+  --shadow-modal: 0 24px 64px rgba(0, 0, 0, 0.75);
+  --shadow-glow: 0 0 25px rgba(216, 178, 110, 0.2);
+}
+
+/* ==========================================================================
+   THEME 2: PAPER IVORY (Minimal Archival Light Mode — Swiss Gallery Edition)
+   ========================================================================== */
+[data-theme="ivory"] {
+  --bg-primary: #F7F7F5;          /* Archival Off-White Museum Paper */
+  --bg-secondary: #FFFFFF;        /* Pure White Elevated Surface */
+  --bg-tertiary: #EDEDE8;         /* Defined Card & Input Surface */
+  --bg-elevated: #E2E2DC;         /* Hover / Modal Surface */
+  --bg-glass: rgba(247, 247, 245, 0.94);
+
+  --text-primary: #0E1015;        /* Deep Swiss Black Ink — High Contrast */
+  --text-secondary: #30343F;      /* Rich Dark Charcoal Graphite */
+  --text-muted: #5C6170;          /* Visible Slate Architectural Gray */
+  --text-inverse: #FFFFFF;
+
+  --accent-primary: #94712A;      /* Burnished Bronze Gold (High Contrast on White) */
+  --accent-hover: #7A5B1D;
+  --accent-subtle: rgba(148, 113, 42, 0.12);
+  --accent-glow: rgba(148, 113, 42, 0.24);
+
+  --border-hairline: rgba(14, 16, 21, 0.13); /* Clearly visible architectural lines */
+  --border-medium: rgba(14, 16, 21, 0.24);
+  --border-accent: rgba(148, 113, 42, 0.42);
+
+  --signal-positive: #059669;
+  --signal-positive-bg: rgba(5, 150, 105, 0.12);
+  --signal-warning: #D97706;
+  --signal-warning-bg: rgba(217, 119, 6, 0.12);
+  --signal-negative: #DC2626;
+  --signal-negative-bg: rgba(220, 38, 38, 0.12);
+
+  --shadow-subtle: 0 2px 8px rgba(14, 16, 21, 0.05);
+  --shadow-card: 0 4px 20px rgba(14, 16, 21, 0.08);
+  --shadow-modal: 0 24px 64px rgba(14, 16, 21, 0.16);
+  --shadow-glow: 0 0 25px rgba(148, 113, 42, 0.15);
+}

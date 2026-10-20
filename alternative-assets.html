@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="obsidian">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alternative & Illiquid Assets — Private Markets, Aviation & Art | AURELIUS</title>
+  <meta name="description" content="Institutional valuation, automated J-curve capital call pacing, yacht charter offset modeling, and fine art freeport collateralization.">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!-- TOP TELEMETRY BAR -->
+  <aside class="telemetry-bar" aria-label="Live Telemetry">
+    <div class="container-wide">
+      <div class="telemetry-group">
+        <span class="telemetry-item">
+          <span class="telemetry-dot" aria-hidden="true"></span>
+          <span class="label">ILLIQUID ASSETS:</span>
+          <span class="val">$921.4M SUPERVISED // J-CURVE PACED</span>
+        </span>
+        <span class="telemetry-item">
+          <span class="label">FREEPORTS:</span>
+          <span class="val">GENEVA // SINGAPORE // DELAWARE</span>
+        </span>
+      </div>
+
+      <div class="telemetry-group secondary-telemetry">
+        <span class="telemetry-item"><span class="label">UTC:</span> <span class="val" id="clock-utc">18:00:00</span></span>
+        <span class="telemetry-item"><span class="label">ZRH:</span> <span class="val" id="clock-zrh">20:00:00</span></span>
+        <span class="telemetry-item"><span class="label">SGP:</span> <span class="val" id="clock-sgp">02:00:00</span></span>
+        <span class="telemetry-item"><span class="label">NYC:</span> <span class="val" id="clock-nyc">14:00:00</span></span>
+      </div>
+
+      <div class="telemetry-group">
+        <button class="theme-toggle-btn" type="button" aria-label="Toggle Obsidian and Ivory Theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <span class="theme-label">IVORY</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <div class="container-wide">
+      <a href="index.html" class="brand-logo" aria-label="AURELIUS Homepage">
+        <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polygon points="16 2, 30 26, 2 26" />
+          <circle cx="16" cy="16" r="3" fill="currentColor" />
+        </svg>
+        <span class="brand-name">AURELIUS</span>
+        <span class="brand-tag">QUANTITATIVE</span>
+      </a>
+
+      <!-- Desktop Mega-Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <div class="nav-item">
+          <a href="architecture.html" class="nav-link">Platform <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
+          <div class="mega-dropdown">
+            <a href="architecture.html" class="dropdown-link"><div class="dropdown-title"><span>The Aurelius Core</span><span class="page-num">02</span></div><div class="dropdown-desc">5-layer adversarial multi-agent reasoning stack.</div></a>
+            <a href="advisory-suite.html" class="dropdown-link"><div class="dropdown-title"><span>Autonomous Advisory Suite</span><span class="page-num">03</span></div><div class="dropdown-desc">Voice synthesis briefings & encrypted execution.</div></a>
+            <a href="security-enclave.html" class="dropdown-link"><div class="dropdown-title"><span>Zero-Knowledge Enclave</span><span class="page-num">04</span></div><div class="dropdown-desc">Air-gapped Zurich bunker & dedicated silicon.</div></a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="family-offices.html" class="nav-link active">Sovereign Solutions <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
+          <div class="mega-dropdown wide">
+            <a href="family-offices.html" class="dropdown-link"><div class="dropdown-title"><span>Family Office Integration</span><span class="page-num">05</span></div><div class="dropdown-desc">Unified ledger consolidating 10+ custodians.</div></a>
+            <a href="sovereign-tax.html" class="dropdown-link"><div class="dropdown-title"><span>Cross-Border Tax Arbitrage</span><span class="page-num">06</span></div><div class="dropdown-desc">Residency day-counts & treaty optimization.</div></a>
+            <a href="alternative-assets.html" class="dropdown-link"><div class="dropdown-title"><span>Alternative & Illiquid Assets</span><span class="page-num">07</span></div><div class="dropdown-desc">Aviation, superyachts, freeports & PE pacing.</div></a>
+            <a href="dynasty-estate.html" class="dropdown-link"><div class="dropdown-title"><span>Dynasty & Succession AI</span><span class="page-num">08</span></div><div class="dropdown-desc">100-year multi-generational trust modeling.</div></a>
+            <a href="geopolitical-risk.html" class="dropdown-link" style="grid-column: span 2;"><div class="dropdown-title"><span>Geopolitical Risk & Tail Hedging</span><span class="page-num">09</span></div><div class="dropdown-desc">Black-swan telemetry and sanctions immunity.</div></a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="simulator.html" class="nav-link">Intelligence &amp; Lab <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
+          <div class="mega-dropdown">
+            <a href="simulator.html" class="dropdown-link"><div class="dropdown-title"><span>Monte Carlo Wealth Lab</span><span class="page-num">10</span></div><div class="dropdown-desc">500-path stochastic modeling sandbox.</div></a>
+            <a href="case-studies.html" class="dropdown-link"><div class="dropdown-title"><span>Anonymized Principal Ledgers</span><span class="page-num">11</span></div><div class="dropdown-desc">Verified Swiss banking secrecy outcomes.</div></a>
+            <a href="intelligence.html" class="dropdown-link"><div class="dropdown-title"><span>Quantitative Intelligence</span><span class="page-num">12</span></div><div class="dropdown-desc">Institutional monographs & macro dispatches.</div></a>
+            <a href="dispatch-article.html" class="dropdown-link"><div class="dropdown-title"><span>Whitepaper Monograph No. 14</span><span class="page-num">13</span></div><div class="dropdown-desc">Autonomous tax-loss harvesting in private debt.</div></a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="charter.html" class="nav-link">Institution <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
+          <div class="mega-dropdown">
+            <a href="charter.html" class="dropdown-link"><div class="dropdown-title"><span>Institutional Charter & Ethics</span><span class="page-num">14</span></div><div class="dropdown-desc">The 5 immutable fiduciary manifesto rules.</div></a>
+            <a href="membership.html" class="dropdown-link"><div class="dropdown-title"><span>Allocation Tiers & Access</span><span class="page-num">15</span></div><div class="dropdown-desc">Strictly capped at 150 global principals.</div></a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cmd-trigger-btn" type="button" aria-label="Open Command Palette">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span>Command</span>
+          <kbd>⌘K</kbd>
+        </button>
+        <a href="client-terminal.html" class="btn btn-secondary btn-sm btn-mono">Terminal</a>
+        <a href="request-briefing.html" class="btn btn-primary btn-sm btn-mono">Briefing</a>
+        <button class="mobile-nav-toggle" type="button" aria-label="Open Mobile Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-pillar-title">Pillar I: Platform</div>
+    <a href="architecture.html" class="mobile-drawer-link">02 — The Aurelius Core</a>
+    <a href="advisory-suite.html" class="mobile-drawer-link">03 — Autonomous Advisory Suite</a>
+    <a href="security-enclave.html" class="mobile-drawer-link">04 — Security &amp; Zero-Knowledge Enclave</a>
+
+    <div class="mobile-pillar-title">Pillar II: Sovereign Solutions</div>
+    <a href="family-offices.html" class="mobile-drawer-link">05 — Family Office Integration</a>
+    <a href="sovereign-tax.html" class="mobile-drawer-link">06 — Sovereign Tax &amp; Jurisdictions</a>
+    <a href="alternative-assets.html" class="mobile-drawer-link active">07 — Alternative &amp; Illiquid Assets</a>
+    <a href="dynasty-estate.html" class="mobile-drawer-link">08 — Dynasty &amp; Succession AI</a>
+    <a href="geopolitical-risk.html" class="mobile-drawer-link">09 — Geopolitical Risk &amp; Tail Hedging</a>
+
+    <div class="mobile-pillar-title">Pillar III: Intelligence &amp; Lab</div>
+    <a href="simulator.html" class="mobile-drawer-link">10 — Monte Carlo Wealth Lab</a>
+    <a href="case-studies.html" class="mobile-drawer-link">11 — Anonymized Principal Ledgers</a>
+    <a href="intelligence.html" class="mobile-drawer-link">12 — Quantitative Intelligence</a>
+    <a href="dispatch-article.html" class="mobile-drawer-link">13 — Whitepaper Monograph No. 14</a>
+
+    <div class="mobile-pillar-title">Pillar IV: Institution</div>
+    <a href="charter.html" class="mobile-drawer-link">14 — Institutional Charter &amp; Ethics</a>
+    <a href="membership.html" class="mobile-drawer-link">15 — Allocation Tiers &amp; Pricing</a>
+    <a href="request-briefing.html" class="mobile-drawer-link">16 — Request Private Briefing</a>
+    <a href="client-terminal.html" class="mobile-drawer-link" style="color: var(--accent-primary); font-weight: 600;">17 — Live Client Terminal</a>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+    
+    <header class="page-hero">
+      <div class="container-wide">
+        <div class="page-eyebrow">
+          <span class="badge badge-accent">PILLAR II // NON-PUBLIC MARKETS</span>
+          <span>VALUATION &amp; CASH FLOW MODELING</span>
+        </div>
+        <h1 class="page-title">
+          Alternative &amp; Illiquid Assets.
+        </h1>
+        <p class="page-lead">
+          For ultra-high-net-worth balance sheets, up to 60% of total wealth resides in non-public markets: private equity buyouts, direct co-investments, Gulfstream aviation, 80-meter superyachts, and fine art in Geneva freeports. Aurelius transforms opaque, illiquid holdings into continuous mathematical collateral.
+        </p>
+      </div>
+    </header>
+
+    <!-- SECTION 1: ASSET CLASS MODULES (Interactive Tabs) -->
+    <section class="section-py border-b">
+      <div class="container-wide">
+        <div style="margin-bottom: var(--space-6);">
+          <div class="page-eyebrow">SPECIALIZED ASSET SLEEVES</div>
+          <h2>Institutional Modules for Non-Public Capital</h2>
+          <p class="lead">Select an illiquid asset category to inspect live valuation algorithms, cash flow pacing, and collateralization frameworks.</p>
+        </div>
+
+        <div class="tabs-container">
+          <div class="tabs-nav" role="tablist">
+            <button class="tab-btn active" data-tab="tab-pe" type="button">PRIVATE EQUITY &amp; LP PACING</button>
+            <button class="tab-btn" data-tab="tab-aviation" type="button">AVIATION &amp; SUPERYACHTS</button>
+            <button class="tab-btn" data-tab="tab-art" type="button">FINE ART &amp; FREEPORTS</button>
+            <button class="tab-btn" data-tab="tab-realestate" type="button">TROPHY REAL ESTATE</button>
+          </div>
+
+          <div class="tab-content">
+            
+            <!-- Module 1: Private Equity & LP Commitment Pacing Calculator -->
+            <div id="tab-pe" class="tab-pane active">
+              <div class="swiss-grid" style="grid-template-columns: 1.1fr 0.9fr;">
+                <div>
+                  <div class="card-eyebrow">AUTOMATED J-CURVE MODELING</div>
+                  <h3 style="margin-bottom: var(--space-3);">LP Commitment Pacing &amp; Capital Call Forecast</h3>
+                  <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-5);">
+                    Prevent cash drag without risking catastrophic default on private equity capital calls. Aurelius models the historical drawdown pace across 240+ Tier-1 GP buyout funds (Blackstone, KKR, Carlyle, CVC, EQT) and stages liquidity from short-term sovereign bills.
+                  </p>
+
+                  <!-- Interactive Pacing Calculator -->
+                  <div class="card" style="background-color: var(--bg-tertiary);">
+                    <div class="input-range-header">
+                      <span class="form-label" style="margin: 0;">New LP Fund Commitment ($M USD):</span>
+                      <span class="range-val-badge" id="pe-val-badge">$50M USD</span>
+                    </div>
+                    <input type="range" class="input-range" id="pe-slider" min="10" max="250" step="5" value="50">
+
+                    <div class="table-container" style="margin-top: var(--space-4); border: none;">
+                      <table class="swiss-table">
+                        <thead>
+                          <tr>
+                            <th>Vintage Year</th>
+                            <th class="num-col">Projected Call (%)</th>
+                            <th class="num-col">Capital Called</th>
+                            <th class="num-col">Cumulative NAV</th>
+                          </tr>
+                        </thead>
+                        <tbody id="pe-schedule-tbody">
+                          <!-- Generated dynamically by JS -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card" style="background-color: var(--bg-tertiary); display: flex; flex-direction: column; justify-content: space-between;">
+                  <div>
+                    <div class="stat-label">PORTFOLIO PRIVATE MARKETS SLEEVE</div>
+                    <div class="stat-value" style="font-size: 2.2rem;">$497.6<span class="unit">M</span></div>
+                    <p class="stat-desc" style="margin-top: var(--space-2);">
+                      Active across 14 closed-end funds and 6 direct co-investment special purpose vehicles (SPVs).
+                    </p>
+                    <div class="callout" style="margin-top: var(--space-4);">
+                      <div class="callout-title">THE LIQUIDITY ARCHITECT GUARANTEE</div>
+                      <div class="callout-body" style="font-size: 12.5px;">
+                        Zero uninvested cash drag. All capital call requirements are funded via synchronized coupon laddering from Swiss Pfandbriefe and Lombard repo lines, generating an estimated <strong>+84 bps in annual portfolio yield alpha</strong>.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="border-top: 1px solid var(--border-hairline); padding-top: var(--space-4); font-family: var(--font-mono); font-size: 11px; display: flex; justify-content: space-between;">
+                    <span style="color: var(--text-muted);">ACTIVE PACING REGIME:</span>
+                    <span style="color: var(--signal-positive);">STOCHASTIC REINVESTMENT</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Module 2: Aviation & Superyachts -->
+            <div id="tab-aviation" class="tab-pane">
+              <div class="swiss-grid" style="grid-template-columns: 1fr 1fr;">
+                <div>
+                  <div class="card-eyebrow">PASSION ASSETS &amp; LOGISTICS</div>
+                  <h3 style="margin-bottom: var(--space-3);">Aviation &amp; Superyacht Operating Cost Offset</h3>
+                  <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-4);">
+                    A $75M Gulfstream G700 and a 72-meter Feadship motor yacht generate $6M to $10M in annual fixed operating burn. Aurelius continuously models charter yield offset curves, jet fuel forward hedges, and cross-border Maltese leasing structures.
+                  </p>
+
+                  <div class="card" style="background-color: var(--bg-tertiary);">
+                    <div class="form-group">
+                      <label class="form-label">Asset Profile Selected:</label>
+                      <select class="input-select" id="lifestyle-asset-select">
+                        <option value="jet">Gulfstream G700 (Private Jet - $75M Hull Value)</option>
+                        <option value="yacht">72m Feadship Superyacht ($110M Value)</option>
+                      </select>
+                    </div>
+
+                    <div id="lifestyle-metrics-box" class="mono" style="font-size: 12px; color: var(--text-secondary); line-height: 1.8;">
+                      Annual Operating Burn: $4,850,000 USD<br>
+                      Optimal Charter Weeks Offset: 6 Weeks ($2,100,000 Net)<br>
+                      Fuel Hedge Forward (Jet-A): 140,000 gal @ $2.42/gal (LOCKED)<br>
+                      Net Effective Annual Cost: <span style="color: var(--accent-primary); font-weight: 600;">$2,750,000 USD (-43.3% Offset)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card" style="background-color: var(--bg-tertiary);">
+                  <div class="stat-label">DEBT FACILITY VS. CASH LIQUIDATION</div>
+                  <div class="stat-value" style="font-size: 2rem;">+$22.5<span class="unit">M</span></div>
+                  <p class="stat-desc" style="margin-top: var(--space-3); line-height: 1.6;">
+                    10-year net capital preserved by financing lifestyle hull acquisitions via a Swiss Franc Lombard credit line (SNB + 42 bps) rather than liquidating appreciated equity index baskets subject to 37% capital gains tax.
+                  </p>
+                  <div style="margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--border-hairline); font-family: var(--font-mono); font-size: 11px; display: flex; justify-content: space-between;">
+                    <span style="color: var(--text-muted);">REGISTRATION SPV:</span>
+                    <span style="color: var(--accent-primary);">MALTA AOC // GENEVA HOLDING</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Module 3: Fine Art & Freeports -->
+            <div id="tab-art" class="tab-pane">
+              <div class="swiss-grid" style="grid-template-columns: 1fr 1fr;">
+                <div>
+                  <div class="card-eyebrow">BLUE-CHIP HOROLOGY &amp; FINE ART</div>
+                  <h3 style="margin-bottom: var(--space-3);">Freeport Collateralization &amp; LTV Lending</h3>
+                  <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-4);">
+                    Transforming museum-grade post-war art (Twombly, Basquiat, Richter) and rare horology vaulted in Geneva and Singapore into non-recourse liquidity lines. Aurelius tracks condition reports, auction market depth, and loan-to-value (LTV) headroom.
+                  </p>
+                  <div class="table-container" style="border: 1px solid var(--border-hairline);">
+                    <table class="swiss-table">
+                      <thead>
+                        <tr>
+                          <th>Vault Freeport</th>
+                          <th>Inventory Value</th>
+                          <th>Max Permissible LTV</th>
+                          <th class="num-col">Credit Capacity</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><strong>Geneva Freeport (CH)</strong></td>
+                          <td>$84,500,000 USD</td>
+                          <td>50% LTV</td>
+                          <td class="num-col mono cell-highlight">$42,250,000</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Le Freeport Singapore (SG)</strong></td>
+                          <td>$46,200,000 USD</td>
+                          <td>45% LTV</td>
+                          <td class="num-col mono cell-highlight">$20,790,000</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Delaware Vault (US)</strong></td>
+                          <td>$28,000,000 USD</td>
+                          <td>50% LTV</td>
+                          <td class="num-col mono cell-highlight">$14,000,000</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="card" style="background-color: var(--bg-tertiary);">
+                  <div class="stat-label">TOTAL ART CREDIT FACILITY</div>
+                  <div class="stat-value" style="font-size: 2rem;">$77.0<span class="unit">M</span></div>
+                  <p class="stat-desc" style="margin-top: var(--space-3); line-height: 1.6;">
+                    Unused emergency liquidity cushion. Fully air-gapped non-recourse facility at SOFR + 115 bps, callable in under 4 hours without public auction liquidation exposure or gallery fire-sale discounts.
+                  </p>
+                  <div style="margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--border-hairline); font-family: var(--font-mono); font-size: 11px; display: flex; justify-content: space-between;">
+                    <span style="color: var(--text-muted);">CLIMATE TELEMETRY:</span>
+                    <span style="color: var(--signal-positive);">19.5&deg;C // 50% RH (PERFECT)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Module 4: Trophy Real Estate -->
+            <div id="tab-realestate" class="tab-pane">
+              <div class="swiss-grid" style="grid-template-columns: 1fr 1fr;">
+                <div>
+                  <div class="card-eyebrow">PRIME RESIDENTIAL &amp; COMMERCIAL</div>
+                  <h3 style="margin-bottom: var(--space-3);">Global Trophy Real Estate Debt Monitor</h3>
+                  <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-4);">
+                    Surveillance of prime real estate holdings across London Belgravia, New York Central Park South, Geneva, and Tokyo. Monitors mortgage rollover dates, interest rate cap hedging, and cross-border inheritance duty exposure.
+                  </p>
+                  <ul style="display: flex; flex-direction: column; gap: var(--space-3); font-size: 13.5px; color: var(--text-secondary);">
+                    <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-hairline); padding-bottom: 8px;">
+                      <span>London Belgravia Residence (UK)</span>
+                      <span class="mono" style="color: var(--text-primary);">&pound;42.0M // 0% Debt</span>
+                    </li>
+                    <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-hairline); padding-bottom: 8px;">
+                      <span>NYC 57th St Penthouse (US)</span>
+                      <span class="mono" style="color: var(--text-primary);">$58.5M // SOFR + 85 bps Fixed</span>
+                    </li>
+                    <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-hairline); padding-bottom: 8px;">
+                      <span>Geneva Lakefront Estate (CH)</span>
+                      <span class="mono" style="color: var(--text-primary);">CHF 65.0M // SNB + 32 bps</span>
+                    </li>
+                    <li style="display: flex; justify-content: space-between;">
+                      <span>Tokyo Minato-ku Commercial Block (JP)</span>
+                      <span class="mono" style="color: var(--text-primary);">&yen;8.4B // 0.72% 10-Yr Fixed</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="card" style="background-color: var(--bg-tertiary);">
+                  <div class="stat-label">REFINANCING SAVINGS TELEMETRY</div>
+                  <div class="stat-value" style="font-size: 2rem;">118 <span class="unit">BPS</span></div>
+                  <p class="stat-desc" style="margin-top: var(--space-3); line-height: 1.6;">
+                    Average spread reduction achieved by Aurelius auctioning sovereign debt refinancing across 6 competing Swiss, British, and Japanese private banks simultaneously.
+                  </p>
+                  <div style="margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--border-hairline); font-family: var(--font-mono); font-size: 11px; display: flex; justify-content: space-between;">
+                    <span style="color: var(--text-muted);">INHERITANCE DUTY SHIELD:</span>
+                    <span style="color: var(--accent-primary);">100% OFFSHORE DEBT OFFSET</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div style="margin-top: var(--space-8); text-align: center;">
+          <a href="dynasty-estate.html" class="btn btn-primary btn-mono">Next: Dynasty &amp; Succession AI (100-Year Simulator) &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- COMMAND PALETTE MODAL -->
+  <div id="cmd-palette" class="cmd-modal-backdrop" role="dialog" aria-modal="true" aria-label="Command Palette">
+    <div class="cmd-modal">
+      <div class="cmd-header">
+        <svg class="cmd-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" class="cmd-input" placeholder="Search all 17 sovereign pages..." aria-label="Command search">
+        <span class="cmd-esc">ESC</span>
+      </div>
+      <div class="cmd-quick-actions">
+        <button class="cmd-chip" data-action="toggle-theme" type="button">Toggle Theme</button>
+        <button class="cmd-chip" data-action="terminal" type="button">Client Terminal</button>
+        <button class="cmd-chip" data-action="simulator" type="button">Monte Carlo Lab</button>
+        <button class="cmd-chip" data-action="briefing" type="button">Request Briefing</button>
+      </div>
+      <div class="cmd-results" role="listbox"></div>
+      <div class="cmd-footer">
+        <div class="cmd-hints"><span>&uarr;&darr; Navigate</span><span>&crarr; Select</span><span>ESC Close</span></div>
+        <span class="mono" style="color: var(--accent-primary);">AURELIUS OS v4.2</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARCHITECTURAL FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container-wide">
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <a href="index.html" class="brand-logo" style="margin-bottom: var(--space-3);">
+              <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="16 2, 30 26, 2 26" /><circle cx="16" cy="16" r="3" fill="currentColor" /></svg>
+              <span class="brand-name">AURELIUS</span>
+            </a>
+            <p>Autonomous Sovereign Wealth Architecture for $100M+ Liquid Net Worth Principals.</p>
+            <div style="margin-top: var(--space-4);"><span class="badge badge-accent">AIR-GAPPED SILICON</span></div>
+          </div>
+          <div>
+            <div class="footer-col-title">Platform</div>
+            <ul class="footer-nav-list">
+              <li><a href="index.html" class="footer-nav-link"><span>Overview</span><span class="page-badge">01</span></a></li>
+              <li><a href="architecture.html" class="footer-nav-link"><span>The Aurelius Core</span><span class="page-badge">02</span></a></li>
+              <li><a href="advisory-suite.html" class="footer-nav-link"><span>Autonomous Advisory</span><span class="page-badge">03</span></a></li>
+              <li><a href="security-enclave.html" class="footer-nav-link"><span>Security &amp; ZK Enclave</span><span class="page-badge">04</span></a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Sovereign Solutions</div>
+            <ul class="footer-nav-list">
+              <li><a href="family-offices.html" class="footer-nav-link"><span>Family Offices</span><span class="page-badge">05</span></a></li>
+              <li><a href="sovereign-tax.html" class="footer-nav-link"><span>Sovereign Tax</span><span class="page-badge">06</span></a></li>
+              <li><a href="alternative-assets.html" class="footer-nav-link"><span>Alternative Assets</span><span class="page-badge">07</span></a></li>
+              <li><a href="dynasty-estate.html" class="footer-nav-link"><span>Dynasty AI</span><span class="page-badge">08</span></a></li>
+              <li><a href="geopolitical-risk.html" class="footer-nav-link"><span>Geopolitical Risk</span><span class="page-badge">09</span></a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Intelligence &amp; Lab</div>
+            <ul class="footer-nav-list">
+              <li><a href="simulator.html" class="footer-nav-link"><span>Monte Carlo Lab</span><span class="page-badge">10</span></a></li>
+              <li><a href="case-studies.html" class="footer-nav-link"><span>Principal Ledgers</span><span class="page-badge">11</span></a></li>
+              <li><a href="intelligence.html" class="footer-nav-link"><span>Quantitative Research</span><span class="page-badge">12</span></a></li>
+              <li><a href="dispatch-article.html" class="footer-nav-link"><span>Monograph No. 14</span><span class="page-badge">13</span></a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Institution</div>
+            <ul class="footer-nav-list">
+              <li><a href="charter.html" class="footer-nav-link"><span>Institutional Charter</span><span class="page-badge">14</span></a></li>
+              <li><a href="membership.html" class="footer-nav-link"><span>Membership Tiers</span><span class="page-badge">15</span></a></li>
+              <li><a href="request-briefing.html" class="footer-nav-link"><span>Request Briefing</span><span class="page-badge">16</span></a></li>
+              <li><a href="client-terminal.html" class="footer-nav-link" style="color: var(--accent-primary);"><span>Live Client Terminal</span><span class="page-badge">17</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-enclaves">
+      <div class="container-wide">
+        <div class="enclaves-grid">
+          <div class="enclave-card"><div class="enclave-city"><span>Zurich Vault</span><span>CH-8001</span></div><div class="enclave-address">Bahnhofstrasse 45, 8001 Zürich, Switzerland</div><div class="enclave-status">&#9679; Air-Gapped Dedicated Alpine Vault</div></div>
+          <div class="enclave-card"><div class="enclave-city"><span>Singapore Hub</span><span>SG-049315</span></div><div class="enclave-address">10 Collyer Quay, Ocean Financial Centre, Singapore</div><div class="enclave-status">&#9679; Asian Family Office Enclave</div></div>
+          <div class="enclave-card"><div class="enclave-city"><span>New York Desk</span><span>US-10153</span></div><div class="enclave-address">767 Fifth Avenue, General Motors Building, NYC</div><div class="enclave-status">&#9679; Institutional Telemetry Node</div></div>
+          <div class="enclave-card"><div class="enclave-city"><span>Geneva Freeport</span><span>CH-1204</span></div><div class="enclave-address">Rue du Rhône 42, 1204 Genève, Switzerland</div><div class="enclave-status">&#9679; Direct Bullion &amp; Freeport Custody</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container-wide">
+        <p class="footer-disclaimer">REGULATORY NOTICE: Aurelius Quantitative Systems AG operates as an autonomous sovereign wealth architecture and technology infrastructure provider. Aurelius does not hold commingled customer deposits, sell proprietary financial products, or accept third-party commissions.</p>
+        <div class="footer-legal-bar">
+          <span>&copy; 2026 AURELIUS QUANTITATIVE SYSTEMS AG. ALL RIGHTS RESERVED. SWISS LAW GOVERNED.</span>
+          <span>ZK ROOT HASH: <span class="footer-hash">0x8e2c7a91bfd59104c8f2a64019de58c14f3b77209d841e2b5e0c679a</span></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/mock-data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // PE Commitment Pacing Dynamic Schedule Calculator
+    const peSlider = document.getElementById("pe-slider");
+    const peValBadge = document.getElementById("pe-val-badge");
+    const peTbody = document.getElementById("pe-schedule-tbody");
+
+    const renderPESchedule = (comm) => {
+      peValBadge.textContent = `$${comm}M USD`;
+      const schedule = [
+        { year: "Year 1 (Vintage)", pct: 25, called: comm * 0.25, nav: comm * 0.23 },
+        { year: "Year 2", pct: 35, called: comm * 0.35, nav: comm * 0.58 },
+        { year: "Year 3", pct: 25, called: comm * 0.25, nav: comm * 0.86 },
+        { year: "Year 4", pct: 10, called: comm * 0.10, nav: comm * 1.05 },
+        { year: "Year 5 (Harvest)", pct: 5, called: comm * 0.05, nav: comm * 1.34 }
+      ];
+
+      let html = "";
+      schedule.forEach(row => {
+        html += `
+          <tr>
+            <td><strong>${row.year}</strong></td>
+            <td class="num-col mono">${row.pct}%</td>
+            <td class="num-col mono cell-highlight">$${row.called.toFixed(1)}M</td>
+            <td class="num-col mono" style="color: var(--signal-positive);">$${row.nav.toFixed(1)}M</td>
+          </tr>
+        `;
+      });
+      peTbody.innerHTML = html;
+    };
+
+    peSlider.addEventListener("input", (e) => {
+      renderPESchedule(parseInt(e.target.value));
+    });
+
+    renderPESchedule(50);
+
+    // Lifestyle Asset Profile Switcher
+    const assetSelect = document.getElementById("lifestyle-asset-select");
+    const metricsBox = document.getElementById("lifestyle-metrics-box");
+
+    assetSelect.addEventListener("change", (e) => {
+      if (e.target.value === "jet") {
+        metricsBox.innerHTML = `
+          Annual Operating Burn: $4,850,000 USD<br>
+          Optimal Charter Weeks Offset: 6 Weeks ($2,100,000 Net)<br>
+          Fuel Hedge Forward (Jet-A): 140,000 gal @ $2.42/gal (LOCKED)<br>
+          Net Effective Annual Cost: <span style="color: var(--accent-primary); font-weight: 600;">$2,750,000 USD (-43.3% Offset)</span>
+        `;
+      } else {
+        metricsBox.innerHTML = `
+          Annual Operating Burn: $9,200,000 USD<br>
+          Optimal Charter Weeks Offset: 8 Weeks ($5,600,000 Net)<br>
+          Marine Gas Oil (MGO) Forward: 480 MT @ $720/MT (LOCKED)<br>
+          Net Effective Annual Cost: <span style="color: var(--accent-primary); font-weight: 600;">$3,600,000 USD (-60.8% Offset)</span>
+        `;
+      }
+    });
+  </script>
+</body>
+</html>
