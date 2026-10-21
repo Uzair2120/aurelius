@@ -1,20 +1,19 @@
-# AURELIUS QUANTITATIVE SYSTEMS
-### *Autonomous Sovereign Wealth Architecture*
+# AURELIUS SMART FINANCE
+### *Simple, Sleek & Professional Money Management for Everyone*
 
-> Bespoke, air-gapped AI financial advisory and multi-agent wealth management engines engineered exclusively for billionaires, single-family offices (SFOs), and sovereign principals ($100M+ liquid net worth).
+> Modern, intuitive personal finance and wealth-building platform engineered for everyday people. Clear explanations, zero Wall Street jargon, transparent pricing, and 24/7 AI-guided financial peace of mind.
 
 ---
 
-## 🏛️ Architecture & Overview
+## 🏛️ Platform Overview
 
-Aurelius is a complete 17-page static frontend web application built strictly with **HTML5, CSS3, and Vanilla ES6+ JavaScript**. It features zero external CSS or JavaScript frameworks (no Bootstrap, Tailwind, or React), delivering institutional-grade performance, razor-sharp typography, and mathematical precision.
+Aurelius is a complete 17-page frontend web application built strictly with **HTML5, CSS3, and Vanilla ES6+ JavaScript**. It features zero external CSS or JavaScript dependencies, delivering lightning-fast load times, clean typography, responsive layouts, and accessible financial tools that anyone with zero finance background can easily understand.
 
 ### Key Pillars
-* **Pillar I: Platform** — Multi-Agent AI Core, Autonomous Advisory Capabilities, and Zero-Knowledge Air-Gapped Silicon.
-* **Pillar II: Sovereign Solutions** — Single & Multi-Family Office Integration, Cross-Border Tax Arbitrage, Alternative & Illiquid Asset Tracking, Multi-Generational Dynasty Succession, and Macro Black-Swan Hedging.
-* **Pillar III: Intelligence & Lab** — Interactive Monte Carlo Wealth Lab (Merton Jump Diffusion), Anonymized Principal Ledgers, Quantitative Dispatches, and Research Monograph Reader.
-* **Pillar IV: Institution** — Institutional Charter & Fiduciary Ethics, Capital Allocation Protocol ($100M–$10B+), and Encrypted PGP Intake Consultation.
-* **Terminal** — Live Billionaire Client Terminal with dynamic multi-currency NAV conversion, multi-agent AI adversarial reasoning console, and biometric hardware approval queue.
+* **Getting Started & Platform** — Home landing page, 4 friendly automated money coaches (Safety, Saver, Goal, Growth), AI Financial Assistant chat, and bank-grade security guarantees.
+* **Everyday Guides** — Family & couples shared budgeting, smart everyday tax tips & deductions, investing basics for beginners (index funds vs. stocks), retirement planning roadmaps, and inflation protection.
+* **Interactive Tools** — Live interactive compound savings calculator, real user success stories, educational learning center, and a full interactive demo dashboard (Sarah's account).
+* **Transparent Pricing & Ethics** — Flat, affordable pricing ($0 Starter, $9 Plus, $19 Family), zero percentage cuts on your money, and 5 fiduciary ethical promises.
 
 ---
 
@@ -22,51 +21,45 @@ Aurelius is a complete 17-page static frontend web application built strictly wi
 
 | # | Page | File | Description |
 |---|------|------|-------------|
-| 01 | Sovereign Landing | `index.html` | Interactive asset topology canvas, live rate-shock decision preview, and core pillars |
-| 02 | The Aurelius Core | `architecture.html` | Clickable 5-layer multi-agent reasoning stack with live debate transcripts |
-| 03 | Advisory Suite | `advisory-suite.html` | Synthesized 90s executive briefing with real-time HTML5 audio-waveform visualizer |
-| 04 | Security Enclave | `security-enclave.html` | Interactive zero-knowledge (ZK) verification sandbox and air-gapped hardware telemetry |
-| 05 | Family Offices | `family-offices.html` | Multi-custodian balance sheet consolidation and consensus approval engine |
-| 06 | Sovereign Tax | `sovereign-tax.html` | Interactive day-count presence tracker (UK FIG, Swiss Forfait, UAE, Singapore) |
-| 07 | Alternative Assets | `alternative-assets.html` | Illiquid asset radar (Gulfstream G700, superyachts, blue-chip art) with secondary bids |
-| 08 | Dynasty & Estate | `dynasty-estate.html` | 100-year multi-generational dynasty trust projection canvas and succession rules |
-| 09 | Geopolitical Risk | `geopolitical-risk.html` | Live black-swan macro matrix and automated sovereign tail-risk hedges |
-| 10 | Wealth Lab | `simulator.html` | Interactive 500-path Monte Carlo engine with Merton jump-diffusion and Sharpe/Sortino/VaR |
-| 11 | Case Studies | `case-studies.html` | Anonymized principal ledgers with cryptographic SHA-256 verification |
-| 12 | Intelligence | `intelligence.html` | Filterable quantitative research library with live keyword filtering |
-| 13 | Monograph Reader | `dispatch-article.html` | Editorial research whitepaper reader with interactive footnotes and copyable citations |
-| 14 | Charter | `charter.html` | 5-point sovereign fiduciary constitution, ethics, and Zurich executive leadership |
-| 15 | Membership | `membership.html` | Capital tiers ($100M–$10B+), onboarding protocol, and 10-year fee comparison calculator |
-| 16 | Request Briefing | `request-briefing.html` | 4-step encrypted private intake wizard generating downloadable PGP session tokens |
-| 17 | Client Terminal | `client-terminal.html` | Full-screen simulated billionaire portfolio dashboard with real-time multi-agent console |
+| 01 | Home Overview | `index.html` | Clean, modern landing page with live interactive savings calculator, customer reviews & FAQ |
+| 02 | How Aurelius Works | `architecture.html` | Meet your 4 friendly automated coaches (Safety, Saver, Goal, Growth) |
+| 03 | AI Financial Assistant | `advisory-suite.html` | Interactive chat demo answering everyday money questions in plain English 24/7 |
+| 04 | Security & Privacy | `security-enclave.html` | Plain-English bank-grade 256-bit encryption and safety guarantees |
+| 05 | Family & Couples Money | `family-offices.html` | Manage shared household budgets, joint goals, and transparent permissions |
+| 06 | Smart Tax Tips | `sovereign-tax.html` | Interactive Tax Savings Estimator and simple guides to 401(k), IRA, and HSA deductions |
+| 07 | Investing Basics | `alternative-assets.html` | Plain-English introduction to index funds, stocks, and bonds with interactive comparison |
+| 08 | Retirement Planning | `dynasty-estate.html` | Interactive retirement nest egg estimator and age-by-age financial roadmap |
+| 09 | Keeping Money Safe | `geopolitical-risk.html` | Interactive emergency buffer calculator and historical market recovery facts |
+| 10 | Savings Calculator | `simulator.html` | Interactive compound growth simulator with custom monthly savings and visual charts |
+| 11 | Real User Stories | `case-studies.html` | Real stories of people who eliminated debt, saved emergency funds, and bought homes |
+| 12 | Learning Center | `intelligence.html` | 9 beginner-friendly guides on budgeting, saving, and investing with instant search & filter |
+| 13 | Guide: Compound Interest | `dispatch-article.html` | Visual, easy-to-understand breakdown of how compound interest grows your wealth |
+| 14 | Our 5 Ethical Promises | `charter.html` | Fiduciary manifesto: no kickbacks, no percentage cuts, and 100% plain language |
+| 15 | Pricing & Plans | `membership.html` | Transparent, flat subscription pricing ($0 Starter, $9 Plus, $19 Family) with zero cuts |
+| 16 | Get Started Free | `request-briefing.html` | Quick 2-minute free sign-up and contact form with no credit card required |
+| 17 | Live Dashboard Demo | `client-terminal.html` | Interactive personal wealth dashboard demo featuring Sarah's account & AI Coach |
 
 ---
 
-## 🎨 Design System & Dual Theme Engine
+## 🎨 Design System
 
-* **Obsidian (Default Dark Mode)**: Carbon obsidian (`#0B0C10`), elevated surfaces (`#12141A`), pure white typography (`#FFFFFF`), visible slate ash labels (`#9197A6`), and luminous champagne titanium gold (`#D8B26E`).
-* **Paper Ivory (Light Mode)**: Archival museum paper (`#F7F7F5`), pure white cards (`#FFFFFF`), deep ink typography (`#0E1015`), and burnished bronze accents (`#94712A`).
-* **Typography**: *Cormorant Garamond* (editorial display), *Inter* (UI & body), and *JetBrains Mono* (financial data & tabular numbers).
-* **Command Palette**: Press `Cmd + K` or `Ctrl + K` on any page to open the institutional search modal for instant keyboard navigation, live currency switching, and theme toggling.
+* **Light Mode (Default)**: Pure crisp white (`#FFFFFF`), sleek cool slate (`#F8FAFC`), deep legible text (`#0F172A`), modern tech blue accent (`#2563EB`), and emerald positive growth indicators (`#10B981`).
+* **Obsidian Mode (Optional)**: Modern dark palette available via top helper bar toggle.
+* **Typography**: *Inter* (clean, modern sans-serif) and *JetBrains Mono* (for numbers and data).
+* **Command Palette**: Press `Cmd + K` or `Ctrl + K` on any page to open the search modal for instant navigation across all pages and guides.
 
 ---
 
 ## 🚀 Getting Started
 
-No build tools, compilation, or package manager required. Simply open `index.html` in any modern web browser or serve locally:
+No build tools or installation needed. Simply open `index.html` in any web browser or run locally:
 
 ```bash
 # Using Python
 python -m http.server 8000
 
-# Using Node.js npx
+# Using Node.js
 npx serve .
 ```
 
-Navigate to `http://localhost:8000`.
-
----
-
-## 📄 License & Disclosures
-
-Confidential & Proprietary. All systems modeled under Swiss Federal Act on Data Protection (FADP Article 13) and FINMA circulars.
+Then visit `http://localhost:8000` in your browser.

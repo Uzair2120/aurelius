@@ -1,5 +1,6 @@
 /* ==========================================================================
-   AURELIUS QUANTITATIVE SYSTEMS — CSS RESET & BASE STYLES
+   AURELIUS WEALTH & FINANCE — CSS RESET & BASE STYLES
+   Clean, Sleek, Professional, Modern Typography
    ========================================================================== */
 
 *, *::before, *::after {
@@ -32,50 +33,52 @@ body {
   transition: background-color var(--transition-base), color var(--transition-base);
 }
 
-/* Typography Defaults */
+/* Typography Defaults — Clean, Modern, Sleek */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
-  font-weight: 300;
-  line-height: 1.15;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  line-height: 1.2;
   letter-spacing: -0.025em;
   color: var(--text-primary);
 }
 
 h1 {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+  letter-spacing: -0.035em;
+  font-weight: 800;
 }
 
 h2 {
-  font-size: clamp(2rem, 3.5vw, 3.25rem);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  letter-spacing: -0.03em;
+  font-weight: 700;
 }
 
 h3 {
-  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+  letter-spacing: -0.02em;
+  font-weight: 600;
 }
 
 h4 {
-  font-size: clamp(1.25rem, 1.8vw, 1.65rem);
+  font-size: clamp(1.15rem, 1.5vw, 1.4rem);
+  font-weight: 600;
 }
 
 h5 {
-  font-size: 1.125rem;
-  font-family: var(--font-sans);
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 h6 {
-  font-size: 0.8125rem;
-  font-family: var(--font-mono);
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 600;
 }
 
 p {
   color: var(--text-secondary);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
+  line-height: 1.65;
 }
 
 p:last-child {
@@ -83,10 +86,10 @@ p:last-child {
 }
 
 p.lead {
-  font-size: var(--text-lg);
-  line-height: 1.65;
-  color: var(--text-primary);
-  font-weight: 300;
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  font-weight: 400;
 }
 
 /* Links & Buttons */
@@ -100,64 +103,43 @@ button {
   background: none;
   border: none;
   font-family: inherit;
-  font-size: inherit;
-  color: inherit;
   cursor: pointer;
+  color: inherit;
 }
 
-/* Code & Tabular Figures */
-code, kbd, samp, pre, .mono, .tabular {
-  font-family: var(--font-mono);
-  font-variant-numeric: tabular-nums lining-nums;
-  letter-spacing: -0.02em;
-}
-
-/* Media Elements */
-img, svg, video, canvas, audio, iframe, embed, object {
-  display: block;
-  max-width: 100%;
-}
-
-/* Lists */
-ul, ol {
-  list-style: none;
-}
-
-/* Tables */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+/* Form Inputs */
+input, select, textarea {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
   width: 100%;
 }
 
-/* Form Elements */
-input, select, textarea, button {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px var(--accent-subtle);
 }
 
-/* Selection */
+/* Images & Media */
+img, svg, video, canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utility Focus Rings */
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
 ::selection {
-  background-color: var(--accent-primary);
-  color: var(--text-inverse);
-}
-
-/* Scrollbars */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg-primary);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--border-medium);
-  border-radius: var(--radius-none);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-primary);
+  background-color: var(--accent-subtle);
+  color: var(--accent-primary);
 }

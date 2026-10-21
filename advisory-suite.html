@@ -1,44 +1,129 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="obsidian">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Autonomous Advisory Suite — Sovereign Wealth Interface | AURELIUS</title>
-  <meta name="description" content="Sub-second voice synthesis briefings, encrypted matrix messaging, and institutional CIO API access for sovereign principals.">
+  <title>Meet Your AI Financial Assistant | Aurelius</title>
+  <meta name="description" content="Ask everyday money questions in plain English. No jargon, no sales pitches, and 100% fiduciary advice 24/7.">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages.css">
+  <style>
+    .chat-container {
+      background: var(--bg-primary);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .chat-header {
+      padding: 1.25rem 1.5rem;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .chat-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--accent-primary);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+    .chat-messages {
+      padding: 1.5rem;
+      min-height: 320px;
+      max-height: 420px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .msg-bubble {
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-md);
+      max-width: 85%;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .msg-assistant {
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      align-self: flex-start;
+      border-bottom-left-radius: 2px;
+    }
+    .msg-user {
+      background: var(--accent-primary);
+      color: #FFFFFF;
+      align-self: flex-end;
+      border-bottom-right-radius: 2px;
+    }
+    .chat-presets {
+      padding: 0.75rem 1.25rem;
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .chat-preset-btn {
+      background: var(--bg-primary);
+      border: 1px solid var(--border-medium);
+      padding: 0.4rem 0.85rem;
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .chat-preset-btn:hover {
+      border-color: var(--accent-primary);
+      color: var(--accent-primary);
+      background: var(--bg-primary);
+    }
+    .chat-input-bar {
+      padding: 1rem 1.25rem;
+      background: var(--bg-primary);
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      gap: 0.75rem;
+    }
+    .chat-input-field {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+    }
+  </style>
 </head>
 <body>
 
-  <!-- TOP TELEMETRY BAR -->
-  <aside class="telemetry-bar" aria-label="Live Telemetry">
+  <!-- TOP HELPER BAR -->
+  <aside class="telemetry-bar" aria-label="Announcement Bar">
     <div class="container-wide">
       <div class="telemetry-group">
         <span class="telemetry-item">
           <span class="telemetry-dot" aria-hidden="true"></span>
-          <span class="label">VOICE SYNTHESIS:</span>
-          <span class="val">LOW LATENCY // ON-DEVICE</span>
+          <span class="val">AI Coach: Friendly, 24/7 personal financial guidance in plain English.</span>
         </span>
-        <span class="telemetry-item">
-          <span class="label">COMM CHANNEL:</span>
-          <span class="val">END-TO-END ENCRYPTED</span>
-        </span>
-      </div>
-
-      <div class="telemetry-group secondary-telemetry">
-        <span class="telemetry-item"><span class="label">UTC:</span> <span class="val" id="clock-utc">18:00:00</span></span>
-        <span class="telemetry-item"><span class="label">ZRH:</span> <span class="val" id="clock-zrh">20:00:00</span></span>
-        <span class="telemetry-item"><span class="label">SGP:</span> <span class="val" id="clock-sgp">02:00:00</span></span>
-        <span class="telemetry-item"><span class="label">NYC:</span> <span class="val" id="clock-nyc">14:00:00</span></span>
       </div>
 
       <div class="telemetry-group">
-        <button class="theme-toggle-btn" type="button" aria-label="Toggle Obsidian and Ivory Theme">
+        <button class="theme-toggle-btn" type="button" aria-label="Toggle Light and Obsidian Theme">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-          <span class="theme-label">IVORY</span>
+          <span class="theme-label">Light Mode</span>
         </button>
       </div>
     </div>
@@ -47,64 +132,46 @@
   <!-- SITE HEADER -->
   <header class="site-header">
     <div class="container-wide">
-      <a href="index.html" class="brand-logo" aria-label="AURELIUS Homepage">
-        <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
-          <polygon points="16 2, 30 26, 2 26" />
-          <circle cx="16" cy="16" r="3" fill="currentColor" />
+      <a href="index.html" class="brand-logo" aria-label="Aurelius Homepage">
+        <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" />
+          <path d="M11 19L16 9L21 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M13 15H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
         </svg>
-        <span class="brand-name">AURELIUS</span>
-        <span class="brand-tag">QUANTITATIVE</span>
+        <span class="brand-name">Aurelius</span>
+        <span class="brand-tag">Smart Finance</span>
       </a>
 
-      <!-- Desktop Mega-Menu -->
+      <!-- Simple Nav -->
       <nav class="nav-menu" aria-label="Primary Navigation">
         <div class="nav-item">
-          <a href="architecture.html" class="nav-link active">Platform <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
-          <div class="mega-dropdown">
-            <a href="architecture.html" class="dropdown-link"><div class="dropdown-title"><span>The Aurelius Core</span><span class="page-num">02</span></div><div class="dropdown-desc">5-layer adversarial multi-agent reasoning stack.</div></a>
-            <a href="advisory-suite.html" class="dropdown-link"><div class="dropdown-title"><span>Autonomous Advisory Suite</span><span class="page-num">03</span></div><div class="dropdown-desc">Voice synthesis briefings & encrypted execution.</div></a>
-            <a href="security-enclave.html" class="dropdown-link"><div class="dropdown-title"><span>Zero-Knowledge Enclave</span><span class="page-num">04</span></div><div class="dropdown-desc">Air-gapped Zurich bunker & dedicated silicon.</div></a>
-          </div>
+          <a href="index.html" class="nav-link">Home</a>
         </div>
-
         <div class="nav-item">
-          <a href="family-offices.html" class="nav-link">Sovereign Solutions <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
-          <div class="mega-dropdown wide">
-            <a href="family-offices.html" class="dropdown-link"><div class="dropdown-title"><span>Family Office Integration</span><span class="page-num">05</span></div><div class="dropdown-desc">Unified ledger consolidating 10+ custodians.</div></a>
-            <a href="sovereign-tax.html" class="dropdown-link"><div class="dropdown-title"><span>Cross-Border Tax Arbitrage</span><span class="page-num">06</span></div><div class="dropdown-desc">Residency day-counts & treaty optimization.</div></a>
-            <a href="alternative-assets.html" class="dropdown-link"><div class="dropdown-title"><span>Alternative & Illiquid Assets</span><span class="page-num">07</span></div><div class="dropdown-desc">Aviation, superyachts, freeports & PE pacing.</div></a>
-            <a href="dynasty-estate.html" class="dropdown-link"><div class="dropdown-title"><span>Dynasty & Succession AI</span><span class="page-num">08</span></div><div class="dropdown-desc">100-year multi-generational trust modeling.</div></a>
-            <a href="geopolitical-risk.html" class="dropdown-link" style="grid-column: span 2;"><div class="dropdown-title"><span>Geopolitical Risk & Tail Hedging</span><span class="page-num">09</span></div><div class="dropdown-desc">Black-swan telemetry and sanctions immunity.</div></a>
-          </div>
+          <a href="architecture.html" class="nav-link">How It Works</a>
         </div>
-
         <div class="nav-item">
-          <a href="simulator.html" class="nav-link">Intelligence &amp; Lab <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
-          <div class="mega-dropdown">
-            <a href="simulator.html" class="dropdown-link"><div class="dropdown-title"><span>Monte Carlo Wealth Lab</span><span class="page-num">10</span></div><div class="dropdown-desc">500-path stochastic modeling sandbox.</div></a>
-            <a href="case-studies.html" class="dropdown-link"><div class="dropdown-title"><span>Anonymized Principal Ledgers</span><span class="page-num">11</span></div><div class="dropdown-desc">Verified Swiss banking secrecy outcomes.</div></a>
-            <a href="intelligence.html" class="dropdown-link"><div class="dropdown-title"><span>Quantitative Intelligence</span><span class="page-num">12</span></div><div class="dropdown-desc">Institutional monographs & macro dispatches.</div></a>
-            <a href="dispatch-article.html" class="dropdown-link"><div class="dropdown-title"><span>Whitepaper Monograph No. 14</span><span class="page-num">13</span></div><div class="dropdown-desc">Autonomous tax-loss harvesting in private debt.</div></a>
-          </div>
+          <a href="simulator.html" class="nav-link">Savings Calculator</a>
         </div>
-
         <div class="nav-item">
-          <a href="charter.html" class="nav-link">Institution <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
-          <div class="mega-dropdown">
-            <a href="charter.html" class="dropdown-link"><div class="dropdown-title"><span>Institutional Charter & Ethics</span><span class="page-num">14</span></div><div class="dropdown-desc">The 5 immutable fiduciary manifesto rules.</div></a>
-            <a href="membership.html" class="dropdown-link"><div class="dropdown-title"><span>Allocation Tiers & Access</span><span class="page-num">15</span></div><div class="dropdown-desc">Strictly capped at 150 global principals.</div></a>
-          </div>
+          <a href="client-terminal.html" class="nav-link">Live Demo</a>
+        </div>
+        <div class="nav-item">
+          <a href="membership.html" class="nav-link">Pricing</a>
+        </div>
+        <div class="nav-item">
+          <a href="security-enclave.html" class="nav-link">Security</a>
         </div>
       </nav>
 
       <div class="header-actions">
-        <button class="cmd-trigger-btn" type="button" aria-label="Open Command Palette">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <span>Command</span>
+        <button class="cmd-trigger-btn" type="button" aria-label="Search">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span>Search</span>
           <kbd>⌘K</kbd>
         </button>
-        <a href="client-terminal.html" class="btn btn-secondary btn-sm btn-mono">Terminal</a>
-        <a href="request-briefing.html" class="btn btn-primary btn-sm btn-mono">Briefing</a>
+        <a href="client-terminal.html" class="btn btn-secondary btn-sm">Try Demo</a>
+        <a href="request-briefing.html" class="btn btn-primary btn-sm">Get Started Free</a>
         <button class="mobile-nav-toggle" type="button" aria-label="Open Mobile Menu">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
@@ -114,29 +181,19 @@
 
   <!-- Mobile Drawer -->
   <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
-    <div class="mobile-pillar-title">Pillar I: Platform</div>
-    <a href="architecture.html" class="mobile-drawer-link">02 — The Aurelius Core</a>
-    <a href="advisory-suite.html" class="mobile-drawer-link active">03 — Autonomous Advisory Suite</a>
-    <a href="security-enclave.html" class="mobile-drawer-link">04 — Security &amp; Zero-Knowledge Enclave</a>
-
-    <div class="mobile-pillar-title">Pillar II: Sovereign Solutions</div>
-    <a href="family-offices.html" class="mobile-drawer-link">05 — Family Office Integration</a>
-    <a href="sovereign-tax.html" class="mobile-drawer-link">06 — Sovereign Tax &amp; Jurisdictions</a>
-    <a href="alternative-assets.html" class="mobile-drawer-link">07 — Alternative &amp; Illiquid Assets</a>
-    <a href="dynasty-estate.html" class="mobile-drawer-link">08 — Dynasty &amp; Succession AI</a>
-    <a href="geopolitical-risk.html" class="mobile-drawer-link">09 — Geopolitical Risk &amp; Tail Hedging</a>
-
-    <div class="mobile-pillar-title">Pillar III: Intelligence &amp; Lab</div>
-    <a href="simulator.html" class="mobile-drawer-link">10 — Monte Carlo Wealth Lab</a>
-    <a href="case-studies.html" class="mobile-drawer-link">11 — Anonymized Principal Ledgers</a>
-    <a href="intelligence.html" class="mobile-drawer-link">12 — Quantitative Intelligence</a>
-    <a href="dispatch-article.html" class="mobile-drawer-link">13 — Whitepaper Monograph No. 14</a>
-
-    <div class="mobile-pillar-title">Pillar IV: Institution</div>
-    <a href="charter.html" class="mobile-drawer-link">14 — Institutional Charter &amp; Ethics</a>
-    <a href="membership.html" class="mobile-drawer-link">15 — Allocation Tiers &amp; Pricing</a>
-    <a href="request-briefing.html" class="mobile-drawer-link">16 — Request Private Briefing</a>
-    <a href="client-terminal.html" class="mobile-drawer-link" style="color: var(--accent-primary); font-weight: 600;">17 — Live Client Terminal</a>
+    <div class="mobile-pillar-title">Explore Aurelius</div>
+    <a href="index.html" class="mobile-drawer-link">Home Overview</a>
+    <a href="architecture.html" class="mobile-drawer-link">How It Works</a>
+    <a href="simulator.html" class="mobile-drawer-link">Savings Calculator</a>
+    <a href="sovereign-tax.html" class="mobile-drawer-link">Smart Tax Tips</a>
+    <a href="alternative-assets.html" class="mobile-drawer-link">Investing Basics</a>
+    <a href="dynasty-estate.html" class="mobile-drawer-link">Retirement Planning</a>
+    <a href="geopolitical-risk.html" class="mobile-drawer-link">Money Safety &amp; Inflation</a>
+    <a href="advisory-suite.html" class="mobile-drawer-link" style="color: var(--accent-primary); font-weight: 600;">AI Financial Assistant</a>
+    <a href="client-terminal.html" class="mobile-drawer-link">Live Demo</a>
+    <a href="membership.html" class="mobile-drawer-link">Pricing Plans</a>
+    <a href="security-enclave.html" class="mobile-drawer-link">Security &amp; Privacy</a>
+    <a href="request-briefing.html" class="mobile-drawer-link">Get Started Free</a>
   </div>
 
   <!-- MAIN CONTENT -->
@@ -145,224 +202,130 @@
     <header class="page-hero">
       <div class="container-wide">
         <div class="page-eyebrow">
-          <span class="badge badge-accent">PILLAR I // ADVISORY INTERFACE</span>
-          <span>AUTONOMOUS FIDUCIARY DIALOGUE</span>
+          <span class="badge badge-accent">🤖 24/7 FINANCIAL COACH</span>
+          <span>FRIENDLY &amp; INTUITIVE</span>
         </div>
         <h1 class="page-title">
-          Autonomous Advisory Suite: Precision at your command.
+          Ask everyday money questions in plain English.
         </h1>
         <p class="page-lead">
-          Principals communicate with Aurelius through high-definition encrypted voice, asynchronous Signal/Matrix messaging, or direct programmatic API feeds for family office Chief Investment Officers. No awkward relationship manager calls, no sales pitches—only instant mathematical answers.
+          No expensive advisor hourly fees, no pushy sales pitches, and zero judgment. Ask anything from "Can I afford this vacation?" to "How do I start a simple budget?"
         </p>
       </div>
     </header>
 
-    <!-- SECTION 1: SIMULATED ADVISORY BRIEFING (Interactive Canvas Wave & Transcript) -->
+    <!-- SECTION 1: LIVE INTERACTIVE CHAT DEMO -->
     <section class="section-py border-b">
       <div class="container-wide">
-        <div style="margin-bottom: var(--space-6);">
-          <div class="page-eyebrow">SIMULATED MORNING EXECUTIVE BRIEFING</div>
-          <h2>Executive Wealth Briefing: 07:00 CET Telemetry</h2>
-          <p class="lead">Click play below to experience a simulated 90-second morning synthesized briefing delivering portfolio delta, capital call pacing, and overnight geopolitical impacts.</p>
-        </div>
-
-        <div class="audio-briefing-box">
-          <div class="briefing-header">
-            <div style="display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap;">
-              <span class="badge badge-emerald">&#9679; SYNTHESIS ENGINE READY</span>
-              <span class="mono" style="font-size: 11px; color: var(--text-muted);">PRINCIPAL: #PRIN-8841 // ZURICH ENCLAVE</span>
-            </div>
-            <button id="briefing-play-btn" class="btn btn-primary btn-sm btn-mono" type="button">
-              PLAY 90-SECOND BRIEFING
-            </button>
-          </div>
-
-          <!-- Canvas Audio Waveform Visualizer -->
-          <canvas id="briefing-wave-canvas" class="briefing-wave-canvas"></canvas>
-
-          <!-- Synchronized Transcript Stream -->
-          <div class="briefing-transcript-stream">
-            <div class="transcript-line active">
-              <span class="transcript-timestamp">[00:00 - 00:18]</span>
-              "Good morning, Principal. Your consolidated net worth stands at $1,842,910,400 USD across 5 custodians, up 0.14% overnight driven by private credit coupon distribution."
-            </div>
-            <div class="transcript-line">
-              <span class="transcript-timestamp">[00:19 - 00:36]</span>
-              "Overnight, the Federal Reserve signaled neutral policy; US 10-year yields tightened 4 basis points to 4.18%. Your direct index tax-loss harvesting sleeve captured $412,000 in capital losses at J.P. Morgan."
-            </div>
-            <div class="transcript-line">
-              <span class="transcript-timestamp">[00:37 - 00:54]</span>
-              "A capital call of $14.2M from Blackstone Strategic Opportunities IV has been verified. The Liquidity Architect has staged liquidation from short-term Swiss Pfandbriefe without equity drag."
-            </div>
-            <div class="transcript-line">
-              <span class="transcript-timestamp">[00:55 - 01:14]</span>
-              "Residency statutory check: You have 14 allowable UK presence days remaining for the calendar quarter. Your flight to Zurich is aligned with Swiss forfait limits."
-            </div>
-            <div class="transcript-line">
-              <span class="transcript-timestamp">[01:15 - 01:30]</span>
-              "All five AI sub-agents report nominal consensus. Your hardware key approval is pending for one cross-border dividend sweep. End of briefing."
+        
+        <div class="chat-container">
+          <div class="chat-header">
+            <div class="chat-avatar">✨</div>
+            <div>
+              <div style="font-weight: 700; font-size: 15px; color: var(--text-primary);">Aurelius Financial Coach</div>
+              <div style="font-size: 12px; color: var(--signal-positive); display: flex; align-items: center; gap: 4px;">
+                <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--signal-positive);"></span>
+                Online &bull; Ready to help
+              </div>
             </div>
           </div>
+
+          <div class="chat-messages" id="chat-messages">
+            <div class="msg-bubble msg-assistant">
+              Hi Sarah! 👋 I'm your Aurelius financial assistant. You can ask me any question about budgeting, saving, or investing in everyday language. Try one of the quick questions below or type your own!
+            </div>
+          </div>
+
+          <div class="chat-presets">
+            <button type="button" class="chat-preset-btn" data-query="How much emergency fund do I need?">💡 How much emergency fund?</button>
+            <button type="button" class="chat-preset-btn" data-query="Pay off credit cards or invest first?">💳 Pay debt or invest?</button>
+            <button type="button" class="chat-preset-btn" data-query="What is an index fund in 2 sentences?">📈 Explain index funds simply</button>
+            <button type="button" class="chat-preset-btn" data-query="How does the 50/30/20 budget work?">📊 50/30/20 rule</button>
+          </div>
+
+          <form class="chat-input-bar" id="chat-form">
+            <input type="text" class="chat-input-field" id="chat-input" placeholder="Type a financial question..." autocomplete="off">
+            <button type="submit" class="btn btn-primary btn-sm" style="padding: 0 1.25rem;">Ask Coach</button>
+          </form>
         </div>
+
       </div>
     </section>
 
-    <!-- SECTION 2: 3 INTERACTION MODALITIES -->
+    <!-- SECTION 2: 4 REASONS TO LOVE YOUR COACH -->
     <section class="section-py border-b" style="background-color: var(--bg-secondary);">
       <div class="container-wide">
-        <div style="margin-bottom: var(--space-8);">
-          <div class="page-eyebrow">CHANNELS OF SOVEREIGN ENGAGEMENT</div>
-          <h2>Three Modalities of Interaction</h2>
-          <p class="lead">Engineered to accommodate the lifestyle of international sovereign principals and the rigorous requirements of institutional family office teams.</p>
+        <div style="max-width: 680px; margin-bottom: var(--space-8);">
+          <div class="page-eyebrow">WHY IT'S DIFFERENT</div>
+          <h2>Financial Advice That Feels Human</h2>
+          <p class="lead">Built to give you genuine confidence with your money, without the stuffy Wall Street vibe.</p>
         </div>
 
-        <div class="swiss-grid" style="grid-template-columns: repeat(3, 1fr);">
-          <div class="card">
-            <div class="card-eyebrow">MODALITY 01</div>
-            <h3 class="card-title">Sovereign Voice Interface</h3>
-            <p class="card-desc">
-              Trained on private acoustic neural models running locally on client-dedicated silicon. Sub-200ms latency allows natural conversational queries during transit, on private aircraft, or in confidential residence rooms.
+        <div class="swiss-grid" style="grid-template-columns: repeat(2, 1fr); gap: var(--space-6);">
+          
+          <div class="card" style="padding: 2rem;">
+            <div style="font-size: 32px; margin-bottom: 0.75rem;">🤝</div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Zero Judgment, Ever</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
+              Many people feel embarrassed asking a human advisor basic questions. With Aurelius, no question is too basic. Ask anything anytime without hesitation.
             </p>
-            <div class="card-footer">
-              <span class="mono" style="font-size: 11px; color: var(--accent-primary);">SUB-200MS LATENCY</span>
-              <span class="badge">ON-DEVICE</span>
-            </div>
           </div>
 
-          <div class="card">
-            <div class="card-eyebrow">MODALITY 02</div>
-            <h3 class="card-title">Air-Gapped Matrix Messaging</h3>
-            <p class="card-desc">
-              Communicate asynchronously via end-to-end encrypted Matrix or Signal federated protocols. Request ad-hoc stress-tests, model yacht acquisitions, and approve multi-million dollar cash transfers with hardware key confirmation.
+          <div class="card" style="padding: 2rem;">
+            <div style="font-size: 32px; margin-bottom: 0.75rem;">🚫</div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">No Commission Bias</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
+              Traditional brokers often push expensive insurance policies or high-fee mutual funds because they earn commissions. Aurelius sells zero third-party products.
             </p>
-            <div class="card-footer">
-              <span class="mono" style="font-size: 11px; color: var(--accent-primary);">E2EE PROTOCOL</span>
-              <span class="badge badge-emerald">DOUBLE RATCHET</span>
-            </div>
           </div>
 
-          <div class="card">
-            <div class="card-eyebrow">MODALITY 03</div>
-            <h3 class="card-title">Family Office CIO / Analyst API</h3>
-            <p class="card-desc">
-              Empower your in-house investment team with programmatic GraphQL and FIX API endpoints. Extract normalized real-time balance sheets, automated LP commitment models, and institutional tax ledger exports.
+          <div class="card" style="padding: 2rem;">
+            <div style="font-size: 32px; margin-bottom: 0.75rem;">⚡</div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Instant Answers 24/7</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
+              Standing in a car dealership or planning a vacation on a Sunday night? You don't have to wait days for an appointment—get clear answers in seconds.
             </p>
-            <div class="card-footer">
-              <span class="mono" style="font-size: 11px; color: var(--accent-primary);">REST / GRAPHQL / FIX</span>
-              <span class="badge badge-accent">INSTITUTIONAL</span>
-            </div>
           </div>
+
+          <div class="card" style="padding: 2rem;">
+            <div style="font-size: 32px; margin-bottom: 0.75rem;">🎯</div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Tied Directly to Your Goals</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
+              Whether saving for your first home down payment or paying off college debt, the coach tailors every recommendation to your actual timeline.
+            </p>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- SECTION 3: INTERACTIVE CAPABILITY MATRIX (12 Metrics Filterable Table) -->
+    <!-- SECTION 3: COMMON FAQ -->
     <section class="section-py">
       <div class="container-wide">
-        <div style="margin-bottom: var(--space-6); display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: gap: var(--space-4);">
-          <div>
-            <div class="page-eyebrow">INSTITUTIONAL BENCHMARK</div>
-            <h2>Capability Matrix: Aurelius vs. Traditional Private Banking</h2>
-            <p class="lead">An objective comparison across 12 institutional wealth management criteria.</p>
+        <div style="max-width: 680px; margin-bottom: var(--space-8);">
+          <div class="page-eyebrow">SECURITY &amp; PRIVACY</div>
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: var(--space-4); max-width: 800px;">
+          <div class="card" style="padding: 1.5rem;">
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Can the AI make transactions or withdraw my money?</h4>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+              No. The AI Coach is strictly advisory. It cannot move, withdraw, or transfer money. Every action requires your explicit confirmation and password.
+            </p>
           </div>
-          <!-- Filter Buttons -->
-          <div style="display: flex; gap: var(--space-2);" role="tablist">
-            <button class="btn btn-secondary btn-sm btn-mono matrix-filter-btn active" data-filter="all">All Metrics</button>
-            <button class="btn btn-secondary btn-sm btn-mono matrix-filter-btn" data-filter="cost">Cost &amp; Execution</button>
-            <button class="btn btn-secondary btn-sm btn-mono matrix-filter-btn" data-filter="security">Security &amp; Privacy</button>
-            <button class="btn btn-secondary btn-sm btn-mono matrix-filter-btn" data-filter="fiduciary">Governance</button>
+
+          <div class="card" style="padding: 1.5rem;">
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Is my chat history kept private?</h4>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+              Yes, 100%. All communications are encrypted end-to-end. We never sell your personal financial questions or balances to third parties or advertisers.
+            </p>
           </div>
         </div>
 
-        <div class="table-container">
-          <table class="swiss-table" id="capability-matrix-table">
-            <thead>
-              <tr>
-                <th style="width: 30%;">Capability Metric</th>
-                <th style="width: 28%; color: var(--accent-primary);">Aurelius Autonomous Suite</th>
-                <th style="width: 21%;">Traditional Private Bank</th>
-                <th style="width: 21%;">Multi-Family Office (MFO)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr data-cat="cost">
-                <td><strong>1. Response Latency for Complex Inquiries</strong></td>
-                <td class="cell-highlight"><span class="badge badge-emerald">&lt; 40 Milliseconds</span></td>
-                <td>3 to 5 Business Days</td>
-                <td>24 to 48 Hours</td>
-              </tr>
-              <tr data-cat="cost">
-                <td><strong>2. Total Fee Drag on $1B Liquid Portfolio</strong></td>
-                <td class="cell-highlight">Flat Infrastructure License (~$1.2M)</td>
-                <td>75 bps AUM Fee ($7.5M/yr)</td>
-                <td>40 to 60 bps ($4.0M–$6.0M/yr)</td>
-              </tr>
-              <tr data-cat="cost">
-                <td><strong>3. Tax-Loss Harvesting Frequency</strong></td>
-                <td class="cell-highlight">Continuous Intra-day Algorithmic</td>
-                <td>Annual (December post-hoc)</td>
-                <td>Quarterly manual review</td>
-              </tr>
-              <tr data-cat="fiduciary">
-                <td><strong>4. Conflict of Interest (Kickbacks / Commission)</strong></td>
-                <td class="cell-highlight"><span class="badge badge-emerald">0.00ms (Mathematically Zero)</span></td>
-                <td>High (In-house structured products)</td>
-                <td>Moderate (Soft-dollar kickbacks)</td>
-              </tr>
-              <tr data-cat="cost">
-                <td><strong>5. Cross-Custodian Real-Time Aggregation</strong></td>
-                <td class="cell-highlight">Instantaneous Normalized Neural Ledger</td>
-                <td>Blind to External Banks</td>
-                <td>Delayed Monthly PDF Consolidation</td>
-              </tr>
-              <tr data-cat="security">
-                <td><strong>6. Infrastructure Privacy &amp; Air-Gapping</strong></td>
-                <td class="cell-highlight"><span class="badge badge-accent">100% Dedicated Air-Gapped Silicon</span></td>
-                <td>Shared Public Cloud / Mainframe</td>
-                <td>Commercial SaaS (Addepar/Black Diamond)</td>
-              </tr>
-              <tr data-cat="cost">
-                <td><strong>7. Alternative &amp; Illiquid Asset Valuation</strong></td>
-                <td class="cell-highlight">Continuous J-Curve, Aviation &amp; Art LTV</td>
-                <td>Lagged Quarterly GP marks</td>
-                <td>Manual spreadsheet estimates</td>
-              </tr>
-              <tr data-cat="cost">
-                <td><strong>8. Direct Execution Protocol</strong></td>
-                <td class="cell-highlight">Multi-sig Direct FIX Protocol Routing</td>
-                <td>Manual Broker Dealer Routing</td>
-                <td>Third-party Prime Broker Relay</td>
-              </tr>
-              <tr data-cat="security">
-                <td><strong>9. Black-Swan Macro Stress-Testing</strong></td>
-                <td class="cell-highlight">Real-time 500-Path Stochastic Engine</td>
-                <td>Standard Historical Variance</td>
-                <td>Ad-hoc Static Excel Scenarios</td>
-              </tr>
-              <tr data-cat="fiduciary">
-                <td><strong>10. Surveillance Availability</strong></td>
-                <td class="cell-highlight">24/7/365 Autonomous Global Telemetry</td>
-                <td>Banking Hours (09:00 - 17:00)</td>
-                <td>Business Hours</td>
-              </tr>
-              <tr data-cat="fiduciary">
-                <td><strong>11. Multi-Generational Trust Rule Enforcement</strong></td>
-                <td class="cell-highlight">Formal Deterministic Logic Verification</td>
-                <td>Human Trust Officer Discretion</td>
-                <td>External Trust Attorney Review</td>
-              </tr>
-              <tr data-cat="fiduciary">
-                <td><strong>12. Decision Auditability &amp; Traceability</strong></td>
-                <td class="cell-highlight">100% SHA-256 Merkle Provenance</td>
-                <td>Informal Email / Committee Notes</td>
-                <td>Meeting Minutes (Undigitized)</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div style="margin-top: var(--space-6); text-align: center;">
-          <a href="security-enclave.html" class="btn btn-primary btn-mono">Next: Zero-Knowledge Security Enclave &rarr;</a>
+        <div style="margin-top: var(--space-8); display: flex; gap: var(--space-4); flex-wrap: wrap;">
+          <a href="client-terminal.html" class="btn btn-primary">Try Live Dashboard Demo &rarr;</a>
+          <a href="request-briefing.html" class="btn btn-secondary">Get Started Free &rarr;</a>
         </div>
       </div>
     </section>
@@ -374,117 +337,131 @@
     <div class="cmd-modal">
       <div class="cmd-header">
         <svg class="cmd-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="text" class="cmd-input" placeholder="Search all 17 sovereign pages..." aria-label="Command search">
+        <input type="text" class="cmd-input" placeholder="Search pages, guides, tools..." aria-label="Command search">
         <span class="cmd-esc">ESC</span>
       </div>
       <div class="cmd-quick-actions">
         <button class="cmd-chip" data-action="toggle-theme" type="button">Toggle Theme</button>
-        <button class="cmd-chip" data-action="terminal" type="button">Client Terminal</button>
-        <button class="cmd-chip" data-action="simulator" type="button">Monte Carlo Lab</button>
-        <button class="cmd-chip" data-action="briefing" type="button">Request Briefing</button>
+        <button class="cmd-chip" data-action="terminal" type="button">Client Demo</button>
+        <button class="cmd-chip" data-action="simulator" type="button">Savings Calculator</button>
+        <button class="cmd-chip" data-action="briefing" type="button">Get Started</button>
       </div>
       <div class="cmd-results" role="listbox"></div>
       <div class="cmd-footer">
         <div class="cmd-hints"><span>&uarr;&darr; Navigate</span><span>&crarr; Select</span><span>ESC Close</span></div>
-        <span class="mono" style="color: var(--accent-primary);">AURELIUS OS v4.2</span>
+        <span class="mono" style="color: var(--accent-primary);">Aurelius Platform</span>
       </div>
     </div>
   </div>
 
-  <!-- ARCHITECTURAL FOOTER -->
+  <!-- CLEAN FOOTER -->
   <footer class="site-footer">
     <div class="footer-top">
       <div class="container-wide">
         <div class="footer-grid">
           <div class="footer-brand-col">
             <a href="index.html" class="brand-logo" style="margin-bottom: var(--space-3);">
-              <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="16 2, 30 26, 2 26" /><circle cx="16" cy="16" r="3" fill="currentColor" /></svg>
-              <span class="brand-name">AURELIUS</span>
+              <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" />
+                <path d="M11 19L16 9L21 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M13 15H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <span class="brand-name">Aurelius</span>
             </a>
-            <p>Autonomous Sovereign Wealth Architecture for $100M+ Liquid Net Worth Principals.</p>
-            <div style="margin-top: var(--space-4);"><span class="badge badge-accent">AIR-GAPPED SILICON</span></div>
+            <p style="font-size: 14px; line-height: 1.6; color: var(--text-secondary);">
+              Smart money management and wealth tools made simple for everyone.
+            </p>
           </div>
+
           <div>
-            <div class="footer-col-title">Platform</div>
+            <div class="footer-col-title">Navigation</div>
             <ul class="footer-nav-list">
-              <li><a href="index.html" class="footer-nav-link"><span>Overview</span><span class="page-badge">01</span></a></li>
-              <li><a href="architecture.html" class="footer-nav-link"><span>The Aurelius Core</span><span class="page-badge">02</span></a></li>
-              <li><a href="advisory-suite.html" class="footer-nav-link"><span>Autonomous Advisory</span><span class="page-badge">03</span></a></li>
-              <li><a href="security-enclave.html" class="footer-nav-link"><span>Security &amp; ZK Enclave</span><span class="page-badge">04</span></a></li>
+              <li><a href="index.html" class="footer-nav-link"><span>Home</span></a></li>
+              <li><a href="architecture.html" class="footer-nav-link"><span>How It Works</span></a></li>
+              <li><a href="simulator.html" class="footer-nav-link"><span>Savings Calculator</span></a></li>
+              <li><a href="client-terminal.html" class="footer-nav-link"><span>Live Demo</span></a></li>
             </ul>
           </div>
+
           <div>
-            <div class="footer-col-title">Sovereign Solutions</div>
+            <div class="footer-col-title">Plans &amp; Support</div>
             <ul class="footer-nav-list">
-              <li><a href="family-offices.html" class="footer-nav-link"><span>Family Offices</span><span class="page-badge">05</span></a></li>
-              <li><a href="sovereign-tax.html" class="footer-nav-link"><span>Sovereign Tax</span><span class="page-badge">06</span></a></li>
-              <li><a href="alternative-assets.html" class="footer-nav-link"><span>Alternative Assets</span><span class="page-badge">07</span></a></li>
-              <li><a href="dynasty-estate.html" class="footer-nav-link"><span>Dynasty AI</span><span class="page-badge">08</span></a></li>
-              <li><a href="geopolitical-risk.html" class="footer-nav-link"><span>Geopolitical Risk</span><span class="page-badge">09</span></a></li>
-            </ul>
-          </div>
-          <div>
-            <div class="footer-col-title">Intelligence &amp; Lab</div>
-            <ul class="footer-nav-list">
-              <li><a href="simulator.html" class="footer-nav-link"><span>Monte Carlo Lab</span><span class="page-badge">10</span></a></li>
-              <li><a href="case-studies.html" class="footer-nav-link"><span>Principal Ledgers</span><span class="page-badge">11</span></a></li>
-              <li><a href="intelligence.html" class="footer-nav-link"><span>Quantitative Research</span><span class="page-badge">12</span></a></li>
-              <li><a href="dispatch-article.html" class="footer-nav-link"><span>Monograph No. 14</span><span class="page-badge">13</span></a></li>
-            </ul>
-          </div>
-          <div>
-            <div class="footer-col-title">Institution</div>
-            <ul class="footer-nav-list">
-              <li><a href="charter.html" class="footer-nav-link"><span>Institutional Charter</span><span class="page-badge">14</span></a></li>
-              <li><a href="membership.html" class="footer-nav-link"><span>Membership Tiers</span><span class="page-badge">15</span></a></li>
-              <li><a href="request-briefing.html" class="footer-nav-link"><span>Request Briefing</span><span class="page-badge">16</span></a></li>
-              <li><a href="client-terminal.html" class="footer-nav-link" style="color: var(--accent-primary);"><span>Live Client Terminal</span><span class="page-badge">17</span></a></li>
+              <li><a href="membership.html" class="footer-nav-link"><span>Pricing Plans</span></a></li>
+              <li><a href="security-enclave.html" class="footer-nav-link"><span>Security &amp; Privacy</span></a></li>
+              <li><a href="request-briefing.html" class="footer-nav-link"><span>Get Started Free</span></a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-    <div class="footer-enclaves">
-      <div class="container-wide">
-        <div class="enclaves-grid">
-          <div class="enclave-card"><div class="enclave-city"><span>Zurich Vault</span><span>CH-8001</span></div><div class="enclave-address">Bahnhofstrasse 45, 8001 Zürich, Switzerland</div><div class="enclave-status">&#9679; Air-Gapped Dedicated Alpine Vault</div></div>
-          <div class="enclave-card"><div class="enclave-city"><span>Singapore Hub</span><span>SG-049315</span></div><div class="enclave-address">10 Collyer Quay, Ocean Financial Centre, Singapore</div><div class="enclave-status">&#9679; Asian Family Office Enclave</div></div>
-          <div class="enclave-card"><div class="enclave-city"><span>New York Desk</span><span>US-10153</span></div><div class="enclave-address">767 Fifth Avenue, General Motors Building, NYC</div><div class="enclave-status">&#9679; Institutional Telemetry Node</div></div>
-          <div class="enclave-card"><div class="enclave-city"><span>Geneva Freeport</span><span>CH-1204</span></div><div class="enclave-address">Rue du Rhône 42, 1204 Genève, Switzerland</div><div class="enclave-status">&#9679; Direct Bullion &amp; Freeport Custody</div></div>
-        </div>
-      </div>
-    </div>
+
     <div class="footer-bottom">
       <div class="container-wide">
-        <p class="footer-disclaimer">REGULATORY NOTICE: Aurelius Quantitative Systems AG operates as an autonomous sovereign wealth architecture and technology infrastructure provider. Aurelius does not hold commingled customer deposits, sell proprietary financial products, or accept third-party commissions.</p>
         <div class="footer-legal-bar">
-          <span>&copy; 2026 AURELIUS QUANTITATIVE SYSTEMS AG. ALL RIGHTS RESERVED. SWISS LAW GOVERNED.</span>
-          <span>ZK ROOT HASH: <span class="footer-hash">0x8e2c7a91bfd59104c8f2a64019de58c14f3b77209d841e2b5e0c679a</span></span>
+          <span>&copy; 2026 Aurelius Technologies. Simple, secure financial planning for everyone.</span>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="js/mock-data.js"></script>
   <script src="js/main.js"></script>
   <script>
-    // Matrix Filter Logic
-    document.querySelectorAll(".matrix-filter-btn").forEach(btn => {
+    // Live AI Chat Simulator
+    const chatForm = document.getElementById("chat-form");
+    const chatInput = document.getElementById("chat-input");
+    const chatMessages = document.getElementById("chat-messages");
+    const presetBtns = document.querySelectorAll(".chat-preset-btn");
+
+    const answers = {
+      "emergency": "A good rule of thumb is keeping 3 to 6 months of living expenses (rent, food, bills) in a High-Yield Savings Account earning ~4.5% APY. This protects you if you have a medical bill or lose a job, so you never have to go into credit card debt.",
+      "debt": "If you have high-interest credit card debt (usually 18% to 28% interest), pay that off first! No regular investment reliably makes 25% returns every year, so paying off high-interest debt is like an instant guaranteed 25% profit on your money.",
+      "index": "An index fund is like a giant gift basket of stocks. Instead of buying 1 stock like Apple or Tesla and hoping it doesn't drop, an index fund buys 500 top companies at once. If a few do poorly, the rest lift you up, giving you steady long-term growth.",
+      "budget": "The 50/30/20 rule is simple: 50% of your take-home pay goes to Needs (rent, groceries, utilities), 30% goes to Wants (dining out, hobbies, shopping), and 20% goes directly to Savings and Debt payoff. It keeps your finances balanced effortlessly."
+    };
+
+    function appendMessage(sender, text) {
+      const bubble = document.createElement("div");
+      bubble.className = sender === "user" ? "msg-bubble msg-user" : "msg-bubble msg-assistant";
+      bubble.textContent = text;
+      chatMessages.appendChild(bubble);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function processQuestion(q) {
+      appendMessage("user", q);
+
+      setTimeout(() => {
+        const lower = q.toLowerCase();
+        let reply = "That's a great question! In general, building simple automated habits—like saving $50 or $100 every payday into an index fund and keeping a 3-month cash buffer—builds more long-term financial security than trying to time the market.";
+
+        if (lower.includes("emergency") || lower.includes("buffer")) {
+          reply = answers["emergency"];
+        } else if (lower.includes("debt") || lower.includes("credit") || lower.includes("invest first")) {
+          reply = answers["debt"];
+        } else if (lower.includes("index") || lower.includes("stock")) {
+          reply = answers["index"];
+        } else if (lower.includes("budget") || lower.includes("50/30/20") || lower.includes("rule")) {
+          reply = answers["budget"];
+        }
+
+        appendMessage("assistant", reply);
+      }, 500);
+    }
+
+    chatForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const q = chatInput.value.trim();
+      if (!q) return;
+      chatInput.value = "";
+      processQuestion(q);
+    });
+
+    presetBtns.forEach(btn => {
       btn.addEventListener("click", () => {
-        document.querySelectorAll(".matrix-filter-btn").forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        const filter = btn.getAttribute("data-filter");
-        const rows = document.querySelectorAll("#capability-matrix-table tbody tr");
-
-        rows.forEach(row => {
-          if (filter === "all") {
-            row.style.display = "";
-          } else {
-            const cat = row.getAttribute("data-cat");
-            row.style.display = (cat === filter) ? "" : "none";
-          }
-        });
+        const q = btn.getAttribute("data-query");
+        processQuestion(q);
       });
     });
   </script>

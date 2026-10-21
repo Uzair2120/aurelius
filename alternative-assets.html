@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="obsidian">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alternative & Illiquid Assets — Private Markets, Aviation & Art | AURELIUS</title>
-  <meta name="description" content="Institutional valuation, automated J-curve capital call pacing, yacht charter offset modeling, and fine art freeport collateralization.">
+  <title>Investing Basics for Beginners | Aurelius</title>
+  <meta name="description" content="Learn the fundamentals of investing without the Wall Street jargon. Clear, plain-English guides to index funds, stocks, and bonds.">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -13,32 +13,20 @@
 </head>
 <body>
 
-  <!-- TOP TELEMETRY BAR -->
-  <aside class="telemetry-bar" aria-label="Live Telemetry">
+  <!-- TOP HELPER BAR -->
+  <aside class="telemetry-bar" aria-label="Announcement Bar">
     <div class="container-wide">
       <div class="telemetry-group">
         <span class="telemetry-item">
           <span class="telemetry-dot" aria-hidden="true"></span>
-          <span class="label">ILLIQUID ASSETS:</span>
-          <span class="val">$921.4M SUPERVISED // J-CURVE PACED</span>
+          <span class="val">Investing Tip: Time in the market beats timing the market.</span>
         </span>
-        <span class="telemetry-item">
-          <span class="label">FREEPORTS:</span>
-          <span class="val">GENEVA // SINGAPORE // DELAWARE</span>
-        </span>
-      </div>
-
-      <div class="telemetry-group secondary-telemetry">
-        <span class="telemetry-item"><span class="label">UTC:</span> <span class="val" id="clock-utc">18:00:00</span></span>
-        <span class="telemetry-item"><span class="label">ZRH:</span> <span class="val" id="clock-zrh">20:00:00</span></span>
-        <span class="telemetry-item"><span class="label">SGP:</span> <span class="val" id="clock-sgp">02:00:00</span></span>
-        <span class="telemetry-item"><span class="label">NYC:</span> <span class="val" id="clock-nyc">14:00:00</span></span>
       </div>
 
       <div class="telemetry-group">
-        <button class="theme-toggle-btn" type="button" aria-label="Toggle Obsidian and Ivory Theme">
+        <button class="theme-toggle-btn" type="button" aria-label="Toggle Light and Obsidian Theme">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-          <span class="theme-label">IVORY</span>
+          <span class="theme-label">Light Mode</span>
         </button>
       </div>
     </div>
@@ -47,64 +35,46 @@
   <!-- SITE HEADER -->
   <header class="site-header">
     <div class="container-wide">
-      <a href="index.html" class="brand-logo" aria-label="AURELIUS Homepage">
-        <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
-          <polygon points="16 2, 30 26, 2 26" />
-          <circle cx="16" cy="16" r="3" fill="currentColor" />
+      <a href="index.html" class="brand-logo" aria-label="Aurelius Homepage">
+        <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" />
+          <path d="M11 19L16 9L21 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M13 15H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
         </svg>
-        <span class="brand-name">AURELIUS</span>
-        <span class="brand-tag">QUANTITATIVE</span>
+        <span class="brand-name">Aurelius</span>
+        <span class="brand-tag">Smart Finance</span>
       </a>
 
-      <!-- Desktop Mega-Menu -->
+      <!-- Simple Nav -->
       <nav class="nav-menu" aria-label="Primary Navigation">
         <div class="nav-item">
-          <a href="architecture.html" class="nav-link">Platform <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
-          <div class="mega-dropdown">
-            <a href="architecture.html" class="dropdown-link"><div class="dropdown-title"><span>The Aurelius Core</span><span class="page-num">02</span></div><div class="dropdown-desc">5-layer adversarial multi-agent reasoning stack.</div></a>
-            <a href="advisory-suite.html" class="dropdown-link"><div class="dropdown-title"><span>Autonomous Advisory Suite</span><span class="page-num">03</span></div><div class="dropdown-desc">Voice synthesis briefings & encrypted execution.</div></a>
-            <a href="security-enclave.html" class="dropdown-link"><div class="dropdown-title"><span>Zero-Knowledge Enclave</span><span class="page-num">04</span></div><div class="dropdown-desc">Air-gapped Zurich bunker & dedicated silicon.</div></a>
-          </div>
+          <a href="index.html" class="nav-link">Home</a>
         </div>
-
         <div class="nav-item">
-          <a href="family-offices.html" class="nav-link active">Sovereign Solutions <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
-          <div class="mega-dropdown wide">
-            <a href="family-offices.html" class="dropdown-link"><div class="dropdown-title"><span>Family Office Integration</span><span class="page-num">05</span></div><div class="dropdown-desc">Unified ledger consolidating 10+ custodians.</div></a>
-            <a href="sovereign-tax.html" class="dropdown-link"><div class="dropdown-title"><span>Cross-Border Tax Arbitrage</span><span class="page-num">06</span></div><div class="dropdown-desc">Residency day-counts & treaty optimization.</div></a>
-            <a href="alternative-assets.html" class="dropdown-link"><div class="dropdown-title"><span>Alternative & Illiquid Assets</span><span class="page-num">07</span></div><div class="dropdown-desc">Aviation, superyachts, freeports & PE pacing.</div></a>
-            <a href="dynasty-estate.html" class="dropdown-link"><div class="dropdown-title"><span>Dynasty & Succession AI</span><span class="page-num">08</span></div><div class="dropdown-desc">100-year multi-generational trust modeling.</div></a>
-            <a href="geopolitical-risk.html" class="dropdown-link" style="grid-column: span 2;"><div class="dropdown-title"><span>Geopolitical Risk & Tail Hedging</span><span class="page-num">09</span></div><div class="dropdown-desc">Black-swan telemetry and sanctions immunity.</div></a>
-          </div>
+          <a href="architecture.html" class="nav-link">How It Works</a>
         </div>
-
         <div class="nav-item">
-          <a href="simulator.html" class="nav-link">Intelligence &amp; Lab <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
-          <div class="mega-dropdown">
-            <a href="simulator.html" class="dropdown-link"><div class="dropdown-title"><span>Monte Carlo Wealth Lab</span><span class="page-num">10</span></div><div class="dropdown-desc">500-path stochastic modeling sandbox.</div></a>
-            <a href="case-studies.html" class="dropdown-link"><div class="dropdown-title"><span>Anonymized Principal Ledgers</span><span class="page-num">11</span></div><div class="dropdown-desc">Verified Swiss banking secrecy outcomes.</div></a>
-            <a href="intelligence.html" class="dropdown-link"><div class="dropdown-title"><span>Quantitative Intelligence</span><span class="page-num">12</span></div><div class="dropdown-desc">Institutional monographs & macro dispatches.</div></a>
-            <a href="dispatch-article.html" class="dropdown-link"><div class="dropdown-title"><span>Whitepaper Monograph No. 14</span><span class="page-num">13</span></div><div class="dropdown-desc">Autonomous tax-loss harvesting in private debt.</div></a>
-          </div>
+          <a href="simulator.html" class="nav-link">Savings Calculator</a>
         </div>
-
         <div class="nav-item">
-          <a href="charter.html" class="nav-link">Institution <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
-          <div class="mega-dropdown">
-            <a href="charter.html" class="dropdown-link"><div class="dropdown-title"><span>Institutional Charter & Ethics</span><span class="page-num">14</span></div><div class="dropdown-desc">The 5 immutable fiduciary manifesto rules.</div></a>
-            <a href="membership.html" class="dropdown-link"><div class="dropdown-title"><span>Allocation Tiers & Access</span><span class="page-num">15</span></div><div class="dropdown-desc">Strictly capped at 150 global principals.</div></a>
-          </div>
+          <a href="client-terminal.html" class="nav-link">Live Demo</a>
+        </div>
+        <div class="nav-item">
+          <a href="membership.html" class="nav-link">Pricing</a>
+        </div>
+        <div class="nav-item">
+          <a href="security-enclave.html" class="nav-link">Security</a>
         </div>
       </nav>
 
       <div class="header-actions">
-        <button class="cmd-trigger-btn" type="button" aria-label="Open Command Palette">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <span>Command</span>
+        <button class="cmd-trigger-btn" type="button" aria-label="Search">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span>Search</span>
           <kbd>⌘K</kbd>
         </button>
-        <a href="client-terminal.html" class="btn btn-secondary btn-sm btn-mono">Terminal</a>
-        <a href="request-briefing.html" class="btn btn-primary btn-sm btn-mono">Briefing</a>
+        <a href="client-terminal.html" class="btn btn-secondary btn-sm">Try Demo</a>
+        <a href="request-briefing.html" class="btn btn-primary btn-sm">Get Started Free</a>
         <button class="mobile-nav-toggle" type="button" aria-label="Open Mobile Menu">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
@@ -114,29 +84,19 @@
 
   <!-- Mobile Drawer -->
   <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
-    <div class="mobile-pillar-title">Pillar I: Platform</div>
-    <a href="architecture.html" class="mobile-drawer-link">02 — The Aurelius Core</a>
-    <a href="advisory-suite.html" class="mobile-drawer-link">03 — Autonomous Advisory Suite</a>
-    <a href="security-enclave.html" class="mobile-drawer-link">04 — Security &amp; Zero-Knowledge Enclave</a>
-
-    <div class="mobile-pillar-title">Pillar II: Sovereign Solutions</div>
-    <a href="family-offices.html" class="mobile-drawer-link">05 — Family Office Integration</a>
-    <a href="sovereign-tax.html" class="mobile-drawer-link">06 — Sovereign Tax &amp; Jurisdictions</a>
-    <a href="alternative-assets.html" class="mobile-drawer-link active">07 — Alternative &amp; Illiquid Assets</a>
-    <a href="dynasty-estate.html" class="mobile-drawer-link">08 — Dynasty &amp; Succession AI</a>
-    <a href="geopolitical-risk.html" class="mobile-drawer-link">09 — Geopolitical Risk &amp; Tail Hedging</a>
-
-    <div class="mobile-pillar-title">Pillar III: Intelligence &amp; Lab</div>
-    <a href="simulator.html" class="mobile-drawer-link">10 — Monte Carlo Wealth Lab</a>
-    <a href="case-studies.html" class="mobile-drawer-link">11 — Anonymized Principal Ledgers</a>
-    <a href="intelligence.html" class="mobile-drawer-link">12 — Quantitative Intelligence</a>
-    <a href="dispatch-article.html" class="mobile-drawer-link">13 — Whitepaper Monograph No. 14</a>
-
-    <div class="mobile-pillar-title">Pillar IV: Institution</div>
-    <a href="charter.html" class="mobile-drawer-link">14 — Institutional Charter &amp; Ethics</a>
-    <a href="membership.html" class="mobile-drawer-link">15 — Allocation Tiers &amp; Pricing</a>
-    <a href="request-briefing.html" class="mobile-drawer-link">16 — Request Private Briefing</a>
-    <a href="client-terminal.html" class="mobile-drawer-link" style="color: var(--accent-primary); font-weight: 600;">17 — Live Client Terminal</a>
+    <div class="mobile-pillar-title">Explore Aurelius</div>
+    <a href="index.html" class="mobile-drawer-link">Home Overview</a>
+    <a href="architecture.html" class="mobile-drawer-link">How It Works</a>
+    <a href="simulator.html" class="mobile-drawer-link">Savings Calculator</a>
+    <a href="sovereign-tax.html" class="mobile-drawer-link">Smart Tax Tips</a>
+    <a href="alternative-assets.html" class="mobile-drawer-link" style="color: var(--accent-primary); font-weight: 600;">Investing Basics</a>
+    <a href="dynasty-estate.html" class="mobile-drawer-link">Retirement Planning</a>
+    <a href="geopolitical-risk.html" class="mobile-drawer-link">Money Safety &amp; Inflation</a>
+    <a href="advisory-suite.html" class="mobile-drawer-link">AI Financial Assistant</a>
+    <a href="client-terminal.html" class="mobile-drawer-link">Live Demo</a>
+    <a href="membership.html" class="mobile-drawer-link">Pricing Plans</a>
+    <a href="security-enclave.html" class="mobile-drawer-link">Security &amp; Privacy</a>
+    <a href="request-briefing.html" class="mobile-drawer-link">Get Started Free</a>
   </div>
 
   <!-- MAIN CONTENT -->
@@ -145,243 +105,194 @@
     <header class="page-hero">
       <div class="container-wide">
         <div class="page-eyebrow">
-          <span class="badge badge-accent">PILLAR II // NON-PUBLIC MARKETS</span>
-          <span>VALUATION &amp; CASH FLOW MODELING</span>
+          <span class="badge badge-accent">📈 INVESTING 101</span>
+          <span>NO WALL STREET JARGON</span>
         </div>
         <h1 class="page-title">
-          Alternative &amp; Illiquid Assets.
+          How investing works, explained in plain English.
         </h1>
         <p class="page-lead">
-          For ultra-high-net-worth balance sheets, up to 60% of total wealth resides in non-public markets: private equity buyouts, direct co-investments, Gulfstream aviation, 80-meter superyachts, and fine art in Geneva freeports. Aurelius transforms opaque, illiquid holdings into continuous mathematical collateral.
+          You don't need a million dollars, a finance degree, or hours of free time to build long-term wealth. Here is everything you need to know about growing your money safely and consistently.
         </p>
       </div>
     </header>
 
-    <!-- SECTION 1: ASSET CLASS MODULES (Interactive Tabs) -->
+    <!-- SECTION 1: THE 4 CORE ASSET TYPES -->
     <section class="section-py border-b">
       <div class="container-wide">
-        <div style="margin-bottom: var(--space-6);">
-          <div class="page-eyebrow">SPECIALIZED ASSET SLEEVES</div>
-          <h2>Institutional Modules for Non-Public Capital</h2>
-          <p class="lead">Select an illiquid asset category to inspect live valuation algorithms, cash flow pacing, and collateralization frameworks.</p>
+        <div style="max-width: 720px; margin-bottom: var(--space-8);">
+          <div class="page-eyebrow">THE 4 BUILDING BLOCKS</div>
+          <h2>Where Does Money Actually Go?</h2>
+          <p class="lead">Every investment in the world falls into a few simple categories. Here are the only 4 you really need to care about.</p>
         </div>
 
-        <div class="tabs-container">
-          <div class="tabs-nav" role="tablist">
-            <button class="tab-btn active" data-tab="tab-pe" type="button">PRIVATE EQUITY &amp; LP PACING</button>
-            <button class="tab-btn" data-tab="tab-aviation" type="button">AVIATION &amp; SUPERYACHTS</button>
-            <button class="tab-btn" data-tab="tab-art" type="button">FINE ART &amp; FREEPORTS</button>
-            <button class="tab-btn" data-tab="tab-realestate" type="button">TROPHY REAL ESTATE</button>
+        <div class="swiss-grid" style="grid-template-columns: repeat(2, 1fr); gap: var(--space-6);">
+          
+          <div class="card" style="padding: 2rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-size: 32px;">🏦</span>
+              <span class="badge badge-emerald">LOWEST RISK</span>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">1. High-Yield Cash Savings</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+              Instead of earning 0.01% at an old traditional bank, modern high-yield accounts pay 4% to 5% APY while keeping your money 100% FDIC-insured and instantly accessible.
+            </p>
+            <div style="font-size: 12px; color: var(--text-primary); font-weight: 600; padding: 0.5rem 0.75rem; background: var(--bg-secondary); border-radius: 6px;">
+              Best for: Emergency funds, upcoming vacations, down payments (0-2 years).
+            </div>
           </div>
 
-          <div class="tab-content">
-            
-            <!-- Module 1: Private Equity & LP Commitment Pacing Calculator -->
-            <div id="tab-pe" class="tab-pane active">
-              <div class="swiss-grid" style="grid-template-columns: 1.1fr 0.9fr;">
-                <div>
-                  <div class="card-eyebrow">AUTOMATED J-CURVE MODELING</div>
-                  <h3 style="margin-bottom: var(--space-3);">LP Commitment Pacing &amp; Capital Call Forecast</h3>
-                  <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-5);">
-                    Prevent cash drag without risking catastrophic default on private equity capital calls. Aurelius models the historical drawdown pace across 240+ Tier-1 GP buyout funds (Blackstone, KKR, Carlyle, CVC, EQT) and stages liquidity from short-term sovereign bills.
-                  </p>
+          <div class="card" style="padding: 2rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-size: 32px;">📊</span>
+              <span class="badge badge-accent">SMARTEST CHOICE</span>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">2. Index Funds &amp; ETFs</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+              Instead of guessing which single company will succeed, an S&P 500 index fund lets you buy a tiny slice of the 500 biggest companies in the USA (Apple, Microsoft, Amazon, etc.) all in one click.
+            </p>
+            <div style="font-size: 12px; color: var(--text-primary); font-weight: 600; padding: 0.5rem 0.75rem; background: var(--bg-secondary); border-radius: 6px;">
+              Best for: Long-term wealth building, retirement, financial freedom (5+ years).
+            </div>
+          </div>
 
-                  <!-- Interactive Pacing Calculator -->
-                  <div class="card" style="background-color: var(--bg-tertiary);">
-                    <div class="input-range-header">
-                      <span class="form-label" style="margin: 0;">New LP Fund Commitment ($M USD):</span>
-                      <span class="range-val-badge" id="pe-val-badge">$50M USD</span>
-                    </div>
-                    <input type="range" class="input-range" id="pe-slider" min="10" max="250" step="5" value="50">
+          <div class="card" style="padding: 2rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-size: 32px;">📜</span>
+              <span class="badge badge-emerald">STABLE INCOME</span>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">3. Bonds &amp; Fixed Income</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+              A bond is simply a loan you give to the government or a reliable company. In return, they pay you guaranteed interest over time, then return your original money in full.
+            </p>
+            <div style="font-size: 12px; color: var(--text-primary); font-weight: 600; padding: 0.5rem 0.75rem; background: var(--bg-secondary); border-radius: 6px;">
+              Best for: Adding stability to a portfolio and reducing market swings.
+            </div>
+          </div>
 
-                    <div class="table-container" style="margin-top: var(--space-4); border: none;">
-                      <table class="swiss-table">
-                        <thead>
-                          <tr>
-                            <th>Vintage Year</th>
-                            <th class="num-col">Projected Call (%)</th>
-                            <th class="num-col">Capital Called</th>
-                            <th class="num-col">Cumulative NAV</th>
-                          </tr>
-                        </thead>
-                        <tbody id="pe-schedule-tbody">
-                          <!-- Generated dynamically by JS -->
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
+          <div class="card" style="padding: 2rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-size: 32px;">🎯</span>
+              <span class="badge badge-amber">HIGHER RISK</span>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">4. Individual Stocks</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+              Buying individual shares of specific companies you like. It can be fun and exciting, but carries higher risk because if that single company struggles, your investment drops.
+            </p>
+            <div style="font-size: 12px; color: var(--text-primary); font-weight: 600; padding: 0.5rem 0.75rem; background: var(--bg-secondary); border-radius: 6px;">
+              Tip: Financial experts recommend keeping individual stocks under 5% of your total money.
+            </div>
+          </div>
 
-                <div class="card" style="background-color: var(--bg-tertiary); display: flex; flex-direction: column; justify-content: space-between;">
-                  <div>
-                    <div class="stat-label">PORTFOLIO PRIVATE MARKETS SLEEVE</div>
-                    <div class="stat-value" style="font-size: 2.2rem;">$497.6<span class="unit">M</span></div>
-                    <p class="stat-desc" style="margin-top: var(--space-2);">
-                      Active across 14 closed-end funds and 6 direct co-investment special purpose vehicles (SPVs).
-                    </p>
-                    <div class="callout" style="margin-top: var(--space-4);">
-                      <div class="callout-title">THE LIQUIDITY ARCHITECT GUARANTEE</div>
-                      <div class="callout-body" style="font-size: 12.5px;">
-                        Zero uninvested cash drag. All capital call requirements are funded via synchronized coupon laddering from Swiss Pfandbriefe and Lombard repo lines, generating an estimated <strong>+84 bps in annual portfolio yield alpha</strong>.
-                      </div>
-                    </div>
-                  </div>
+        </div>
+      </div>
+    </section>
 
-                  <div style="border-top: 1px solid var(--border-hairline); padding-top: var(--space-4); font-family: var(--font-mono); font-size: 11px; display: flex; justify-content: space-between;">
-                    <span style="color: var(--text-muted);">ACTIVE PACING REGIME:</span>
-                    <span style="color: var(--signal-positive);">STOCHASTIC REINVESTMENT</span>
-                  </div>
-                </div>
+    <!-- SECTION 2: INTERACTIVE COMPARISON SIMULATOR -->
+    <section class="section-py border-b" style="background-color: var(--bg-secondary);">
+      <div class="container-wide">
+        <div style="max-width: 720px; margin-bottom: var(--space-6);">
+          <div class="page-eyebrow">INTERACTIVE COMPARISON</div>
+          <h2>Comparing Where You Put Your Money</h2>
+          <p class="lead">See what happens over time to the exact same monthly savings depending on where you store it.</p>
+        </div>
+
+        <div class="card" style="padding: 2rem; margin-bottom: var(--space-6);">
+          <div class="swiss-grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-6);">
+            <div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                <label for="inv-monthly" style="font-weight: 600; font-size: 14px;">Monthly Amount</label>
+                <span id="inv-monthly-val" style="font-weight: 700; color: var(--accent-primary);">$300 / mo</span>
               </div>
+              <input type="range" id="inv-monthly" class="input-range" min="50" max="1500" step="25" value="300">
             </div>
 
-            <!-- Module 2: Aviation & Superyachts -->
-            <div id="tab-aviation" class="tab-pane">
-              <div class="swiss-grid" style="grid-template-columns: 1fr 1fr;">
-                <div>
-                  <div class="card-eyebrow">PASSION ASSETS &amp; LOGISTICS</div>
-                  <h3 style="margin-bottom: var(--space-3);">Aviation &amp; Superyacht Operating Cost Offset</h3>
-                  <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-4);">
-                    A $75M Gulfstream G700 and a 72-meter Feadship motor yacht generate $6M to $10M in annual fixed operating burn. Aurelius continuously models charter yield offset curves, jet fuel forward hedges, and cross-border Maltese leasing structures.
-                  </p>
-
-                  <div class="card" style="background-color: var(--bg-tertiary);">
-                    <div class="form-group">
-                      <label class="form-label">Asset Profile Selected:</label>
-                      <select class="input-select" id="lifestyle-asset-select">
-                        <option value="jet">Gulfstream G700 (Private Jet - $75M Hull Value)</option>
-                        <option value="yacht">72m Feadship Superyacht ($110M Value)</option>
-                      </select>
-                    </div>
-
-                    <div id="lifestyle-metrics-box" class="mono" style="font-size: 12px; color: var(--text-secondary); line-height: 1.8;">
-                      Annual Operating Burn: $4,850,000 USD<br>
-                      Optimal Charter Weeks Offset: 6 Weeks ($2,100,000 Net)<br>
-                      Fuel Hedge Forward (Jet-A): 140,000 gal @ $2.42/gal (LOCKED)<br>
-                      Net Effective Annual Cost: <span style="color: var(--accent-primary); font-weight: 600;">$2,750,000 USD (-43.3% Offset)</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="card" style="background-color: var(--bg-tertiary);">
-                  <div class="stat-label">DEBT FACILITY VS. CASH LIQUIDATION</div>
-                  <div class="stat-value" style="font-size: 2rem;">+$22.5<span class="unit">M</span></div>
-                  <p class="stat-desc" style="margin-top: var(--space-3); line-height: 1.6;">
-                    10-year net capital preserved by financing lifestyle hull acquisitions via a Swiss Franc Lombard credit line (SNB + 42 bps) rather than liquidating appreciated equity index baskets subject to 37% capital gains tax.
-                  </p>
-                  <div style="margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--border-hairline); font-family: var(--font-mono); font-size: 11px; display: flex; justify-content: space-between;">
-                    <span style="color: var(--text-muted);">REGISTRATION SPV:</span>
-                    <span style="color: var(--accent-primary);">MALTA AOC // GENEVA HOLDING</span>
-                  </div>
-                </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                <label for="inv-years" style="font-weight: 600; font-size: 14px;">Time Horizon</label>
+                <span id="inv-years-val" style="font-weight: 700; color: var(--accent-primary);">20 Years</span>
               </div>
+              <input type="range" id="inv-years" class="input-range" min="5" max="35" step="1" value="20">
             </div>
-
-            <!-- Module 3: Fine Art & Freeports -->
-            <div id="tab-art" class="tab-pane">
-              <div class="swiss-grid" style="grid-template-columns: 1fr 1fr;">
-                <div>
-                  <div class="card-eyebrow">BLUE-CHIP HOROLOGY &amp; FINE ART</div>
-                  <h3 style="margin-bottom: var(--space-3);">Freeport Collateralization &amp; LTV Lending</h3>
-                  <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-4);">
-                    Transforming museum-grade post-war art (Twombly, Basquiat, Richter) and rare horology vaulted in Geneva and Singapore into non-recourse liquidity lines. Aurelius tracks condition reports, auction market depth, and loan-to-value (LTV) headroom.
-                  </p>
-                  <div class="table-container" style="border: 1px solid var(--border-hairline);">
-                    <table class="swiss-table">
-                      <thead>
-                        <tr>
-                          <th>Vault Freeport</th>
-                          <th>Inventory Value</th>
-                          <th>Max Permissible LTV</th>
-                          <th class="num-col">Credit Capacity</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><strong>Geneva Freeport (CH)</strong></td>
-                          <td>$84,500,000 USD</td>
-                          <td>50% LTV</td>
-                          <td class="num-col mono cell-highlight">$42,250,000</td>
-                        </tr>
-                        <tr>
-                          <td><strong>Le Freeport Singapore (SG)</strong></td>
-                          <td>$46,200,000 USD</td>
-                          <td>45% LTV</td>
-                          <td class="num-col mono cell-highlight">$20,790,000</td>
-                        </tr>
-                        <tr>
-                          <td><strong>Delaware Vault (US)</strong></td>
-                          <td>$28,000,000 USD</td>
-                          <td>50% LTV</td>
-                          <td class="num-col mono cell-highlight">$14,000,000</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-
-                <div class="card" style="background-color: var(--bg-tertiary);">
-                  <div class="stat-label">TOTAL ART CREDIT FACILITY</div>
-                  <div class="stat-value" style="font-size: 2rem;">$77.0<span class="unit">M</span></div>
-                  <p class="stat-desc" style="margin-top: var(--space-3); line-height: 1.6;">
-                    Unused emergency liquidity cushion. Fully air-gapped non-recourse facility at SOFR + 115 bps, callable in under 4 hours without public auction liquidation exposure or gallery fire-sale discounts.
-                  </p>
-                  <div style="margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--border-hairline); font-family: var(--font-mono); font-size: 11px; display: flex; justify-content: space-between;">
-                    <span style="color: var(--text-muted);">CLIMATE TELEMETRY:</span>
-                    <span style="color: var(--signal-positive);">19.5&deg;C // 50% RH (PERFECT)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Module 4: Trophy Real Estate -->
-            <div id="tab-realestate" class="tab-pane">
-              <div class="swiss-grid" style="grid-template-columns: 1fr 1fr;">
-                <div>
-                  <div class="card-eyebrow">PRIME RESIDENTIAL &amp; COMMERCIAL</div>
-                  <h3 style="margin-bottom: var(--space-3);">Global Trophy Real Estate Debt Monitor</h3>
-                  <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-4);">
-                    Surveillance of prime real estate holdings across London Belgravia, New York Central Park South, Geneva, and Tokyo. Monitors mortgage rollover dates, interest rate cap hedging, and cross-border inheritance duty exposure.
-                  </p>
-                  <ul style="display: flex; flex-direction: column; gap: var(--space-3); font-size: 13.5px; color: var(--text-secondary);">
-                    <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-hairline); padding-bottom: 8px;">
-                      <span>London Belgravia Residence (UK)</span>
-                      <span class="mono" style="color: var(--text-primary);">&pound;42.0M // 0% Debt</span>
-                    </li>
-                    <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-hairline); padding-bottom: 8px;">
-                      <span>NYC 57th St Penthouse (US)</span>
-                      <span class="mono" style="color: var(--text-primary);">$58.5M // SOFR + 85 bps Fixed</span>
-                    </li>
-                    <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-hairline); padding-bottom: 8px;">
-                      <span>Geneva Lakefront Estate (CH)</span>
-                      <span class="mono" style="color: var(--text-primary);">CHF 65.0M // SNB + 32 bps</span>
-                    </li>
-                    <li style="display: flex; justify-content: space-between;">
-                      <span>Tokyo Minato-ku Commercial Block (JP)</span>
-                      <span class="mono" style="color: var(--text-primary);">&yen;8.4B // 0.72% 10-Yr Fixed</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="card" style="background-color: var(--bg-tertiary);">
-                  <div class="stat-label">REFINANCING SAVINGS TELEMETRY</div>
-                  <div class="stat-value" style="font-size: 2rem;">118 <span class="unit">BPS</span></div>
-                  <p class="stat-desc" style="margin-top: var(--space-3); line-height: 1.6;">
-                    Average spread reduction achieved by Aurelius auctioning sovereign debt refinancing across 6 competing Swiss, British, and Japanese private banks simultaneously.
-                  </p>
-                  <div style="margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--border-hairline); font-family: var(--font-mono); font-size: 11px; display: flex; justify-content: space-between;">
-                    <span style="color: var(--text-muted);">INHERITANCE DUTY SHIELD:</span>
-                    <span style="color: var(--accent-primary);">100% OFFSHORE DEBT OFFSET</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
 
-        <div style="margin-top: var(--space-8); text-align: center;">
-          <a href="dynasty-estate.html" class="btn btn-primary btn-mono">Next: Dynasty &amp; Succession AI (100-Year Simulator) &rarr;</a>
+        <!-- Comparison Cards -->
+        <div class="swiss-grid" style="grid-template-columns: repeat(3, 1fr); gap: var(--space-6);">
+          
+          <!-- Cash Card -->
+          <div class="card" style="padding: 1.75rem;">
+            <div style="font-size: 12px; color: var(--text-secondary); text-transform: uppercase; font-weight: 600;">Cash In Checking (0%)</div>
+            <div id="result-cash" style="font-size: 2rem; font-weight: 800; color: var(--text-primary); margin: 0.5rem 0;">$72,000</div>
+            <p style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+              You saved <strong id="total-contributed-1">$72,000</strong> from your salary, but inflation actually reduced its purchasing power by ~40%.
+            </p>
+          </div>
+
+          <!-- High-Yield Card -->
+          <div class="card" style="padding: 1.75rem;">
+            <div style="font-size: 12px; color: var(--text-secondary); text-transform: uppercase; font-weight: 600;">High-Yield Savings (4.5%)</div>
+            <div id="result-hysa" style="font-size: 2rem; font-weight: 800; color: var(--accent-primary); margin: 0.5rem 0;">$116,420</div>
+            <p style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+              Earned <strong id="hysa-interest-earned" style="color: var(--accent-primary);">+$44,420</strong> in free bank interest, easily keeping pace with living costs.
+            </p>
+          </div>
+
+          <!-- S&P 500 Index Fund Card -->
+          <div class="card" style="padding: 1.75rem; border: 2px solid var(--signal-positive); background: var(--bg-primary);">
+            <div style="font-size: 12px; color: var(--signal-positive); text-transform: uppercase; font-weight: 700;">Index Fund Investing (~8% avg)</div>
+            <div id="result-investing" style="font-size: 2rem; font-weight: 800; color: var(--signal-positive); margin: 0.5rem 0;">$176,700</div>
+            <p style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+              Earned <strong id="invest-growth-earned" style="color: var(--signal-positive);">+$104,700</strong> purely from compound market growth!
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: 4 GOLDEN RULES -->
+    <section class="section-py">
+      <div class="container-wide">
+        <div style="max-width: 680px; margin-bottom: var(--space-8);">
+          <div class="page-eyebrow">PEACE OF MIND</div>
+          <h2>The 4 Golden Rules of Simple Investing</h2>
+        </div>
+
+        <div class="swiss-grid" style="grid-template-columns: repeat(2, 1fr); gap: var(--space-6);">
+          <div class="card" style="padding: 1.75rem;">
+            <h4 style="font-size: 1.15rem; margin-bottom: 0.5rem;">1. Never invest rent or grocery money</h4>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+              Keep 3 to 6 months of expenses in a safe cash savings account first. Only invest money you won't need for at least 3 to 5 years.
+            </p>
+          </div>
+
+          <div class="card" style="padding: 1.75rem;">
+            <h4 style="font-size: 1.15rem; margin-bottom: 0.5rem;">2. Automate and forget it</h4>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+              Set up an automatic monthly transfer on payday. Small amounts like $50 or $200 add up tremendously without feeling like a sacrifice.
+            </p>
+          </div>
+
+          <div class="card" style="padding: 1.75rem;">
+            <h4 style="font-size: 1.15rem; margin-bottom: 0.5rem;">3. Don't put all eggs in one basket</h4>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+              Broad index funds spread your money across hundreds of different industries—so if one company fails, your overall savings remain strong.
+            </p>
+          </div>
+
+          <div class="card" style="padding: 1.75rem;">
+            <h4 style="font-size: 1.15rem; margin-bottom: 0.5rem;">4. Ignore daily panic headlines</h4>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+              Stock prices go up and down every single day. Historically, every major market dip has eventually recovered to new all-time highs.
+            </p>
+          </div>
+        </div>
+
+        <div style="margin-top: var(--space-8); display: flex; gap: var(--space-4); flex-wrap: wrap;">
+          <a href="simulator.html" class="btn btn-primary">Try the Full Savings Calculator &rarr;</a>
+          <a href="dynasty-estate.html" class="btn btn-secondary">Next: Retirement Planning &rarr;</a>
         </div>
       </div>
     </section>
@@ -393,156 +304,123 @@
     <div class="cmd-modal">
       <div class="cmd-header">
         <svg class="cmd-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="text" class="cmd-input" placeholder="Search all 17 sovereign pages..." aria-label="Command search">
+        <input type="text" class="cmd-input" placeholder="Search pages, guides, tools..." aria-label="Command search">
         <span class="cmd-esc">ESC</span>
       </div>
       <div class="cmd-quick-actions">
         <button class="cmd-chip" data-action="toggle-theme" type="button">Toggle Theme</button>
-        <button class="cmd-chip" data-action="terminal" type="button">Client Terminal</button>
-        <button class="cmd-chip" data-action="simulator" type="button">Monte Carlo Lab</button>
-        <button class="cmd-chip" data-action="briefing" type="button">Request Briefing</button>
+        <button class="cmd-chip" data-action="terminal" type="button">Client Demo</button>
+        <button class="cmd-chip" data-action="simulator" type="button">Savings Calculator</button>
+        <button class="cmd-chip" data-action="briefing" type="button">Get Started</button>
       </div>
       <div class="cmd-results" role="listbox"></div>
       <div class="cmd-footer">
         <div class="cmd-hints"><span>&uarr;&darr; Navigate</span><span>&crarr; Select</span><span>ESC Close</span></div>
-        <span class="mono" style="color: var(--accent-primary);">AURELIUS OS v4.2</span>
+        <span class="mono" style="color: var(--accent-primary);">Aurelius Platform</span>
       </div>
     </div>
   </div>
 
-  <!-- ARCHITECTURAL FOOTER -->
+  <!-- CLEAN FOOTER -->
   <footer class="site-footer">
     <div class="footer-top">
       <div class="container-wide">
         <div class="footer-grid">
           <div class="footer-brand-col">
             <a href="index.html" class="brand-logo" style="margin-bottom: var(--space-3);">
-              <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="16 2, 30 26, 2 26" /><circle cx="16" cy="16" r="3" fill="currentColor" /></svg>
-              <span class="brand-name">AURELIUS</span>
+              <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" />
+                <path d="M11 19L16 9L21 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M13 15H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <span class="brand-name">Aurelius</span>
             </a>
-            <p>Autonomous Sovereign Wealth Architecture for $100M+ Liquid Net Worth Principals.</p>
-            <div style="margin-top: var(--space-4);"><span class="badge badge-accent">AIR-GAPPED SILICON</span></div>
+            <p style="font-size: 14px; line-height: 1.6; color: var(--text-secondary);">
+              Smart money management and wealth tools made simple for everyone.
+            </p>
           </div>
+
           <div>
-            <div class="footer-col-title">Platform</div>
+            <div class="footer-col-title">Navigation</div>
             <ul class="footer-nav-list">
-              <li><a href="index.html" class="footer-nav-link"><span>Overview</span><span class="page-badge">01</span></a></li>
-              <li><a href="architecture.html" class="footer-nav-link"><span>The Aurelius Core</span><span class="page-badge">02</span></a></li>
-              <li><a href="advisory-suite.html" class="footer-nav-link"><span>Autonomous Advisory</span><span class="page-badge">03</span></a></li>
-              <li><a href="security-enclave.html" class="footer-nav-link"><span>Security &amp; ZK Enclave</span><span class="page-badge">04</span></a></li>
+              <li><a href="index.html" class="footer-nav-link"><span>Home</span></a></li>
+              <li><a href="architecture.html" class="footer-nav-link"><span>How It Works</span></a></li>
+              <li><a href="simulator.html" class="footer-nav-link"><span>Savings Calculator</span></a></li>
+              <li><a href="client-terminal.html" class="footer-nav-link"><span>Live Demo</span></a></li>
             </ul>
           </div>
+
           <div>
-            <div class="footer-col-title">Sovereign Solutions</div>
+            <div class="footer-col-title">Plans &amp; Support</div>
             <ul class="footer-nav-list">
-              <li><a href="family-offices.html" class="footer-nav-link"><span>Family Offices</span><span class="page-badge">05</span></a></li>
-              <li><a href="sovereign-tax.html" class="footer-nav-link"><span>Sovereign Tax</span><span class="page-badge">06</span></a></li>
-              <li><a href="alternative-assets.html" class="footer-nav-link"><span>Alternative Assets</span><span class="page-badge">07</span></a></li>
-              <li><a href="dynasty-estate.html" class="footer-nav-link"><span>Dynasty AI</span><span class="page-badge">08</span></a></li>
-              <li><a href="geopolitical-risk.html" class="footer-nav-link"><span>Geopolitical Risk</span><span class="page-badge">09</span></a></li>
-            </ul>
-          </div>
-          <div>
-            <div class="footer-col-title">Intelligence &amp; Lab</div>
-            <ul class="footer-nav-list">
-              <li><a href="simulator.html" class="footer-nav-link"><span>Monte Carlo Lab</span><span class="page-badge">10</span></a></li>
-              <li><a href="case-studies.html" class="footer-nav-link"><span>Principal Ledgers</span><span class="page-badge">11</span></a></li>
-              <li><a href="intelligence.html" class="footer-nav-link"><span>Quantitative Research</span><span class="page-badge">12</span></a></li>
-              <li><a href="dispatch-article.html" class="footer-nav-link"><span>Monograph No. 14</span><span class="page-badge">13</span></a></li>
-            </ul>
-          </div>
-          <div>
-            <div class="footer-col-title">Institution</div>
-            <ul class="footer-nav-list">
-              <li><a href="charter.html" class="footer-nav-link"><span>Institutional Charter</span><span class="page-badge">14</span></a></li>
-              <li><a href="membership.html" class="footer-nav-link"><span>Membership Tiers</span><span class="page-badge">15</span></a></li>
-              <li><a href="request-briefing.html" class="footer-nav-link"><span>Request Briefing</span><span class="page-badge">16</span></a></li>
-              <li><a href="client-terminal.html" class="footer-nav-link" style="color: var(--accent-primary);"><span>Live Client Terminal</span><span class="page-badge">17</span></a></li>
+              <li><a href="membership.html" class="footer-nav-link"><span>Pricing Plans</span></a></li>
+              <li><a href="security-enclave.html" class="footer-nav-link"><span>Security &amp; Privacy</span></a></li>
+              <li><a href="request-briefing.html" class="footer-nav-link"><span>Get Started Free</span></a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-    <div class="footer-enclaves">
-      <div class="container-wide">
-        <div class="enclaves-grid">
-          <div class="enclave-card"><div class="enclave-city"><span>Zurich Vault</span><span>CH-8001</span></div><div class="enclave-address">Bahnhofstrasse 45, 8001 Zürich, Switzerland</div><div class="enclave-status">&#9679; Air-Gapped Dedicated Alpine Vault</div></div>
-          <div class="enclave-card"><div class="enclave-city"><span>Singapore Hub</span><span>SG-049315</span></div><div class="enclave-address">10 Collyer Quay, Ocean Financial Centre, Singapore</div><div class="enclave-status">&#9679; Asian Family Office Enclave</div></div>
-          <div class="enclave-card"><div class="enclave-city"><span>New York Desk</span><span>US-10153</span></div><div class="enclave-address">767 Fifth Avenue, General Motors Building, NYC</div><div class="enclave-status">&#9679; Institutional Telemetry Node</div></div>
-          <div class="enclave-card"><div class="enclave-city"><span>Geneva Freeport</span><span>CH-1204</span></div><div class="enclave-address">Rue du Rhône 42, 1204 Genève, Switzerland</div><div class="enclave-status">&#9679; Direct Bullion &amp; Freeport Custody</div></div>
-        </div>
-      </div>
-    </div>
+
     <div class="footer-bottom">
       <div class="container-wide">
-        <p class="footer-disclaimer">REGULATORY NOTICE: Aurelius Quantitative Systems AG operates as an autonomous sovereign wealth architecture and technology infrastructure provider. Aurelius does not hold commingled customer deposits, sell proprietary financial products, or accept third-party commissions.</p>
         <div class="footer-legal-bar">
-          <span>&copy; 2026 AURELIUS QUANTITATIVE SYSTEMS AG. ALL RIGHTS RESERVED. SWISS LAW GOVERNED.</span>
-          <span>ZK ROOT HASH: <span class="footer-hash">0x8e2c7a91bfd59104c8f2a64019de58c14f3b77209d841e2b5e0c679a</span></span>
+          <span>&copy; 2026 Aurelius Technologies. Simple, secure financial planning for everyone.</span>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="js/mock-data.js"></script>
   <script src="js/main.js"></script>
   <script>
-    // PE Commitment Pacing Dynamic Schedule Calculator
-    const peSlider = document.getElementById("pe-slider");
-    const peValBadge = document.getElementById("pe-val-badge");
-    const peTbody = document.getElementById("pe-schedule-tbody");
+    // Real-Time Comparison Calculation
+    const monthlySlider = document.getElementById("inv-monthly");
+    const yearsSlider = document.getElementById("inv-years");
+    const monthlyVal = document.getElementById("inv-monthly-val");
+    const yearsVal = document.getElementById("inv-years-val");
 
-    const renderPESchedule = (comm) => {
-      peValBadge.textContent = `$${comm}M USD`;
-      const schedule = [
-        { year: "Year 1 (Vintage)", pct: 25, called: comm * 0.25, nav: comm * 0.23 },
-        { year: "Year 2", pct: 35, called: comm * 0.35, nav: comm * 0.58 },
-        { year: "Year 3", pct: 25, called: comm * 0.25, nav: comm * 0.86 },
-        { year: "Year 4", pct: 10, called: comm * 0.10, nav: comm * 1.05 },
-        { year: "Year 5 (Harvest)", pct: 5, called: comm * 0.05, nav: comm * 1.34 }
-      ];
+    const resultCash = document.getElementById("result-cash");
+    const resultHysa = document.getElementById("result-hysa");
+    const resultInvesting = document.getElementById("result-investing");
+    const totalContributed1 = document.getElementById("total-contributed-1");
+    const hysaInterestEarned = document.getElementById("hysa-interest-earned");
+    const investGrowthEarned = document.getElementById("invest-growth-earned");
 
-      let html = "";
-      schedule.forEach(row => {
-        html += `
-          <tr>
-            <td><strong>${row.year}</strong></td>
-            <td class="num-col mono">${row.pct}%</td>
-            <td class="num-col mono cell-highlight">$${row.called.toFixed(1)}M</td>
-            <td class="num-col mono" style="color: var(--signal-positive);">$${row.nav.toFixed(1)}M</td>
-          </tr>
-        `;
-      });
-      peTbody.innerHTML = html;
-    };
+    function updateComparison() {
+      const pmt = parseInt(monthlySlider.value);
+      const yrs = parseInt(yearsSlider.value);
+      const months = yrs * 12;
 
-    peSlider.addEventListener("input", (e) => {
-      renderPESchedule(parseInt(e.target.value));
-    });
+      monthlyVal.textContent = `$${pmt.toLocaleString()} / mo`;
+      yearsVal.textContent = `${yrs} Years`;
 
-    renderPESchedule(50);
+      const totalContributed = pmt * months;
 
-    // Lifestyle Asset Profile Switcher
-    const assetSelect = document.getElementById("lifestyle-asset-select");
-    const metricsBox = document.getElementById("lifestyle-metrics-box");
+      // HYSA ~ 4.5% APY
+      const rHysa = 0.045 / 12;
+      const hysaTotal = Math.round(pmt * ((Math.pow(1 + rHysa, months) - 1) / rHysa));
+      const hysaInterest = hysaTotal - totalContributed;
 
-    assetSelect.addEventListener("change", (e) => {
-      if (e.target.value === "jet") {
-        metricsBox.innerHTML = `
-          Annual Operating Burn: $4,850,000 USD<br>
-          Optimal Charter Weeks Offset: 6 Weeks ($2,100,000 Net)<br>
-          Fuel Hedge Forward (Jet-A): 140,000 gal @ $2.42/gal (LOCKED)<br>
-          Net Effective Annual Cost: <span style="color: var(--accent-primary); font-weight: 600;">$2,750,000 USD (-43.3% Offset)</span>
-        `;
-      } else {
-        metricsBox.innerHTML = `
-          Annual Operating Burn: $9,200,000 USD<br>
-          Optimal Charter Weeks Offset: 8 Weeks ($5,600,000 Net)<br>
-          Marine Gas Oil (MGO) Forward: 480 MT @ $720/MT (LOCKED)<br>
-          Net Effective Annual Cost: <span style="color: var(--accent-primary); font-weight: 600;">$3,600,000 USD (-60.8% Offset)</span>
-        `;
-      }
-    });
+      // S&P 500 Index ~ 8% historical annual return
+      const rInvest = 0.08 / 12;
+      const investTotal = Math.round(pmt * ((Math.pow(1 + rInvest, months) - 1) / rInvest));
+      const investGain = investTotal - totalContributed;
+
+      resultCash.textContent = `$${totalContributed.toLocaleString()}`;
+      totalContributed1.textContent = `$${totalContributed.toLocaleString()}`;
+
+      resultHysa.textContent = `$${hysaTotal.toLocaleString()}`;
+      hysaInterestEarned.textContent = `+$${hysaInterest.toLocaleString()}`;
+
+      resultInvesting.textContent = `$${investTotal.toLocaleString()}`;
+      investGrowthEarned.textContent = `+$${investGain.toLocaleString()}`;
+    }
+
+    monthlySlider.addEventListener("input", updateComparison);
+    yearsSlider.addEventListener("input", updateComparison);
+    updateComparison();
   </script>
 </body>
 </html>

@@ -4,25 +4,25 @@
    ========================================================================== */
 
 const AureliusData = {
-  // 17-Page Master Catalog for Navigation & Command Palette
+  // 17-Page Master Catalog for Navigation & Command Palette (Plain Language & Accessible)
   pages: [
-    { num: "01", title: "Sovereign Landing Experience", url: "index.html", pillar: "Platform", desc: "Autonomous wealth architecture and multi-agent AI engine.", keywords: ["home", "landing", "overview", "sovereign", "core"] },
-    { num: "02", title: "The Aurelius Core", url: "architecture.html", pillar: "Platform", desc: "Proprietary multi-agent adversarial reasoning stack.", keywords: ["architecture", "agents", "adversarial", "engine", "algorithm"] },
-    { num: "03", title: "Autonomous Advisory Suite", url: "advisory-suite.html", pillar: "Platform", desc: "Voice briefings, encrypted text, and family office analyst APIs.", keywords: ["advisory", "briefing", "voice", "cio", "matrix"] },
-    { num: "04", title: "Security & Zero-Knowledge Enclave", url: "security-enclave.html", pillar: "Platform", desc: "Air-gapped dedicated Zurich bunker & custom silicon.", keywords: ["security", "enclave", "zkp", "air-gapped", "hardware", "encryption"] },
-    { num: "05", title: "Single & Multi-Family Offices", url: "family-offices.html", pillar: "Sovereign Solutions", desc: "Unified neural ledger consolidating custodians and holding structures.", keywords: ["family office", "sfo", "mfo", "custodians", "rbac", "ledger"] },
-    { num: "06", title: "Sovereign Tax & Jurisdictions", url: "sovereign-tax.html", pillar: "Sovereign Solutions", desc: "Continuous day-count tracking and treaty optimization.", keywords: ["tax", "cross-border", "residency", "forfait", "non-dom", "treaties"] },
-    { num: "07", title: "Alternative & Illiquid Assets", url: "alternative-assets.html", pillar: "Sovereign Solutions", desc: "Private credit, superyachts, aviation, fine art and freeports.", keywords: ["private equity", "aviation", "superyachts", "fine art", "freeport", "real estate"] },
-    { num: "08", title: "Dynasty & Succession AI", url: "dynasty-estate.html", pillar: "Sovereign Solutions", desc: "Century-scale wealth preservation and trust governance.", keywords: ["dynasty", "succession", "trust", "100-year", "heirs", "constitution"] },
-    { num: "09", title: "Geopolitical Risk & Tail Hedging", url: "geopolitical-risk.html", pillar: "Sovereign Solutions", desc: "Planetary threat telemetry and automated black-swan hedges.", keywords: ["geopolitical", "macro", "risk", "black-swan", "hedging", "defense"] },
-    { num: "10", title: "Monte Carlo Wealth Lab", url: "simulator.html", pillar: "Intelligence & Lab", desc: "Interactive 500-path stochastic modeling and stress-test sandbox.", keywords: ["simulator", "monte carlo", "sandbox", "var", "sharpe", "math"] },
-    { num: "11", title: "Anonymized Principal Ledgers", url: "case-studies.html", pillar: "Intelligence & Lab", desc: "Verified quantitative outcomes from active sovereign deployments.", keywords: ["case studies", "ledgers", "results", "verified", "track record"] },
-    { num: "12", title: "Quantitative Intelligence", url: "intelligence.html", pillar: "Intelligence & Lab", desc: "Monographs and macroeconomic causal dispatches.", keywords: ["research", "intelligence", "whitepapers", "monographs", "dispatches"] },
-    { num: "13", title: "Deep-Dive Research Whitepaper", url: "dispatch-article.html", pillar: "Intelligence & Lab", desc: "Monograph No. 14: Cross-Border Tax Arbitrage in Private Debt.", keywords: ["whitepaper", "article", "monograph", "reading", "tax-loss harvesting"] },
-    { num: "14", title: "Institutional Charter & Ethics", url: "charter.html", pillar: "Institution", desc: "Fiduciary manifesto, zero-kickback protocol and leadership.", keywords: ["charter", "ethics", "leadership", "fiduciary", "manifesto"] },
-    { num: "15", title: "Capital Tiers & Membership", url: "membership.html", pillar: "Institution", desc: "Capped 150-principal registry and flat infrastructure pricing.", keywords: ["membership", "tiers", "allocation", "pricing", "fee savings"] },
-    { num: "16", title: "Request Private Briefing", url: "request-briefing.html", pillar: "Institution", desc: "Encrypted intake flow with simulated PGP session token.", keywords: ["briefing", "consultation", "contact", "pgp", "onboarding"] },
-    { num: "17", title: "Live Client Terminal", url: "client-terminal.html", pillar: "Live App", desc: "Full-viewport institutional dashboard with multi-agent console.", keywords: ["terminal", "dashboard", "live", "portfolio", "console", "fiduciary"] }
+    { num: "01", title: "Home Overview", url: "index.html", pillar: "Getting Started", desc: "Smart money management and wealth tools made simple.", keywords: ["home", "landing", "overview", "start", "simple"] },
+    { num: "02", title: "How Aurelius Works", url: "architecture.html", pillar: "Platform", desc: "Meet your 4 friendly automated money coaches.", keywords: ["how it works", "features", "safety", "saver", "goals"] },
+    { num: "03", title: "AI Financial Assistant", url: "advisory-suite.html", pillar: "Platform", desc: "Ask everyday money questions in plain English 24/7.", keywords: ["assistant", "ai coach", "chat", "questions", "advice"] },
+    { num: "04", title: "Security & Privacy", url: "security-enclave.html", pillar: "Platform", desc: "Bank-grade 256-bit encryption and privacy guarantees.", keywords: ["security", "safety", "privacy", "bank-grade", "encryption"] },
+    { num: "05", title: "Family & Couples Money", url: "family-offices.html", pillar: "Guides", desc: "Manage shared household budgets and financial goals together.", keywords: ["family", "couples", "household", "budget", "shared"] },
+    { num: "06", title: "Smart Tax Tips", url: "sovereign-tax.html", pillar: "Guides", desc: "Easy deductions and strategies to keep more of your paycheck.", keywords: ["tax", "deductions", "401k", "ira", "hsa", "savings"] },
+    { num: "07", title: "Investing Basics for Beginners", url: "alternative-assets.html", pillar: "Guides", desc: "Learn stocks, index funds, and bonds without Wall St jargon.", keywords: ["investing", "basics", "index funds", "stocks", "bonds"] },
+    { num: "08", title: "Retirement & Future Planning", url: "dynasty-estate.html", pillar: "Guides", desc: "Build a comfortable nest egg and future step by step.", keywords: ["retirement", "future", "milestones", "pension", "401k"] },
+    { num: "09", title: "Keeping Money Safe", url: "geopolitical-risk.html", pillar: "Guides", desc: "Inflation defense and peace-of-mind investing habits.", keywords: ["safety", "inflation", "protection", "risk", "peace of mind"] },
+    { num: "10", title: "Savings & Growth Calculator", url: "simulator.html", pillar: "Interactive Tools", desc: "Interactive compound interest calculator and growth tool.", keywords: ["calculator", "savings", "growth", "interest", "simulator"] },
+    { num: "11", title: "Real User Stories", url: "case-studies.html", pillar: "Community", desc: "How everyday people achieved their financial freedom.", keywords: ["stories", "reviews", "results", "testimonials", "customers"] },
+    { num: "12", title: "Learning Center", url: "intelligence.html", pillar: "Education", desc: "Beginner-friendly guides on budgeting, saving, and investing.", keywords: ["learning", "guides", "articles", "education", "tips"] },
+    { num: "13", title: "Guide: Compound Interest", url: "dispatch-article.html", pillar: "Education", desc: "How compound interest really works with simple visual examples.", keywords: ["compound interest", "guide", "article", "reading", "growth"] },
+    { num: "14", title: "Our 5 Ethical Promises", url: "charter.html", pillar: "About Us", desc: "No hidden fees, no percentage cuts, and 100% fiduciary care.", keywords: ["charter", "ethics", "promise", "no fees", "mission"] },
+    { num: "15", title: "Pricing & Plans", url: "membership.html", pillar: "Pricing", desc: "Simple, transparent pricing with zero percentage cuts.", keywords: ["pricing", "plans", "starter", "plus", "cost"] },
+    { num: "16", title: "Get Started Free", url: "request-briefing.html", pillar: "Getting Started", desc: "Create your free account in 2 minutes. No credit card required.", keywords: ["signup", "start", "free", "register", "join"] },
+    { num: "17", title: "Live Dashboard Demo", url: "client-terminal.html", pillar: "Interactive Tools", desc: "Explore Sarah's interactive demo account and AI coach.", keywords: ["demo", "dashboard", "live", "portfolio", "test"] }
   ],
 
   // Live Currency Conversion Matrix
@@ -51,326 +51,321 @@ const AureliusData = {
     assetsSupervisedUSD: 412850000000
   },
 
-  // Flagship Billionaire Client Ledger (Simulated for Client Terminal & Modules)
+  // Personal Wealth Portfolio (Realistic, relatable, and simple for everyday users)
   portfolio: {
-    principalId: "PRIN-8841-VON",
-    domicile: "Zurich / Singapore",
-    baseTotalUSD: 1842910400.00,
-    ytdReturnPct: 2.41,
-    ytdReturnUSD: 43210850.00,
-    volatilityAnnualized: "4.82%",
-    sharpeRatio: 2.84,
-    sortinoRatio: 4.12,
-    maxDrawdown3Yr: "-3.14%",
-    var99DailyUSD: 14200000.00,
-    annualTaxAlphaBps: 142,
+    principalId: "DEMO-USER-SARAH",
+    domicile: "Personal Account",
+    baseTotalUSD: 68450.00,
+    ytdReturnPct: 12.40,
+    ytdReturnUSD: 7540.00,
+    volatilityAnnualized: "Low Risk",
+    sharpeRatio: 1.84,
+    sortinoRatio: 2.12,
+    maxDrawdown3Yr: "-1.2%",
+    var99DailyUSD: 450.00,
+    annualTaxAlphaBps: 240,
 
     // Allocations
     allocations: [
-      { id: "pe_credit", name: "Private Credit & Special Situations", pct: 27, valueUSD: 497585808.00, targetPct: 25, variance: "+2.0%", custodian: "Lombard Odier / Direct SPV" },
-      { id: "public_eq", name: "Direct Global Equities (Direct Indexing)", pct: 25, valueUSD: 460727600.00, targetPct: 25, variance: "0.0%", custodian: "J.P. Morgan Private Bank" },
-      { id: "sovereign_debt", name: "Sovereign Bonds & Inflation-Linked", pct: 20, valueUSD: 368582080.00, targetPct: 20, variance: "0.0%", custodian: "UBS Wealth Management" },
-      { id: "real_assets", name: "Trophy Real Estate & Freeport Infrastructure", pct: 15, valueUSD: 276436560.00, targetPct: 15, variance: "0.0%", custodian: "Direct Swiss Stiftungs" },
-      { id: "venture", name: "Direct Frontier Tech & Space Ventures", pct: 8, valueUSD: 147432832.00, targetPct: 10, variance: "-2.0%", custodian: "Sequoia Heritage / Silicon SPV" },
-      { id: "cash_gold", name: "Physical Gold & Tier-1 Liquidity", pct: 5, valueUSD: 92145520.00, targetPct: 5, variance: "0.0%", custodian: "Julius Bär (Zurich Vault)" }
+      { id: "cash_savings", name: "High-Yield Cash Savings (4.5% APY)", pct: 36, valueUSD: 24500.00, targetPct: 35, variance: "+1.0%", custodian: "Ally High-Yield Savings" },
+      { id: "index_funds", name: "Low-Cost S&P 500 Index Funds", pct: 47, valueUSD: 32000.00, targetPct: 50, variance: "-3.0%", custodian: "Vanguard / Fidelity" },
+      { id: "emergency_reserves", name: "Emergency Safety Reserve", pct: 17, valueUSD: 11950.00, targetPct: 15, variance: "+2.0%", custodian: "Chase Everyday Checking" }
     ],
 
-    // Custodian Breakdown
+    // Custodian / Bank Breakdown
     custodians: [
-      { name: "UBS Wealth Management", city: "Zurich", balanceUSD: 540800000.00, status: "Connected (FIX 4.4)", type: "Tier-1 Custodian Bank" },
-      { name: "J.P. Morgan Private Bank", city: "New York", balanceUSD: 485200000.00, status: "Connected (Direct API)", type: "Prime Broker & Custody" },
-      { name: "Julius Bär", city: "Geneva", balanceUSD: 395400000.00, status: "Connected (Encrypted SFTP)", type: "Private Banking & Bullion Vault" },
-      { name: "Lombard Odier", city: "Singapore", balanceUSD: 274110400.00, status: "Connected (FIX Protocol)", type: "Asian Family Office Hub" },
-      { name: "Direct Sovereign Trust SPVs", city: "Vaduz & Cayman", balanceUSD: 147400000.00, status: "ZK-Verified Ledger", type: "Decentralized Legal Enclave" }
+      { name: "Vanguard Total Market Index", city: "Investment Account", balanceUSD: 32000.00, status: "Connected & Growing", type: "Low-Cost Index Funds" },
+      { name: "Ally High-Yield Savings", city: "Savings Account", balanceUSD: 24500.00, status: "Connected (4.5% APY)", type: "High-Yield Cash" },
+      { name: "Chase Everyday Checking", city: "Checking Account", balanceUSD: 11950.00, status: "Active Primary", type: "Emergency & Bills" }
     ],
 
-    // Pending Fiduciary Queue Actions
+    // Pending Goals & Quick Actions
     pendingApprovals: [
       {
-        id: "ACT-4091",
-        title: "Automated Tax-Loss Harvesting Sleeve Execution",
-        urgency: "HIGH",
-        jurisdiction: "United States (Substantial Presence)",
-        description: "Harvest $4,120,000 in short-term capital losses across S&P direct indexing basket before calendar Q4 treaty reset. Replaces with highly correlated sovereign ETF proxy to eliminate tracking error.",
-        taxAlphaGenerated: "$948,000 USD",
-        status: "AWAITING_BIOMETRIC_KEY"
+        id: "GOAL-101",
+        title: "Monthly Automatic Savings Transfer",
+        urgency: "ON SCHEDULE",
+        jurisdiction: "Recurring Savings",
+        description: "Scheduled monthly transfer of $400 into High-Yield Savings to keep your New Car goal on schedule for completion next year.",
+        taxAlphaGenerated: "+$400 / mo",
+        status: "SCHEDULED"
       },
       {
-        id: "ACT-4092",
-        title: "Cross-Border Liquidity Facility Roll",
-        urgency: "MEDIUM",
-        jurisdiction: "Switzerland / UK Non-Dom",
-        description: "Roll CHF 45M Lombard loan at SNB policy rate + 38 bps collateralized against Swiss franc sovereign paper to fund Q4 direct private equity capital calls.",
-        interestSavings: "84 bps annualized",
-        status: "AWAITING_BIOMETRIC_KEY"
+        id: "GOAL-102",
+        title: "Emergency Fund Milestone Reached 🎉",
+        urgency: "COMPLETED",
+        jurisdiction: "Safety Buffer",
+        description: "Your emergency fund has reached $10,000 (covers 5 full months of living costs). You have complete financial peace of mind!",
+        interestSavings: "100% Funded",
+        status: "COMPLETED"
       },
       {
-        id: "ACT-4093",
-        title: "Geopolitical Tail Risk Convex Put Option Roll",
-        urgency: "ROUTINE",
-        jurisdiction: "Global Derivatives Desk",
-        description: "Re-anchor 6-month Out-Of-The-Money Brent crude calls ($115 strike) and Taiwan Semiconductor put spreads for catastrophic tail indemnity.",
-        costBasis: "0.04% portfolio NAV",
-        status: "AWAITING_BIOMETRIC_KEY"
+        id: "GOAL-103",
+        title: "Subscription Audit Savings",
+        urgency: "TIP",
+        jurisdiction: "Monthly Budget",
+        description: "You saved $35 this month by cancelling unused fitness and video streaming subscriptions.",
+        costBasis: "$420/yr Saved",
+        status: "ACTIVE"
       }
     ]
   },
 
-  // The 5 Adversarial AI Sub-Agents
+  // Friendly AI Financial Guides (Plain English)
   adversarialAgents: [
     {
       id: "risk_hawk",
-      name: "The Risk Hawk",
-      role: "Catastrophic Tail Risk & Capital Preservation",
-      formula: "max { -VaR_{99.9%} - \\lambda \\cdot CVaR }",
-      philosophy: "Underwrite every allocation under the assumption of sovereign debt repudiation, bank clearinghouse holidays, and multi-sigma liquidity droughts.",
-      sampleTranscript: "VETO CONDITIONAL: The proposed $65M Gulfstream acquisition via direct unhedged cash creates an acute 72-hour liquidity squeeze during potential simultaneous capital calls from Blackstone Strategic IV ($14.2M) and Carlyle Europe ($9.8M). I require a synchronized CHF Lombard facility backed by Zurich-vaulted Swiss Confederation bonds."
+      name: "Safety Coach",
+      role: "Emergency Fund & Protection",
+      formula: "Safety Buffer",
+      philosophy: "Always make sure you have 3 to 6 months of living expenses safely stored in cash before taking extra risks.",
+      sampleTranscript: "Your emergency fund has $10,000, which covers 5 full months of your rent and essentials. You have a very safe financial foundation!"
     },
     {
       id: "tax_counsel",
-      name: "The Tax Counsel",
-      role: "Cross-Border Treaty & Residency Day-Count Arbitrage",
-      formula: "\\min \\sum \\tau_i \\cdot \\Delta w_i - \\text{HarvestAlpha}",
-      philosophy: "Eliminate statutory friction across 42 tax treaties, holding companies, and double-taxation conventions without crossing anti-avoidance thresholds.",
-      sampleTranscript: "STRUCTURE CLEARED: Funding via Zurich SPV entity does not trigger UK remittance rules under FIG Regime Section 41. Recommend executing through the Luxembourg SOPARFI subsidiary to maintain 0% withholding on cross-border interest payments."
+      name: "Smart Saver",
+      role: "Budget Optimization & Tips",
+      formula: "Smart Savings",
+      philosophy: "Find easy, painless ways to cut down recurring costs and keep more of your hard-earned paycheck.",
+      sampleTranscript: "By putting your idle cash into a 4.5% High-Yield Savings account instead of a 0.01% checking account, you earned an extra $1,102 in interest this year for free."
     },
     {
       id: "liquidity_architect",
-      name: "The Liquidity Architect",
-      role: "Duration Matching & Illiquid Cash Flow Modeling",
-      formula: "\\text{Ensure } L_{t+k} \\ge \\sum \\text{CapitalCalls}_{t+k} + \\text{Drawdown}",
-      philosophy: "Match illiquid private capital calls with multi-currency coupon flows, dividend schedules, and ultra-short government repo lines.",
-      sampleTranscript: "OPTIMAL ROUTE IDENTIFIED: Projected Q3 distributions from KKR European Infrastructure ($18.4M) and CVC Capital Partners ($12.1M) provide sufficient cash buffer without needing to liquidate any core equity index positions."
+      name: "Goal Planner",
+      role: "Tracking Life Milestones",
+      formula: "Milestone Tracking",
+      philosophy: "Break big dreams into small, monthly habits that you can reach easily without feeling restricted.",
+      sampleTranscript: "At your steady pace of $400/month, your New Car goal of $20,000 will be completely reached within 14 months!"
     },
     {
       id: "macro_strategist",
-      name: "The Macro Strategist",
-      role: "Causal Graph World Model & Black-Swan Anticipation",
-      formula: "\\arg\\max \\mathbb{E}[\\Delta U(\\Omega)] \\text{ s.t. Regime Shifts}",
-      philosophy: "Continuously adjust sovereign asset exposure based on central bank balance sheets, commodity supercycles, and weaponized trade sanctions.",
-      sampleTranscript: "REGIME DETECTED: 10Y US Treasury real yields at 2.15% create structural headwind for high-multiple growth equities. Recommend reweighting 150 bps from US public tech into Swiss-franc sovereign paper and physical gold bullion."
+      name: "Growth Advisor",
+      role: "Long-Term Wealth Building",
+      formula: "Compound Growth",
+      philosophy: "Harness the power of simple index funds and compound growth so your money works for you over the long term.",
+      sampleTranscript: "Your low-cost index investments grew +12.4% this year. That is $3,820 added to your future retirement without working extra hours."
     },
     {
       id: "fiduciary_arbiter",
-      name: "The Fiduciary Arbiter",
-      role: "Family Constitution & Ethical Determinism",
-      formula: "\\mathcal{L}_{\\text{Fiduciary}} = \\mathbb{I}(\\text{Constitution}(\\text{Trade}) == \\text{TRUE})",
-      philosophy: "Enforce the principal's immutable multi-generational constitution with zero tolerance for fee conflicts or counterparty compromises.",
-      sampleTranscript: "CONSENSUS RATIFIED: Council debate concluded in 38 milliseconds. All 5 agents approve the optimized structure: 0% product commissions, 100% direct custodian execution, zero conflict of interest."
+      name: "Peace of Mind",
+      role: "Honest & Transparent Guidance",
+      formula: "100% Fiduciary",
+      philosophy: "Zero hidden commissions, zero trickery. Plain English advice that puts your financial wellbeing first.",
+      sampleTranscript: "All your money remains safely in your own accounts. We never sell your personal information or charge hidden percentage fees."
     }
   ],
 
-  // Billionaire Prompt Console Presets & Multi-Agent Responses
+  // Plain-English Prompts & Friendly Responses
   terminalPrompts: [
     {
       id: "prompt_aviation",
-      label: "Gulfstream G700 Acquisition ($65M)",
-      promptText: "Model liquidity impact of acquiring a $65M Gulfstream G700 via Swiss debt facility vs. equity liquidation across the US sleeve.",
+      label: "🚗 Can I afford to buy a new car this year?",
+      promptText: "Can I comfortably buy a $20,000 car without hurting my emergency savings or long-term investments?",
       responses: [
-        { agent: "The Risk Hawk", latency: "14ms", text: "Equity liquidation of $65M incurs $14.8M in immediate taxable realized capital gains (federal + state). Swiss debt facility at SNB + 42 bps preserves portfolio compounding and avoids forced equity sale." },
-        { agent: "The Tax Counsel", latency: "21ms", text: "Structure aircraft ownership under Maltese SPV operating lease with Geneva holding company. Input VAT fully reclaimable; zero cross-border tax drag." },
-        { agent: "The Liquidity Architect", latency: "28ms", text: "Monthly debt servicing: CHF 142,500. Covered 3.8x by recurring coupon income from the German Bund & Swiss Pfandbriefe ladder." },
-        { agent: "The Fiduciary Arbiter", latency: "36ms", text: "RECOMMENDATION: Approve CHF 65M Lombard credit facility. Projected 10-year net capital preserved vs. cash liquidation: $22,480,000 USD." }
+        { agent: "Safety Coach", latency: "12ms", text: "Your Emergency Fund ($10,000) is 100% funded and safe. We will NOT touch this cushion for the car." },
+        { agent: "Goal Planner", latency: "18ms", text: "You already have $14,400 saved in your Car Goal. You only have $5,600 left to go!" },
+        { agent: "Smart Saver", latency: "24ms", text: "Saving $400/month will complete the remaining amount in 14 months with zero interest or car loan debt." },
+        { agent: "Peace of Mind", latency: "32ms", text: "RECOMMENDATION: Yes! You are completely on track. Continue saving steadily, and you will buy the car with cash comfortably." }
       ],
-      action: "Issue Facility Documentation (Zurich Vault FIX)"
+      action: "Keep Automatic Monthly Deposit Active ($400/mo)"
     },
     {
       id: "prompt_tax_harvest",
-      label: "Direct Indexing Tax-Loss Harvest",
-      promptText: "Execute tax-loss harvest across US direct indexing sleeve and compute net statutory alpha.",
+      label: "🛡️ How big should my emergency fund be?",
+      promptText: "How do I know if my emergency fund is large enough?",
       responses: [
-        { agent: "The Tax Counsel", latency: "11ms", text: "Scanned 500 constituents across US sleeve. Identified 38 tax-loss opportunities generating $4,120,000 in short-term capital losses." },
-        { agent: "The Risk Hawk", latency: "19ms", text: "Immediate proxy matching: Sold positions simultaneously replaced with custom sector tracking baskets. Total portfolio tracking error maintained at <0.012%." },
-        { agent: "The Macro Strategist", latency: "27ms", text: "Statutory tax savings offset realized private equity carry gains from calendar Q3 distributions." },
-        { agent: "The Fiduciary Arbiter", latency: "34ms", text: "RECOMMENDATION: Execute batch FIX swap across 38 orders at J.P. Morgan Prime. Net calculated alpha: +142 bps ($948,000 tax savings)." }
+        { agent: "Safety Coach", latency: "10ms", text: "A healthy emergency fund should cover 3 to 6 months of basic living essentials (rent, groceries, utilities, healthcare)." },
+        { agent: "Smart Saver", latency: "16ms", text: "Your average monthly essential expenses total approximately $2,140." },
+        { agent: "Goal Planner", latency: "22ms", text: "A 4-month cushion would be $8,560. Your current savings balance of $10,000 gives you almost 5 full months of security!" },
+        { agent: "Peace of Mind", latency: "28ms", text: "RECOMMENDATION: Your emergency buffer is in fantastic shape! You can direct any extra savings toward investments or your vacation goal." }
       ],
-      action: "Execute Batch FIX Orders (38 Swaps)"
+      action: "Emergency Cushion Fully Protected"
     },
     {
       id: "prompt_rate_shock",
-      label: "Central Bank 150 bps Hike Stress-Test",
-      promptText: "Stress-test consolidated balance sheet against unanticipated 150 bps emergency interest rate hike by the Federal Reserve.",
+      label: "📈 What happens if I save an extra $100/mo?",
+      promptText: "How much extra wealth will I have if I increase my monthly savings by just $100?",
       responses: [
-        { agent: "The Macro Strategist", latency: "12ms", text: "Modeled instantaneous yield curve inversion: 2Y +150 bps, 10Y +85 bps. Broad equity valuation contraction: -4.8%." },
-        { agent: "The Liquidity Architect", latency: "18ms", text: "Floating rate private credit sleeve (27% allocation) experiences instantaneous yield expansion: +$6.8M annual gross interest income." },
-        { agent: "The Risk Hawk", latency: "26ms", text: "Net portfolio drawdown capped at -1.18% due to gold position, floating credit hedge, and ultra-short sovereign bills." },
-        { agent: "The Fiduciary Arbiter", latency: "32ms", text: "CONCLUSION: Balance sheet possesses structural anti-fragility. No emergency rebalancing required." }
+        { agent: "Growth Advisor", latency: "11ms", text: "An extra $100 per month equals $1,200 per year in fresh contributions." },
+        { agent: "Goal Planner", latency: "18ms", text: "Over 10 years, you will deposit an extra $12,000." },
+        { agent: "Smart Saver", latency: "25ms", text: "With average 7% annual compound growth, that extra $100/month actually grows into an extra $17,400 in your account!" },
+        { agent: "Peace of Mind", latency: "34ms", text: "RECOMMENDATION: That’s $5,400 in pure free interest earned simply by setting aside an extra $25 a week." }
       ],
-      action: "Export Full Stress-Test Telemetry (PDF/CSV)"
+      action: "Increase Monthly Contribution by $100"
     }
   ],
 
-  // Anonymized Case Studies Data
+  // Real Everyday People Success Stories
   caseStudies: [
     {
-      id: "cs_european_industrial",
-      category: "European Industrial Dynasty",
-      title: "Consolidation of a 120-Year-Old Swiss/German Industrial Family Office",
-      aum: "$3.2B Liquid Net Worth",
-      custodians: "8 Custodian Banks across Zurich, Frankfurt & Vaduz",
-      initialState: "Fragmented Excel-based reporting with 14-day lag, $6.8M annual fee drag across private banking tiers, and unharvested tax losses across private equity distribution waterfalls.",
-      intervention: "Deployed air-gapped Aurelius Zurich Enclave. Automated multi-custodian FIX feed ingestion, real-time residency tracking between Zurich, London, and St. Moritz, and continuous direct index tax-loss harvesting.",
+      id: "cs_emergency_fund",
+      category: "First-Time Saver",
+      title: "How Sara Built Her First $10,000 Emergency Fund in 8 Months",
+      aum: "$10,000 Emergency Buffer",
+      custodians: "High-Yield Savings & Everyday Checking",
+      initialState: "Constantly stressed by unexpected car and dental bills, zero automated savings, and money scattered across three separate checking accounts.",
+      intervention: "Set up Aurelius Safety Coach with a $400/month automated deposit into a 4.5% High-Yield Savings account. Cleared 4 unused streaming subscriptions.",
       savingsTable: [
-        { metric: "AUM Percentage Fee", before: "75 bps ($24.0M/yr)", after: "Flat Infrastructure License ($1.2M/yr)", impact: "+$22.8M Saved/yr" },
-        { metric: "Tax Alpha Harvested", before: "0 bps (Annual post-hoc)", after: "148 bps (Intra-day algorithmic)", impact: "+$47.3M Saved/yr" },
-        { metric: "Reporting Latency", before: "14 Days", after: "0.00ms Real-Time", impact: "Instantaneous Telemetry" }
+        { metric: "Monthly Savings Habit", before: "$0 (Erratic)", after: "$450 / month automated", impact: "+$5,400 Saved/yr" },
+        { metric: "Cash Yield Earned", before: "0.01% checking ($1/yr)", after: "4.5% High-Yield ($450/yr)", impact: "+$449 Free Interest" },
+        { metric: "Financial Stress Level", before: "High (Constant anxiety)", after: "Zero (Peace of mind)", impact: "100% Emergency Fund Complete" }
       ],
-      capitalPreserved10Yr: "$384,000,000 USD"
+      capitalPreserved10Yr: "$10,000 Cash Buffer Achieved"
     },
     {
-      id: "cs_tech_founder",
-      category: "Silicon Valley Decacorn Founder",
-      title: "Algorithmic Diversification of a $1.4B Single-Stock Tech Fortune",
-      aum: "$1.4B Concentrated Equity",
-      custodians: "J.P. Morgan, Morgan Stanley Private Wealth",
-      initialState: "Massive single-stock concentration risk (82% of net worth), prohibitive 37% federal + 13.3% state capital gains exposure upon liquidation, and no multi-generational trust architecture.",
-      intervention: "Engineered synthetic algorithmic collar with non-recourse sovereign loan. Modeled automated multi-year charitable lead annuity trusts (CLATs) and Puerto Rico Act 60 / Singapore Variable Capital Company (VCC) migration scenario.",
+      id: "cs_family_home",
+      category: "Young Family",
+      title: "David & Maria Saved $45,000 for Their First Home Down Payment",
+      aum: "$45,000 Home Deposit",
+      custodians: "Ally Savings & Vanguard Index Funds",
+      initialState: "Trying to save for a home downpayment without a clear timeline. Constantly disputing discretionary spending and dining out.",
+      intervention: "Activated Aurelius Family Plan. Established a shared 'Dream Home' goal jar with automated payday deposits and visual milestone bars.",
       savingsTable: [
-        { metric: "Realized Tax Drag", before: "50.3% ($704M Exposure)", after: "18.2% via Synthetic Staggered Harvest", impact: "+$449M Retained" },
-        { metric: "Tail Risk Volatility", before: "54.2% Annualized", after: "7.1% Multi-Asset Hedged", impact: "7.6x Risk Reduction" },
-        { metric: "Downside Floor", before: "Unprotected (-80% Max)", after: "Hard 90% Capital Protection Floor", impact: "Zero Bankruptcy Risk" }
+        { metric: "Discretionary Dining Drag", before: "$850 / month", after: "$450 / month optimized", impact: "+$4,800/yr Redirected to Home" },
+        { metric: "Goal Progress Clarity", before: "Vague guess", after: "Visual 100% progress bar", impact: "Hit Goal 4 Months Early" },
+        { metric: "Total Down Payment", before: "$8,000 saved", after: "$45,000 saved", impact: "Purchased First Home in 2026" }
       ],
-      capitalPreserved10Yr: "$512,000,000 USD"
+      capitalPreserved10Yr: "$45,000 Down Payment Secured"
     },
     {
-      id: "cs_gcc_sovereign",
-      category: "GCC Sovereign Principal",
-      title: "Cross-Border Sanctions Immunity & Petrodollar Neutrality for Gulf Principal",
-      aum: "$5.8B Sovereign Family Balance Sheet",
-      custodians: "UBS, Lombard Odier Singapore, Dubai International Financial Centre (DIFC)",
-      initialState: "Over-reliance on Western clearinghouses, heavy US dollar cash exposure, vulnerability to unilateral jurisdiction sanctions, and lack of real-time physical gold vault ledger tracking.",
-      intervention: "Implemented zero-knowledge multi-sovereign routing. 35% re-allocated into physical allocated bullion in Zurich freeports and Singapore SGX vaults, verified via daily ZK cryptographic proofs.",
+      id: "cs_freelancer",
+      category: "Freelance Professional",
+      title: "Marcus Streamlined Irregular Income & Began Index Investing",
+      aum: "$32,000 Growing Portfolio",
+      custodians: "Chase & Vanguard S&P 500 Index",
+      initialState: "Irregular freelance income resulted in feast-and-famine cycles. Kept all savings in cash earning zero return out of fear of market dips.",
+      intervention: "Used the Aurelius Growth Simulator to map out a safe 3-month cash buffer, then directed regular monthly surplus into low-cost broad index funds.",
       savingsTable: [
-        { metric: "Clearinghouse Sovereign Risk", before: "100% Western Clearing", after: "Triple Arbitraged (CH, SG, UAE)", impact: "Sanctions Immune" },
-        { metric: "Currency Devaluation Drag", before: "-4.2% annualized", after: "+6.8% via Gold & Hard Currencies", impact: "+$638M Alpha" },
-        { metric: "Physical Vault Audit", before: "Annual paper audit", after: "Continuous Cryptographic ZK-Audit", impact: "100% Real-Time Proof" }
+        { metric: "Idle Cash Inflation Loss", before: "-3.5% real loss", after: "+12.4% index growth", impact: "+$3,820 Earned" },
+        { metric: "Budget Volatility Buffer", before: "Panic on slow months", after: "Automated cash smoothing", impact: "Predictable monthly cash flow" },
+        { metric: "Time Spent Budgeting", before: "6 hours / month", after: "3 minutes / week", impact: "95% Time Saved" }
       ],
-      capitalPreserved10Yr: "$920,000,000 USD"
+      capitalPreserved10Yr: "$32,000 Wealth Built"
     },
     {
-      id: "cs_hedge_fund_gp",
-      category: "Global Hedge Fund GP",
-      title: "Tax-Efficient Reinvestment of $850M Multi-Strategy Performance Carry",
-      aum: "$850M Liquid GP Capital",
-      custodians: "Goldman Sachs, Morgan Stanley Prime",
-      initialState: "Severe high-bracket ordinary income exposure on performance fees, disjointed angel and private credit investments with unpredictable capital calls and cash drag.",
-      intervention: "Architected algorithmic cash buffer utilizing short-term Swiss Pfandbriefe and US T-Bills. Programmed multi-agent liquidity forecasting to automate capital calls with zero cash drag.",
+      id: "cs_teacher_couple",
+      category: "Educator & Public Sector",
+      title: "Usman & Ayesha Eliminated Credit Card Debt & Started Retirement",
+      aum: "$22,500 Net Wealth Turnaround",
+      custodians: "Credit Union & Roth IRA",
+      initialState: "Stuck with $7,800 in high-interest credit card debt that eroded their ability to save for their children's future.",
+      intervention: "Followed the Aurelius Debt Avalanche blueprint while keeping a $1,500 starter emergency fund intact. Redirected freed-up interest payments straight into a Roth IRA.",
       savingsTable: [
-        { metric: "Uninvested Cash Drag", before: "12% Idle Cash ($102M)", after: "<0.5% Idle Cash", impact: "+$5.8M/yr Yield Alpha" },
-        { metric: "Lombard Borrowing Spread", before: "SOFR + 140 bps", after: "SNB + 34 bps (Zurich Desk)", impact: "+$1.1M/yr Saved" },
-        { metric: "Audit & Compliance Overhead", before: "6 Full-Time Analysts", after: "Autonomous Aurelius Stack", impact: "+$2.4M/yr Operating Savings" }
+        { metric: "Credit Card Interest Drag", before: "24.9% ($1,940/yr interest)", after: "$0 (Debt Free)", impact: "+$1,940/yr Kept" },
+        { metric: "Monthly Retirement Deposit", before: "$0", after: "$300 / month", impact: "+$3,600/yr Compounding" },
+        { metric: "Net Worth Growth", before: "-$7,800 (In Debt)", after: "+$22,500 (Positive Wealth)", impact: "Complete Financial Turnaround" }
       ],
-      capitalPreserved10Yr: "$144,000,000 USD"
+      capitalPreserved10Yr: "$30,300 Turnaround"
     }
   ],
 
-  // Research Whitepapers & Monographs Data
+  // Beginner-Friendly Financial Guides & Learning Center
   monographs: [
     {
-      id: "mono_14",
-      num: "Monograph No. 14",
-      title: "Autonomous Tax-Loss Harvesting Across Multi-Jurisdictional Private Credit Portfolios",
+      id: "guide_01",
+      num: "Guide 01",
+      title: "How Compound Interest Really Works (The 8th Wonder of the World)",
       date: "OCTOBER 2026",
-      readTime: "18 MIN READ",
-      category: "Sovereign Tax Law",
-      author: "Dr. Marc-André von Berg, Chief Quantitative Architect",
-      abstract: "An exhaustive mathematical analysis of continuous-time algorithmic loss recognition in illiquid and distressed debt sleeves, proving an empirical +142 bps of annualized post-tax alpha without violating statutory wash-sale rules.",
+      readTime: "5 MIN READ",
+      category: "Beginner Investing",
+      author: "Aurelius Education Team",
+      abstract: "A simple, visual walkthrough of how saving just $300 a month turns into over $150,000 through compound interest. No complex formulas required.",
       featured: true,
       url: "dispatch-article.html"
     },
     {
-      id: "mono_13",
-      num: "Monograph No. 13",
-      title: "Adversarial Multi-Agent Debate as a Fiduciary Guardrail for Multi-Billion Balance Sheets",
+      id: "guide_02",
+      num: "Guide 02",
+      title: "How to Build a 3-to-6 Month Emergency Safety Fund",
       date: "SEPTEMBER 2026",
-      readTime: "24 MIN READ",
-      category: "Algorithmic Execution",
-      author: "Aurelius Architecture Working Group",
-      abstract: "Formalizing mathematical game-theoretic proofs that five conflicting objective functions generate Pareto-optimal risk parity superior to traditional human investment committees.",
+      readTime: "4 MIN READ",
+      category: "Savings & Safety",
+      author: "Sarah Jenkins, Financial Coach",
+      abstract: "The step-by-step blueprint for building a cash safety cushion that protects your family from unexpected medical bills, car repairs, or job transitions.",
       featured: false,
       url: "dispatch-article.html"
     },
     {
-      id: "mono_12",
-      num: "Monograph No. 12",
-      title: "Century-Scale Purchasing Power: 100-Year Stochastic Simulation of Dynastic Trusts",
+      id: "guide_03",
+      num: "Guide 03",
+      title: "The 50/30/20 Budgeting Rule Explained in Plain English",
       date: "AUGUST 2026",
-      readTime: "15 MIN READ",
-      category: "Dynastic Governance",
-      author: "Helena S. Lindqvist, Head of Succession AI",
-      abstract: "Modeling generational dilution, fiat debasement, and philanthropic depletion across four generations under five distinct macro regimes from G1 to G4.",
+      readTime: "6 MIN READ",
+      category: "Smart Budgeting",
+      author: "Aurelius Budgeting Lab",
+      abstract: "Divide your monthly income into Needs (50%), Wants (30%), and Savings (20%) to enjoy your life today while securing your future.",
       featured: false,
       url: "dispatch-article.html"
     },
     {
-      id: "mono_11",
-      num: "Monograph No. 11",
-      title: "Zero-Knowledge Custody Verification: Proving Solvency Without Balance Sheet Disclosure",
+      id: "guide_04",
+      num: "Guide 04",
+      title: "Why Low-Cost Index Funds Beat 90% of Active Stock Pickers",
       date: "JULY 2026",
-      readTime: "21 MIN READ",
-      category: "Cryptographic Privacy",
-      author: "Dr. K. Chen & Zurich Enclave Security Team",
-      abstract: "Deploying zk-SNARKs and homomorphic encryption to prove cross-custodian liquidity and regulatory compliance without disclosing underlying holdings to prime brokers or tax authorities.",
+      readTime: "7 MIN READ",
+      category: "Beginner Investing",
+      author: "Investment Insights Team",
+      abstract: "Why trying to pick individual winning stocks is like finding a needle in a haystack, and why buying the whole haystack via index funds wins every time.",
       featured: false,
       url: "dispatch-article.html"
     },
     {
-      id: "mono_10",
-      num: "Monograph No. 10",
-      title: "Petrodollar Repricing and Non-Western Clearinghouse Geopolitics",
+      id: "guide_05",
+      num: "Guide 05",
+      title: "High-Yield Savings: How to Earn 4.5% on Your Idle Cash",
       date: "JUNE 2026",
-      readTime: "28 MIN READ",
-      category: "Monetary Policy",
-      author: "Lord Julian Vance, Macro Risk Advisor",
-      abstract: "Analyzing the systemic ramifications of bilateral currency settlements and structural gold accumulation by Gulf and BRICS sovereign wealth funds.",
+      readTime: "4 MIN READ",
+      category: "Cash & Savings",
+      author: "Aurelius Research",
+      abstract: "Traditional banks pay 0.01% on checking accounts. Learn how moving your emergency cash to a high-yield savings account earns you hundreds in free interest.",
       featured: false,
       url: "dispatch-article.html"
     },
     {
-      id: "mono_09",
-      num: "Monograph No. 09",
-      title: "The Illiquidity Premium Illusion in Late-Stage Private Equity",
+      id: "guide_06",
+      num: "Guide 06",
+      title: "Automate Your Savings: Set It Once and Forget It",
       date: "MAY 2026",
-      readTime: "16 MIN READ",
-      category: "Private Markets",
-      author: "Quantitative Markets Group",
-      abstract: "Deconstructing subscription lines, delayed NAV marks, and fee drag in Tier-1 buyout funds, revealing real net returns relative to leveraged public synthetic equivalents.",
+      readTime: "5 MIN READ",
+      category: "Smart Habits",
+      author: "Habits & Psychology Lab",
+      abstract: "How setting up automated recurring deposits removes willpower and emotional friction from saving money every payday.",
       featured: false,
       url: "dispatch-article.html"
     },
     {
-      id: "mono_08",
-      num: "Monograph No. 08",
-      title: "Freeport Arbitrage: Geneva, Singapore, and Delaware Collateralization Structures",
+      id: "guide_07",
+      num: "Guide 07",
+      title: "How to Pay Off Debt While Still Growing Your Savings",
       date: "APRIL 2026",
-      readTime: "14 MIN READ",
-      category: "Alternative Assets",
-      author: "Asset Tokenization & Valuation Desk",
-      abstract: "Using hyper-spectral imagery analysis and non-recourse Lombard loans to transform trophy fine art into liquid, yield-generating collateral.",
+      readTime: "6 MIN READ",
+      category: "Debt & Planning",
+      author: "Financial Health Desk",
+      abstract: "The smart balance between paying down high-interest credit cards and keeping an essential cash buffer so you never fall back into debt.",
       featured: false,
       url: "dispatch-article.html"
     },
     {
-      id: "mono_07",
-      num: "Monograph No. 07",
-      title: "Algorithmic Day-Count Optimization Under the 2025/2026 UK Non-Dom Reform",
+      id: "guide_08",
+      num: "Guide 08",
+      title: "Simple Tax Tips: How to Legally Keep More of Your Paycheck",
       date: "MARCH 2026",
-      readTime: "22 MIN READ",
-      category: "Sovereign Tax Law",
-      author: "Sovereign Tax Intelligence Group",
-      abstract: "How continuous geo-location and flight plan telemetry protect ultra-high-net-worth principals from inadvertent statutory residence and worldwide taxation.",
+      readTime: "5 MIN READ",
+      category: "Taxes Made Easy",
+      author: "Tax Guidance Team",
+      abstract: "Plain-English explanation of tax-advantaged accounts (401k, IRA, HSA) and how they shield your money from unnecessary taxes.",
       featured: false,
       url: "dispatch-article.html"
     },
     {
-      id: "mono_06",
-      num: "Monograph No. 06",
-      title: "Air-Gapped Silicon vs. Public Cloud: Quantitative Vulnerability Modeling",
+      id: "guide_09",
+      num: "Guide 09",
+      title: "Retirement Basics: Starting in Your 20s, 30s, or 40s",
       date: "FEBRUARY 2026",
-      readTime: "19 MIN READ",
-      category: "Cryptographic Privacy",
-      author: "Hardware Architecture Council",
-      abstract: "Hardware telemetry analysis proving side-channel vulnerability in shared cloud infrastructure and the necessity of dedicated on-premise compute nodes.",
+      readTime: "7 MIN READ",
+      category: "Retirement Planning",
+      author: "Retirement Strategy Group",
+      abstract: "It is never too early or too late to begin. A simple guide on how much you should aim to save for a comfortable, stress-free retirement.",
       featured: false,
       url: "dispatch-article.html"
     }
@@ -460,8 +455,8 @@ window.AureliusUtils = {
     return `${curr.symbol}${converted.toLocaleString("en-US", { maximumFractionDigits: 0 })}`;
   },
 
-  // Active theme helper
-  getTheme: () => localStorage.getItem("aurelius_theme") || "obsidian",
+  // Active theme helper (Default Light)
+  getTheme: () => localStorage.getItem("aurelius_theme") || "light",
   
   // Active currency helper
   getCurrency: () => localStorage.getItem("aurelius_currency") || "USD"

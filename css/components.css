@@ -14,11 +14,11 @@
   padding: 12px 24px;
   font-family: var(--font-sans);
   font-size: var(--text-sm);
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   text-decoration: none;
   cursor: pointer;
-  border-radius: var(--radius-none);
+  border-radius: var(--radius-sm);
   border: 1px solid transparent;
   transition: all var(--transition-fast);
   white-space: nowrap;
@@ -27,26 +27,29 @@
 
 .btn-primary {
   background-color: var(--accent-primary);
-  color: var(--text-inverse);
+  color: #FFFFFF;
   border-color: var(--accent-primary);
+  box-shadow: 0 1px 3px rgba(37, 99, 235, 0.2);
 }
 
 .btn-primary:hover {
   background-color: var(--accent-hover);
   border-color: var(--accent-hover);
   transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
 .btn-secondary {
   background-color: var(--bg-tertiary);
   color: var(--text-primary);
-  border-color: var(--border-medium);
+  border-color: var(--border-hairline);
 }
 
 .btn-secondary:hover {
   background-color: var(--bg-elevated);
-  border-color: var(--accent-primary);
+  border-color: var(--border-medium);
   color: var(--text-primary);
+  transform: translateY(-1px);
 }
 
 .btn-outline {
@@ -165,11 +168,12 @@
 }
 
 .stat-label {
-  font-family: var(--font-mono);
-  font-size: 11px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
   color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
   margin-bottom: var(--space-3);
   display: flex;
   align-items: center;
@@ -177,9 +181,9 @@
 }
 
 .stat-value {
-  font-family: var(--font-mono);
-  font-size: clamp(1.75rem, 3vw, 2.75rem);
-  font-weight: 400;
+  font-family: var(--font-sans);
+  font-size: clamp(1.85rem, 3vw, 2.75rem);
+  font-weight: 800;
   color: var(--text-primary);
   line-height: 1.1;
   letter-spacing: -0.03em;
@@ -231,16 +235,16 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 3px 8px;
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  font-weight: 500;
+  padding: 4px 10px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  border: 1px solid var(--border-medium);
+  letter-spacing: 0.04em;
+  border: 1px solid var(--border-hairline);
   background: var(--bg-tertiary);
   color: var(--text-primary);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-full);
 }
 
 .badge-accent {
@@ -376,17 +380,18 @@
    CARDS & STRUCTURAL TILES
    ========================================================================== */
 .card {
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-medium);
-  box-shadow: var(--shadow-subtle);
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-hairline);
+  box-shadow: var(--shadow-card);
+  border-radius: var(--radius-md);
   padding: clamp(1.25rem, 3vw, 2.25rem);
   position: relative;
-  transition: border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+  transition: all var(--transition-base);
 }
 
 .card:hover {
-  border-color: var(--accent-primary);
-  box-shadow: var(--shadow-card);
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-hover);
 }
 
 .card-interactive {
@@ -395,27 +400,29 @@
 
 .card-interactive:hover {
   border-color: var(--accent-primary);
-  background-color: var(--bg-tertiary);
+  background-color: var(--bg-elevated);
   transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
 }
 
 .card-eyebrow {
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   font-size: 11px;
   color: var(--accent-primary);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   margin-bottom: var(--space-2);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .card-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: var(--text-xl);
-  font-weight: 400;
+  font-weight: 700;
   color: var(--text-primary);
   margin-bottom: var(--space-3);
-  line-height: 1.25;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
 }
 
 .card-desc {

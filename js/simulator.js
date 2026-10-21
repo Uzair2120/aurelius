@@ -28,9 +28,9 @@ const AureliusSimulator = {
    * @returns {Object} { years, p10, p50, p90, samplePaths, sharpe, sortino, maxDrawdown, var99, taxAlpha }
    */
   simulate(config) {
-    const netWorth = config.netWorth || 1842000000;
-    const weights = config.weights || { public_eq: 0.25, sovereign_debt: 0.20, pe_credit: 0.27, real_assets: 0.15, gold: 0.08, cash: 0.05 };
-    const annualSpending = config.annualSpending || (netWorth * 0.025);
+    const netWorth = config.netWorth || 25000;
+    const weights = config.weights || { public_eq: 0.40, sovereign_debt: 0.25, pe_credit: 0.0, real_assets: 0.15, gold: 0.0, cash: 0.20 };
+    const annualSavings = config.annualSavings !== undefined ? config.annualSavings : (config.annualSpending !== undefined ? config.annualSpending : 5000);
     const volRegimeMultiplier = config.volRegime || 1.0;
     const horizonYears = config.horizon || 30;
     const numPaths = 500;
@@ -73,7 +73,7 @@ const AureliusSimulator = {
 
         // Geometric Brownian Motion step
         const growth = Math.exp((netReturn - 0.5 * Math.pow(weightedVol, 2)) * dt + weightedVol * Math.sqrt(dt) * z + jump);
-        curVal = (curVal * growth) - annualSpending;
+        curVal = (curVal * growth) + annualSavings;
         curVal = Math.max(0, curVal);
 
         if (curVal > peak) peak = curVal;
@@ -134,22 +134,25 @@ const AureliusSimulator = {
     if (!canvas) return;
 
     const getConfigFromUI = () => {
-      const netWorth = parseFloat(nwSlider ? nwSlider.value : 1842) * 1e6;
-      const annualSpending = parseFloat(spendSlider ? spendSlider.value : 45) * 1e6;
+      const nwVal = parseFloat(nwSlider ? nwSlider.value : 25);
+      const netWorth = nwVal * 1000;
+      const spendVal = parseFloat(spendSlider ? spendSlider.value : 5);
+      const annualSavings = spendVal * 1000;
       const volRegime = parseFloat(volRegimeSelect ? volRegimeSelect.value : 1.0);
 
       // Allocation weights from weight sliders
-      const eq = parseFloat(document.getElementById("weight-eq")?.value || 25);
-      const bonds = parseFloat(document.getElementById("weight-bonds")?.value || 20);
-      const pe = parseFloat(document.getElementById("weight-pe")?.value || 27);
+      const eq = parseFloat(document.getElementById("weight-eq")?.value || 40);
+      const bonds = parseFloat(document.getElementById("weight-bonds")?.value || 25);
+      const pe = parseFloat(document.getElementById("weight-pe")?.value || 0);
       const re = parseFloat(document.getElementById("weight-re")?.value || 15);
-      const gold = parseFloat(document.getElementById("weight-gold")?.value || 8);
-      const cash = parseFloat(document.getElementById("weight-cash")?.value || 5);
+      const gold = parseFloat(document.getElementById("weight-gold")?.value || 0);
+      const cash = parseFloat(document.getElementById("weight-cash")?.value || 20);
       const sum = eq + bonds + pe + re + gold + cash || 100;
 
       return {
         netWorth,
-        annualSpending,
+        annualSavings,
+        annualSpending: annualSavings,
         volRegime,
         horizon: 30,
         weights: {
@@ -189,14 +192,15 @@ const AureliusSimulator = {
     if (nwSlider && nwBadge) {
       nwSlider.addEventListener("input", (e) => {
         const val = parseFloat(e.target.value);
-        nwBadge.textContent = val >= 1000 ? `$${(val / 1000).toFixed(2)}B USD` : `$${val}M USD`;
+        nwBadge.textContent = `$${val.toLocaleString()},000`;
         updateSimulation();
       });
     }
 
     if (spendSlider && spendBadge) {
       spendSlider.addEventListener("input", (e) => {
-        spendBadge.textContent = `$${e.target.value}M / Year`;
+        const val = parseFloat(e.target.value);
+        spendBadge.textContent = `$${val.toLocaleString()},000 / Year`;
         updateSimulation();
       });
     }

@@ -249,8 +249,8 @@ const AureliusTerminal = {
         actionBox.style.justifyContent = "space-between";
         actionBox.style.alignItems = "center";
         actionBox.innerHTML = `
-          <span class="badge badge-emerald">&#10003; 5-AGENT CONSENSUS RATIFIED (38.4MS)</span>
-          <button id="terminal-action-btn" class="btn btn-primary btn-sm btn-mono" type="button">
+          <span class="badge badge-emerald">&#10003; Coach Advice Ready</span>
+          <button id="terminal-action-btn" class="btn btn-primary btn-sm" type="button">
             ${preset.action} &rarr;
           </button>
         `;
@@ -259,30 +259,30 @@ const AureliusTerminal = {
         const actionBtn = document.getElementById("terminal-action-btn");
         if (actionBtn) {
           actionBtn.addEventListener("click", () => {
-            actionBtn.textContent = "EXECUTED ON CUSTODIAN DESK \u2713";
+            actionBtn.textContent = "Saved to My Plan \u2713";
             actionBtn.disabled = true;
           });
         }
       }
-    }, 320);
+    }, 280);
   },
 
   executeCustomPrompt(text) {
     const mockPreset = {
       promptText: text,
       responses: [
-        { agent: "The Macro Strategist", latency: "11ms", text: `Analyzing macro world model parameters for: "${text}". Regime stability index: 94.2%.` },
-        { agent: "The Risk Hawk", latency: "19ms", text: "Underwriting maximum permissible 30-day liquidity drawdown. No constitutional boundary breach identified." },
-        { agent: "The Tax Counsel", latency: "27ms", text: "Cross-border treaty analysis complete across Zurich, Singapore, and Luxembourg SPV nodes." },
-        { agent: "The Fiduciary Arbiter", latency: "36ms", text: "RECOMMENDATION: Consensus approved. Zero commission conflicts detected." }
+        { agent: "Safety Coach", latency: "11ms", text: `Analyzing your budget for: "${text}". Your emergency fund is fully safe.` },
+        { agent: "Goal Planner", latency: "19ms", text: "You have plenty of breathing room in this month's budget without needing to dip into savings." },
+        { agent: "Smart Saver", latency: "27ms", text: "Remember to keep your monthly automatic transfer of $400 active so compounding stays on track." },
+        { agent: "Peace of Mind", latency: "36ms", text: "RECOMMENDATION: Looks great! You are managing your finances smoothly and responsibly." }
       ],
-      action: "Execute Instruction via Zurich FIX HSM"
+      action: "Add Note to My Goals"
     };
     this.executePrompt(mockPreset);
   },
 
   /* ==========================================================================
-     PENDING FIDUCIARY APPROVALS QUEUE (Biometric Key Confirmation)
+     SAVINGS GOALS & QUICK ACTIONS
      ========================================================================== */
   initFiduciaryApprovals() {
     const listContainer = document.getElementById("terminal-approvals-list");
@@ -291,21 +291,21 @@ const AureliusTerminal = {
     let html = "";
     AureliusData.portfolio.pendingApprovals.forEach(act => {
       html += `
-        <div class="card" id="approval-card-${act.id}" style="background-color: var(--bg-tertiary); margin-bottom: var(--space-4);">
+        <div class="card" id="approval-card-${act.id}" style="background-color: var(--bg-tertiary); margin-bottom: var(--space-4); border: 1px solid var(--border-hairline);">
           <div class="approval-card-header">
             <div>
-              <span class="mono" style="font-size: 11px; color: var(--accent-primary);">${act.id} // ${act.jurisdiction}</span>
+              <span style="font-size: 11px; font-weight: 700; color: var(--accent-primary); text-transform: uppercase;">${act.id} • ${act.jurisdiction}</span>
               <h4 style="font-size: 1.15rem; margin-top: 2px; margin-bottom: 4px;">${act.title}</h4>
             </div>
-            <span class="badge ${act.urgency === 'HIGH' ? 'badge-crimson' : 'badge-accent'}">${act.urgency}</span>
+            <span class="badge ${act.urgency === 'COMPLETED' ? 'badge-emerald' : 'badge-accent'}">${act.urgency}</span>
           </div>
 
-          <p style="font-size: 12.5px; color: var(--text-secondary); line-height: 1.5; margin-bottom: var(--space-3);">${act.description}</p>
+          <p style="font-size: 13.5px; color: var(--text-secondary); line-height: 1.5; margin-bottom: var(--space-3);">${act.description}</p>
 
           <div class="approval-footer">
-            <span class="mono" style="font-size: 11px; color: var(--signal-positive);">ALPHA: ${act.taxAlphaGenerated || act.interestSavings || act.costBasis}</span>
-            <button class="btn btn-outline btn-sm btn-mono approval-btn" data-act-id="${act.id}" type="button">
-              APPROVE WITH BIOMETRIC KEY &rarr;
+            <span style="font-size: 12.5px; font-weight: 600; color: var(--signal-positive);">${act.taxAlphaGenerated || act.interestSavings || act.costBasis}</span>
+            <button class="btn btn-outline btn-sm approval-btn" data-act-id="${act.id}" type="button">
+              View Goal Progress &rarr;
             </button>
           </div>
         </div>
@@ -317,17 +317,17 @@ const AureliusTerminal = {
     listContainer.querySelectorAll(".approval-btn").forEach(btn => {
       btn.addEventListener("click", () => {
         const id = btn.getAttribute("data-act-id");
-        btn.textContent = "VERIFYING YUBIKEY...";
+        btn.textContent = "Updating...";
         btn.disabled = true;
 
         setTimeout(() => {
-          btn.textContent = "RATIFIED // HSM SIGNED \u2713";
-          btn.className = "btn btn-primary btn-sm btn-mono";
+          btn.textContent = "Goal Checked \u2713";
+          btn.className = "btn btn-primary btn-sm";
           const card = document.getElementById(`approval-card-${id}`);
           if (card) {
             card.style.borderColor = "var(--signal-positive)";
           }
-        }, 600);
+        }, 400);
       });
     });
   }

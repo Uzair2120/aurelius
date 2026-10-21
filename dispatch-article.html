@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="obsidian">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Monograph No. 14: Autonomous Tax-Loss Harvesting in Private Debt | AURELIUS</title>
-  <meta name="description" content="Mathematical monograph proving +142 bps of annualized statutory alpha through continuous-time loss recognition in multi-jurisdiction private credit sleeves.">
+  <title>Aurelius Guide 01 — How Compound Interest Really Works</title>
+  <meta name="description" content="Discover how compound interest turns small monthly savings into life-changing wealth. Plain-English guide with simple real-world examples.">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -13,32 +13,20 @@
 </head>
 <body>
 
-  <!-- TOP TELEMETRY BAR -->
-  <aside class="telemetry-bar" aria-label="Live Telemetry">
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <aside class="telemetry-bar" aria-label="Article header">
     <div class="container-wide">
       <div class="telemetry-group">
         <span class="telemetry-item">
           <span class="telemetry-dot" aria-hidden="true"></span>
-          <span class="label">WHITEPAPER VIEWER:</span>
-          <span class="val">MONOGRAPH NO. 14 // PEER REVIEWED</span>
+          <span><strong>Guide 01:</strong> 5-Minute Read • Plain-English Finance</span>
         </span>
-        <span class="telemetry-item">
-          <span class="label">CRYPTOGRAPHIC SIGNATURE:</span>
-          <span class="val">SHA-256 VALIDATED</span>
-        </span>
-      </div>
-
-      <div class="telemetry-group secondary-telemetry">
-        <span class="telemetry-item"><span class="label">UTC:</span> <span class="val" id="clock-utc">18:00:00</span></span>
-        <span class="telemetry-item"><span class="label">ZRH:</span> <span class="val" id="clock-zrh">20:00:00</span></span>
-        <span class="telemetry-item"><span class="label">SGP:</span> <span class="val" id="clock-sgp">02:00:00</span></span>
-        <span class="telemetry-item"><span class="label">NYC:</span> <span class="val" id="clock-nyc">14:00:00</span></span>
       </div>
 
       <div class="telemetry-group">
-        <button class="theme-toggle-btn" type="button" aria-label="Toggle Obsidian and Ivory Theme">
+        <button class="theme-toggle-btn" type="button" aria-label="Toggle Light and Dark Theme">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-          <span class="theme-label">IVORY</span>
+          <span class="theme-label">DARK</span>
         </button>
       </div>
     </div>
@@ -47,64 +35,41 @@
   <!-- SITE HEADER -->
   <header class="site-header">
     <div class="container-wide">
-      <a href="index.html" class="brand-logo" aria-label="AURELIUS Homepage">
-        <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
-          <polygon points="16 2, 30 26, 2 26" />
-          <circle cx="16" cy="16" r="3" fill="currentColor" />
+      <a href="index.html" class="brand-logo" aria-label="Aurelius Homepage">
+        <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" />
+          <path d="M11 19L16 9L21 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M13 15H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
         </svg>
-        <span class="brand-name">AURELIUS</span>
-        <span class="brand-tag">QUANTITATIVE</span>
+        <span class="brand-name">Aurelius</span>
+        <span class="brand-tag">Smart Finance</span>
       </a>
 
-      <!-- Desktop Mega-Menu -->
+      <!-- Simple Nav -->
       <nav class="nav-menu" aria-label="Primary Navigation">
         <div class="nav-item">
-          <a href="architecture.html" class="nav-link">Platform <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
-          <div class="mega-dropdown">
-            <a href="architecture.html" class="dropdown-link"><div class="dropdown-title"><span>The Aurelius Core</span><span class="page-num">02</span></div><div class="dropdown-desc">5-layer adversarial multi-agent reasoning stack.</div></a>
-            <a href="advisory-suite.html" class="dropdown-link"><div class="dropdown-title"><span>Autonomous Advisory Suite</span><span class="page-num">03</span></div><div class="dropdown-desc">Voice synthesis briefings & encrypted execution.</div></a>
-            <a href="security-enclave.html" class="dropdown-link"><div class="dropdown-title"><span>Zero-Knowledge Enclave</span><span class="page-num">04</span></div><div class="dropdown-desc">Air-gapped Zurich bunker & dedicated silicon.</div></a>
-          </div>
+          <a href="index.html" class="nav-link">Home</a>
         </div>
-
         <div class="nav-item">
-          <a href="family-offices.html" class="nav-link">Sovereign Solutions <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
-          <div class="mega-dropdown wide">
-            <a href="family-offices.html" class="dropdown-link"><div class="dropdown-title"><span>Family Office Integration</span><span class="page-num">05</span></div><div class="dropdown-desc">Unified ledger consolidating 10+ custodians.</div></a>
-            <a href="sovereign-tax.html" class="dropdown-link"><div class="dropdown-title"><span>Cross-Border Tax Arbitrage</span><span class="page-num">06</span></div><div class="dropdown-desc">Residency day-counts & treaty optimization.</div></a>
-            <a href="alternative-assets.html" class="dropdown-link"><div class="dropdown-title"><span>Alternative & Illiquid Assets</span><span class="page-num">07</span></div><div class="dropdown-desc">Aviation, superyachts, freeports & PE pacing.</div></a>
-            <a href="dynasty-estate.html" class="dropdown-link"><div class="dropdown-title"><span>Dynasty & Succession AI</span><span class="page-num">08</span></div><div class="dropdown-desc">100-year multi-generational trust modeling.</div></a>
-            <a href="geopolitical-risk.html" class="dropdown-link" style="grid-column: span 2;"><div class="dropdown-title"><span>Geopolitical Risk & Tail Hedging</span><span class="page-num">09</span></div><div class="dropdown-desc">Black-swan telemetry and sanctions immunity.</div></a>
-          </div>
+          <a href="architecture.html" class="nav-link">How It Works</a>
         </div>
-
         <div class="nav-item">
-          <a href="simulator.html" class="nav-link active">Intelligence &amp; Lab <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
-          <div class="mega-dropdown">
-            <a href="simulator.html" class="dropdown-link"><div class="dropdown-title"><span>Monte Carlo Wealth Lab</span><span class="page-num">10</span></div><div class="dropdown-desc">500-path stochastic modeling sandbox.</div></a>
-            <a href="case-studies.html" class="dropdown-link"><div class="dropdown-title"><span>Anonymized Principal Ledgers</span><span class="page-num">11</span></div><div class="dropdown-desc">Verified Swiss banking secrecy outcomes.</div></a>
-            <a href="intelligence.html" class="dropdown-link"><div class="dropdown-title"><span>Quantitative Intelligence</span><span class="page-num">12</span></div><div class="dropdown-desc">Institutional monographs & macro dispatches.</div></a>
-            <a href="dispatch-article.html" class="dropdown-link"><div class="dropdown-title"><span>Whitepaper Monograph No. 14</span><span class="page-num">13</span></div><div class="dropdown-desc">Autonomous tax-loss harvesting in private debt.</div></a>
-          </div>
+          <a href="simulator.html" class="nav-link">Savings Calculator</a>
         </div>
-
         <div class="nav-item">
-          <a href="charter.html" class="nav-link">Institution <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
-          <div class="mega-dropdown">
-            <a href="charter.html" class="dropdown-link"><div class="dropdown-title"><span>Institutional Charter & Ethics</span><span class="page-num">14</span></div><div class="dropdown-desc">The 5 immutable fiduciary manifesto rules.</div></a>
-            <a href="membership.html" class="dropdown-link"><div class="dropdown-title"><span>Allocation Tiers & Access</span><span class="page-num">15</span></div><div class="dropdown-desc">Strictly capped at 150 global principals.</div></a>
-          </div>
+          <a href="client-terminal.html" class="nav-link">Live Demo</a>
+        </div>
+        <div class="nav-item">
+          <a href="membership.html" class="nav-link">Pricing</a>
+        </div>
+        <div class="nav-item">
+          <a href="intelligence.html" class="nav-link active">Guides</a>
         </div>
       </nav>
 
       <div class="header-actions">
-        <button class="cmd-trigger-btn" type="button" aria-label="Open Command Palette">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <span>Command</span>
-          <kbd>⌘K</kbd>
-        </button>
-        <a href="client-terminal.html" class="btn btn-secondary btn-sm btn-mono">Terminal</a>
-        <a href="request-briefing.html" class="btn btn-primary btn-sm btn-mono">Briefing</a>
+        <a href="client-terminal.html" class="btn btn-secondary btn-sm">Try Demo</a>
+        <a href="request-briefing.html" class="btn btn-primary btn-sm">Get Started Free</a>
         <button class="mobile-nav-toggle" type="button" aria-label="Open Mobile Menu">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
@@ -114,378 +79,169 @@
 
   <!-- Mobile Drawer -->
   <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
-    <div class="mobile-pillar-title">Pillar I: Platform</div>
-    <a href="architecture.html" class="mobile-drawer-link">02 — The Aurelius Core</a>
-    <a href="advisory-suite.html" class="mobile-drawer-link">03 — Autonomous Advisory Suite</a>
-    <a href="security-enclave.html" class="mobile-drawer-link">04 — Security &amp; Zero-Knowledge Enclave</a>
-
-    <div class="mobile-pillar-title">Pillar II: Sovereign Solutions</div>
-    <a href="family-offices.html" class="mobile-drawer-link">05 — Family Office Integration</a>
-    <a href="sovereign-tax.html" class="mobile-drawer-link">06 — Sovereign Tax &amp; Jurisdictions</a>
-    <a href="alternative-assets.html" class="mobile-drawer-link">07 — Alternative &amp; Illiquid Assets</a>
-    <a href="dynasty-estate.html" class="mobile-drawer-link">08 — Dynasty &amp; Succession AI</a>
-    <a href="geopolitical-risk.html" class="mobile-drawer-link">09 — Geopolitical Risk &amp; Tail Hedging</a>
-
-    <div class="mobile-pillar-title">Pillar III: Intelligence &amp; Lab</div>
-    <a href="simulator.html" class="mobile-drawer-link">10 — Monte Carlo Wealth Lab</a>
-    <a href="case-studies.html" class="mobile-drawer-link">11 — Anonymized Principal Ledgers</a>
-    <a href="intelligence.html" class="mobile-drawer-link">12 — Quantitative Intelligence</a>
-    <a href="dispatch-article.html" class="mobile-drawer-link active">13 — Whitepaper Monograph No. 14</a>
-
-    <div class="mobile-pillar-title">Pillar IV: Institution</div>
-    <a href="charter.html" class="mobile-drawer-link">14 — Institutional Charter &amp; Ethics</a>
-    <a href="membership.html" class="mobile-drawer-link">15 — Allocation Tiers &amp; Pricing</a>
-    <a href="request-briefing.html" class="mobile-drawer-link">16 — Request Private Briefing</a>
-    <a href="client-terminal.html" class="mobile-drawer-link" style="color: var(--accent-primary); font-weight: 600;">17 — Live Client Terminal</a>
+    <div class="mobile-pillar-title">Explore Aurelius</div>
+    <a href="index.html" class="mobile-drawer-link">Home Overview</a>
+    <a href="architecture.html" class="mobile-drawer-link">How It Works &amp; Features</a>
+    <a href="simulator.html" class="mobile-drawer-link">Savings Calculator</a>
+    <a href="client-terminal.html" class="mobile-drawer-link">Live Dashboard Demo</a>
+    <a href="membership.html" class="mobile-drawer-link">Pricing Plans</a>
+    <a href="intelligence.html" class="mobile-drawer-link" style="color: var(--accent-primary); font-weight: 600;">Financial Guides</a>
+    <a href="request-briefing.html" class="mobile-drawer-link">Get Started Free</a>
   </div>
 
-  <!-- MAIN CONTENT: EDITORIAL WHITEPAPER READER -->
+  <!-- ARTICLE MAIN CONTENT -->
   <main id="main-content">
     
     <header class="page-hero">
-      <div class="container-wide">
+      <div class="container-narrow">
         <div class="page-eyebrow">
-          <span class="badge badge-accent">MONOGRAPH NO. 14 // SOVEREIGN TAX LAW</span>
-          <span>PUBLISHED OCTOBER 2026 // 18 MIN READ</span>
+          <a href="intelligence.html" style="color: var(--accent-primary); text-decoration: underline;">&larr; Back to All Guides</a>
+          <span>•</span>
+          <span>GUIDE 01</span>
         </div>
-        <h1 class="page-title">
-          Autonomous Tax-Loss Harvesting Across Multi-Jurisdictional Private Credit Portfolios.
+        <h1 class="page-title" style="font-size: clamp(2rem, 4vw, 3.25rem);">
+          How Compound Interest Really Works (The 8th Wonder of the World)
         </h1>
-        <p class="page-lead">
-          An exhaustive mathematical analysis of continuous-time algorithmic loss recognition in illiquid and distressed debt sleeves, proving an empirical +142 bps of annualized post-tax alpha without violating statutory wash-sale rules.
-        </p>
-        <div style="display: flex; gap: var(--space-4); align-items: center; flex-wrap: wrap;">
-          <div class="mono" style="font-size: 12px; color: var(--accent-primary);">
-            By Dr. Marc-Andr&eacute; von Berg, Chief Quantitative Architect
-          </div>
-          <button id="download-pdf-btn" class="btn btn-secondary btn-sm btn-mono" type="button">
-            DOWNLOAD CRYPTOGRAPHICALLY SIGNED PDF BRIEF (.ASC)
-          </button>
+        <div style="display: flex; gap: var(--space-4); align-items: center; font-size: 13.5px; color: var(--text-muted); margin-top: 1rem;">
+          <span>By Aurelius Education Team</span>
+          <span>•</span>
+          <span>5 Min Read</span>
+          <span>•</span>
+          <span class="badge badge-emerald">Beginner Friendly</span>
         </div>
       </div>
     </header>
 
-    <!-- ARTICLE BODY WITH STICKY TABLE OF CONTENTS -->
     <section class="section-py border-b">
-      <div class="container-wide">
-        <div class="article-layout">
+      <div class="container-narrow">
+        <article style="line-height: 1.8; font-size: 1.1rem; color: var(--text-secondary);">
           
-          <!-- Sticky Table of Contents -->
-          <aside class="article-toc" aria-label="Table of contents">
-            <div class="toc-title">TABLE OF CONTENTS</div>
-            <nav class="toc-list">
-              <a href="#sec-abstract" class="toc-link active">1. Abstract &amp; Fiduciary Motivation</a>
-              <a href="#sec-formulation" class="toc-link">2. Mathematical Formulation</a>
-              <a href="#sec-washsale" class="toc-link">3. Wash-Sale Safe Harbors</a>
-              <a href="#sec-empirical" class="toc-link">4. Empirical Backtesting (+142 bps)</a>
-              <a href="#sec-crossborder" class="toc-link">5. Cross-Border Treaty Integration</a>
-              <a href="#sec-conclusion" class="toc-link">6. Fiduciary Conclusion</a>
-            </nav>
+          <p class="lead" style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 2rem;">
+            Albert Einstein famously called compound interest the "eighth wonder of the world," adding that <em>"he who understands it, earns it; he who doesn't, pays it."</em> But what does it actually mean for your personal bank account?
+          </p>
 
-            <div style="margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--border-hairline);">
-              <div class="stat-label">PAPER TELEMETRY</div>
-              <div class="mono" style="font-size: 11px; color: var(--text-muted); line-height: 1.6;">
-                SHA-256: 0x9f4a...12c8<br>
-                Citations: 42 Sovereign Codes<br>
-                Empirical Sample: $12.4B NAV
-              </div>
-            </div>
-          </aside>
+          <h2 style="margin: 2rem 0 1rem 0; font-size: 1.75rem;">1. Simple Interest vs. Compound Interest</h2>
+          <p>
+            When you earn <strong>simple interest</strong>, you only earn profit on your original deposit. For example, if you deposit $1,000 at 5% interest, you earn $50 every year. In 10 years, you'll have earned $500.
+          </p>
+          <p>
+            <strong>Compound interest</strong> is entirely different. In Year 1, you earn $50 on your $1,000. But in Year 2, you earn 5% on <strong>$1,050</strong>. That means you earn $52.50. In Year 3, you earn 5% on $1,102.50.
+          </p>
+          <p>
+            Over the first couple of years, the difference looks small. But as time goes on, the line turns into an upward hockey stick. You start earning interest on your interest, creating a snowball effect of pure free growth.
+          </p>
 
-          <!-- Whitepaper Editorial Content -->
-          <article class="article-body">
-            
-            <section id="sec-abstract">
-              <h2>1. Abstract &amp; Fiduciary Motivation</h2>
-              <p>
-                In ultra-high-net-worth balance sheets exceeding $100M liquid capital, statutory tax drag represents the single largest unforced reduction of real compounding purchasing power. While traditional private banks perform superficial annual tax-loss reviews in the final week of December, substantial capital loss opportunities in illiquid credit, syndicated loans, and convertible private debt instruments expire unharvested intra-year.
-              </p>
-              <p>
-                This monograph formalizes the <strong>Aurelius Continuous-Time Harvesting Algorithm (ACTHA)</strong>, which executes micro-loss realizations across multi-jurisdictional private credit positions without disrupting underlying coupon cash flow or generating tracking error against target liability benchmarks.
-              </p>
-            </section>
+          <!-- Highlight Box -->
+          <div class="card" style="background: var(--bg-secondary); border-left: 4px solid var(--accent-primary); padding: 1.75rem; margin: 2rem 0;">
+            <h4 style="margin-bottom: 0.5rem; color: var(--text-primary);">💡 The Rule of 72: A Quick Trick</h4>
+            <p style="margin: 0; font-size: 15px;">
+              Want to know how fast your money will double? Divide <strong>72</strong> by your expected annual interest rate.
+              <br><br>
+              If your investments grow at <strong>7% per year</strong>: <code>72 ÷ 7 = ~10.2 years</code>.
+              <br>
+              That means your money doubles every 10 years automatically without adding an extra cent!
+            </p>
+          </div>
 
-            <section id="sec-formulation">
-              <h2>2. Mathematical Formulation</h2>
-              <p>
-                Let the portfolio value process \( S(t) \) evolve under jump-diffusion with sovereign regime switching. For any constituent credit instrument \( i \in \{1, \dots, N\} \), the accumulated unrealized capital loss at time \( t \) is given by:
-              </p>
+          <h2 style="margin: 2rem 0 1rem 0; font-size: 1.75rem;">2. A Tale of Two Savers: Sarah vs. Jordan</h2>
+          <p>
+            To see why starting early matters so much, look at Sarah and Jordan:
+          </p>
+          <ul>
+            <li style="margin-bottom: 0.75rem;">
+              <strong>Sarah (Starts at age 25):</strong> Saves <strong>$300 every month</strong> into a diversified index fund earning an average 7% per year. She saves for just 10 years (until age 35, depositing a total of $36,000), and then stops adding new money, letting it grow until retirement at age 65.
+            </li>
+            <li style="margin-bottom: 0.75rem;">
+              <strong>Jordan (Starts at age 35):</strong> Waits 10 years to start. He then saves <strong>$300 every month for 30 consecutive years</strong> (from age 35 to 65, depositing a total of $108,000).
+            </li>
+          </ul>
+          <p>
+            Who ends up with more money at age 65?
+          </p>
+          <p>
+            Surprisingly, <strong>Sarah ends up with over $340,000</strong>, while Jordan ends up with roughly $335,000 — even though Jordan put in <strong>$72,000 more of his own cash!</strong> Sarah won simply because compound interest had 10 extra years to do the heavy lifting.
+          </p>
 
-              <div class="terminal-card" style="margin: var(--space-4) 0;">
-                <div class="terminal-body mono" style="font-size: 13px; color: var(--accent-primary);">
-                  L_i(t) = \max \left( 0, \; C_i^{\text{basis}} - P_i(t) \right)
-                </div>
-              </div>
+          <h2 style="margin: 2rem 0 1rem 0; font-size: 1.75rem;">3. Three Simple Rules to Maximize Compounding</h2>
+          <ol style="padding-left: 1.5rem; margin-bottom: 2rem;">
+            <li style="margin-bottom: 0.75rem;">
+              <strong>Start today, even with $50:</strong> Don't wait until you have a huge lump sum. Time in the market is far more powerful than timing the market.
+            </li>
+            <li style="margin-bottom: 0.75rem;">
+              <strong>Automate your deposits:</strong> Set a recurring monthly transfer right after payday so you never forget or spend the money.
+            </li>
+            <li style="margin-bottom: 0.75rem;">
+              <strong>Avoid unnecessary fees:</strong> High 1% or 2% advisor fees silently eat away your compounding returns. Keep your fees low and transparent.
+            </li>
+          </ol>
 
-              <p>
-                The adversarial sub-agent <em>The Tax Counsel</em> maximizes cumulative net statutory alpha \( \Phi(T) \) subject to transactional liquidity constraints enforced by <em>The Liquidity Architect</em>:
-              </p>
+          <!-- Call to action inside article -->
+          <div class="card" style="background: linear-gradient(135deg, var(--bg-elevated), var(--bg-secondary)); text-align: center; padding: 2.5rem; margin-top: 3rem;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">See Your Own Compounding Numbers</h3>
+            <p style="font-size: 15px; margin-bottom: 1.5rem;">
+              Try our free interactive savings calculator to see how much your monthly deposits will grow over 5, 10, or 20 years.
+            </p>
+            <a href="simulator.html" class="btn btn-primary btn-lg">Launch Free Growth Calculator &rarr;</a>
+          </div>
 
-              <div class="terminal-card" style="margin: var(--space-4) 0;">
-                <div class="terminal-body mono" style="font-size: 13px; color: var(--signal-positive);">
-                  \Phi(T) = \int_0^T \sum_{i=1}^N \left( \tau_{\text{stat}} \cdot dL_i(t) - \kappa_i(t) \right) \, dt - \lambda \cdot \text{TrackingError}(t)
-                </div>
-              </div>
-
-              <p>
-                Where \( \tau_{\text{stat}} \) represents the effective statutory marginal capital gains tax rate of the relevant jurisdiction (e.g., 37% US Federal + 13.3% California, or 20% UK Non-Dom remittance rate), and \( \kappa_i(t) \) denotes bid-ask crossing friction.
-              </p>
-            </section>
-
-            <!-- Interactive Inline Data Figure: Toggle Basis Points vs USD Impact -->
-            <div class="article-figure-box">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-3);">
-                <span class="card-eyebrow" style="margin: 0;">FIGURE 1.1 // EMPIRICAL POST-TAX ALPHA MATRIX</span>
-                <div style="display: flex; gap: 6px;">
-                  <button id="fig-btn-bps" class="btn btn-primary btn-sm btn-mono" type="button">Basis Points (bps)</button>
-                  <button id="fig-btn-usd" class="btn btn-secondary btn-sm btn-mono" type="button">USD Capital ($M)</button>
-                </div>
-              </div>
-
-              <div class="table-container" style="border: 1px solid var(--border-hairline);">
-                <table class="swiss-table" id="fig-table">
-                  <thead>
-                    <tr>
-                      <th>Credit Portfolio Sleeve</th>
-                      <th>Gross Yield</th>
-                      <th>Traditional Tax Drag</th>
-                      <th class="cell-highlight">Aurelius Net Retained Alpha</th>
-                    </tr>
-                  </thead>
-                  <tbody id="fig-tbody">
-                    <!-- Populated by JS -->
-                  </tbody>
-                </table>
-              </div>
-              <div class="form-hint" style="margin-top: var(--space-2);">
-                Empirical backtesting modeled across $1,000,000,000 baseline private credit sleeve (2016–2026).
-              </div>
-            </div>
-
-            <section id="sec-washsale">
-              <h2>3. Wash-Sale Safe Harbors</h2>
-              <p>
-                Under statutory rules such as Section 1091 of the United States Internal Revenue Code (and its equivalent safe harbor rules across HMRC and Swiss cantonal authorities), an investor is forbidden from claiming a loss if a "substantially identical" security is acquired within 30 days before or after the sale.
-              </p>
-              <p>
-                Aurelius eliminates this risk through <strong>Synthetic Proxy Synthesis</strong>:
-              </p>
-              <ul style="display: flex; flex-direction: column; gap: var(--space-3); margin-top: var(--space-2);">
-                <li style="display: flex; gap: var(--space-3);">
-                  <span class="mono" style="color: var(--accent-primary);">&#9632;</span>
-                  <span><strong>Cross-Covenant Substitution:</strong> Replacing a sold senior secured loan with a pari-passu syndicated facility issued by a non-identical corporate subsidiary.</span>
-                </li>
-                <li style="display: flex; gap: var(--space-3);">
-                  <span class="mono" style="color: var(--accent-primary);">&#9632;</span>
-                  <span><strong>Multi-Factor Basket Synthesis:</strong> Replicating 99.88% of the risk/duration profile via a custom three-bond sovereign proxy basket with zero legal issuer overlap.</span>
-                </li>
-              </ul>
-            </section>
-
-            <section id="sec-empirical">
-              <h2>4. Empirical Backtesting (+142 bps)</h2>
-              <p>
-                Across an audited 10-year backtest covering market disruptions in 2018 (Fed quantitative tightening), 2020 (global pandemic shock), and 2022 (rapid rate hike regime), ACTHA generated an annualized average of <strong>+142.4 basis points of post-tax statutory alpha</strong>.
-              </p>
-              <p>
-                On a $1.84B consolidated sovereign balance sheet, this translates to <strong>$26,200,000 USD in annualized cash retention</strong>, compounding to over $380M across a decade.
-              </p>
-            </section>
-
-            <section id="sec-crossborder">
-              <h2>5. Cross-Border Treaty Integration</h2>
-              <p>
-                The complexity increases exponentially when multiple sovereign tax jurisdictions overlap. Aurelius continuously routes losses through the appropriate legal entity:
-              </p>
-              <div class="callout">
-                <div class="callout-title">JURISDICTIONAL ROUTING SPECIFICATION</div>
-                <div class="callout-body">
-                  &bull; <strong>US Sleeve Losses:</strong> Offset against high-rate short-term carried interest.<br>
-                  &bull; <strong>UK Non-Dom FIG:</strong> Segregated into offshore clean capital accounts to avoid inadvertent remittance triggers.<br>
-                  &bull; <strong>Swiss Forfait:</strong> Neutralized against cantonal global expenditure baselines.
-                </div>
-              </div>
-            </section>
-
-            <section id="sec-conclusion">
-              <h2>6. Fiduciary Conclusion</h2>
-              <p>
-                Tax efficiency at the sovereign scale is not an annual accounting chore; it is an active, continuous algorithmic discipline. By delegating trade surveillance to adversarial AI agents running within an air-gapped enclave, principals eliminate the single greatest friction point in multi-generational wealth preservation.
-              </p>
-            </section>
-
-          </article>
-        </div>
+        </article>
       </div>
     </section>
 
   </main>
 
-  <!-- COMMAND PALETTE MODAL -->
-  <div id="cmd-palette" class="cmd-modal-backdrop" role="dialog" aria-modal="true" aria-label="Command Palette">
-    <div class="cmd-modal">
-      <div class="cmd-header">
-        <svg class="cmd-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="text" class="cmd-input" placeholder="Search all 17 sovereign pages..." aria-label="Command search">
-        <span class="cmd-esc">ESC</span>
-      </div>
-      <div class="cmd-quick-actions">
-        <button class="cmd-chip" data-action="toggle-theme" type="button">Toggle Theme</button>
-        <button class="cmd-chip" data-action="terminal" type="button">Client Terminal</button>
-        <button class="cmd-chip" data-action="simulator" type="button">Monte Carlo Lab</button>
-        <button class="cmd-chip" data-action="briefing" type="button">Request Briefing</button>
-      </div>
-      <div class="cmd-results" role="listbox"></div>
-      <div class="cmd-footer">
-        <div class="cmd-hints"><span>&uarr;&darr; Navigate</span><span>&crarr; Select</span><span>ESC Close</span></div>
-        <span class="mono" style="color: var(--accent-primary);">AURELIUS OS v4.2</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ARCHITECTURAL FOOTER -->
+  <!-- Clean Footer -->
   <footer class="site-footer">
     <div class="footer-top">
       <div class="container-wide">
         <div class="footer-grid">
           <div class="footer-brand-col">
             <a href="index.html" class="brand-logo" style="margin-bottom: var(--space-3);">
-              <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="16 2, 30 26, 2 26" /><circle cx="16" cy="16" r="3" fill="currentColor" /></svg>
-              <span class="brand-name">AURELIUS</span>
+              <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" />
+                <path d="M11 19L16 9L21 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M13 15H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <span class="brand-name">Aurelius</span>
             </a>
-            <p>Autonomous Sovereign Wealth Architecture for $100M+ Liquid Net Worth Principals.</p>
-            <div style="margin-top: var(--space-4);"><span class="badge badge-accent">AIR-GAPPED SILICON</span></div>
+            <p style="font-size: 14px; line-height: 1.6; color: var(--text-secondary);">
+              Smart money management and wealth tools made simple.
+            </p>
           </div>
+
           <div>
-            <div class="footer-col-title">Platform</div>
+            <div class="footer-col-title">Navigation</div>
             <ul class="footer-nav-list">
-              <li><a href="index.html" class="footer-nav-link"><span>Overview</span><span class="page-badge">01</span></a></li>
-              <li><a href="architecture.html" class="footer-nav-link"><span>The Aurelius Core</span><span class="page-badge">02</span></a></li>
-              <li><a href="advisory-suite.html" class="footer-nav-link"><span>Autonomous Advisory</span><span class="page-badge">03</span></a></li>
-              <li><a href="security-enclave.html" class="footer-nav-link"><span>Security &amp; ZK Enclave</span><span class="page-badge">04</span></a></li>
+              <li><a href="index.html" class="footer-nav-link"><span>Home</span></a></li>
+              <li><a href="architecture.html" class="footer-nav-link"><span>How It Works</span></a></li>
+              <li><a href="simulator.html" class="footer-nav-link"><span>Savings Calculator</span></a></li>
+              <li><a href="client-terminal.html" class="footer-nav-link"><span>Live Demo</span></a></li>
             </ul>
           </div>
+
           <div>
-            <div class="footer-col-title">Sovereign Solutions</div>
+            <div class="footer-col-title">Plans &amp; Support</div>
             <ul class="footer-nav-list">
-              <li><a href="family-offices.html" class="footer-nav-link"><span>Family Offices</span><span class="page-badge">05</span></a></li>
-              <li><a href="sovereign-tax.html" class="footer-nav-link"><span>Sovereign Tax</span><span class="page-badge">06</span></a></li>
-              <li><a href="alternative-assets.html" class="footer-nav-link"><span>Alternative Assets</span><span class="page-badge">07</span></a></li>
-              <li><a href="dynasty-estate.html" class="footer-nav-link"><span>Dynasty AI</span><span class="page-badge">08</span></a></li>
-              <li><a href="geopolitical-risk.html" class="footer-nav-link"><span>Geopolitical Risk</span><span class="page-badge">09</span></a></li>
-            </ul>
-          </div>
-          <div>
-            <div class="footer-col-title">Intelligence &amp; Lab</div>
-            <ul class="footer-nav-list">
-              <li><a href="simulator.html" class="footer-nav-link"><span>Monte Carlo Lab</span><span class="page-badge">10</span></a></li>
-              <li><a href="case-studies.html" class="footer-nav-link"><span>Principal Ledgers</span><span class="page-badge">11</span></a></li>
-              <li><a href="intelligence.html" class="footer-nav-link"><span>Quantitative Research</span><span class="page-badge">12</span></a></li>
-              <li><a href="dispatch-article.html" class="footer-nav-link"><span>Monograph No. 14</span><span class="page-badge">13</span></a></li>
-            </ul>
-          </div>
-          <div>
-            <div class="footer-col-title">Institution</div>
-            <ul class="footer-nav-list">
-              <li><a href="charter.html" class="footer-nav-link"><span>Institutional Charter</span><span class="page-badge">14</span></a></li>
-              <li><a href="membership.html" class="footer-nav-link"><span>Membership Tiers</span><span class="page-badge">15</span></a></li>
-              <li><a href="request-briefing.html" class="footer-nav-link"><span>Request Briefing</span><span class="page-badge">16</span></a></li>
-              <li><a href="client-terminal.html" class="footer-nav-link" style="color: var(--accent-primary);"><span>Live Client Terminal</span><span class="page-badge">17</span></a></li>
+              <li><a href="membership.html" class="footer-nav-link"><span>Pricing Plans</span></a></li>
+              <li><a href="security-enclave.html" class="footer-nav-link"><span>Security &amp; Privacy</span></a></li>
+              <li><a href="request-briefing.html" class="footer-nav-link"><span>Get Started Free</span></a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-    <div class="footer-enclaves">
-      <div class="container-wide">
-        <div class="enclaves-grid">
-          <div class="enclave-card"><div class="enclave-city"><span>Zurich Vault</span><span>CH-8001</span></div><div class="enclave-address">Bahnhofstrasse 45, 8001 Zürich, Switzerland</div><div class="enclave-status">&#9679; Air-Gapped Dedicated Alpine Vault</div></div>
-          <div class="enclave-card"><div class="enclave-city"><span>Singapore Hub</span><span>SG-049315</span></div><div class="enclave-address">10 Collyer Quay, Ocean Financial Centre, Singapore</div><div class="enclave-status">&#9679; Asian Family Office Enclave</div></div>
-          <div class="enclave-card"><div class="enclave-city"><span>New York Desk</span><span>US-10153</span></div><div class="enclave-address">767 Fifth Avenue, General Motors Building, NYC</div><div class="enclave-status">&#9679; Institutional Telemetry Node</div></div>
-          <div class="enclave-card"><div class="enclave-city"><span>Geneva Freeport</span><span>CH-1204</span></div><div class="enclave-address">Rue du Rhône 42, 1204 Genève, Switzerland</div><div class="enclave-status">&#9679; Direct Bullion &amp; Freeport Custody</div></div>
-        </div>
-      </div>
-    </div>
+
     <div class="footer-bottom">
       <div class="container-wide">
-        <p class="footer-disclaimer">REGULATORY NOTICE: Aurelius Quantitative Systems AG operates as an autonomous sovereign wealth architecture and technology infrastructure provider. Aurelius does not hold commingled customer deposits, sell proprietary financial products, or accept third-party commissions.</p>
         <div class="footer-legal-bar">
-          <span>&copy; 2026 AURELIUS QUANTITATIVE SYSTEMS AG. ALL RIGHTS RESERVED. SWISS LAW GOVERNED.</span>
-          <span>ZK ROOT HASH: <span class="footer-hash">0x8e2c7a91bfd59104c8f2a64019de58c14f3b77209d841e2b5e0c679a</span></span>
+          <span>&copy; 2026 Aurelius Technologies. Simple, secure financial planning for everyone.</span>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="js/mock-data.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    // Inline Figure 1.1 Toggle (Bps vs USD)
-    const btnBps = document.getElementById("fig-btn-bps");
-    const btnUSD = document.getElementById("fig-btn-usd");
-    const tbody = document.getElementById("fig-tbody");
-
-    const dataBps = [
-      { sleeve: "Direct Middle-Market Lending", gross: "11.4%", drag: "-340 bps", alpha: "+168 bps" },
-      { sleeve: "Distressed Debt Special Situations", gross: "14.8%", drag: "-420 bps", alpha: "+215 bps" },
-      { sleeve: "European Infrastructure Debt", gross: "8.6%", drag: "-210 bps", alpha: "+112 bps" },
-      { sleeve: "Real Estate Mezzanine Facilities", gross: "9.8%", drag: "-280 bps", alpha: "+144 bps" },
-      { sleeve: "Asset-Backed Lending (Aviation/Yacht)", gross: "8.2%", drag: "-190 bps", alpha: "+95 bps" }
-    ];
-
-    const dataUSD = [
-      { sleeve: "Direct Middle-Market Lending", gross: "$114.0M", drag: "-$34.0M", alpha: "+$16.8M" },
-      { sleeve: "Distressed Debt Special Situations", gross: "$148.0M", drag: "-$42.0M", alpha: "+$21.5M" },
-      { sleeve: "European Infrastructure Debt", gross: "$86.0M", drag: "-$21.0M", alpha: "+$11.2M" },
-      { sleeve: "Real Estate Mezzanine Facilities", gross: "$98.0M", drag: "-$28.0M", alpha: "+$14.4M" },
-      { sleeve: "Asset-Backed Lending (Aviation/Yacht)", gross: "$82.0M", drag: "-$19.0M", alpha: "+$9.5M" }
-    ];
-
-    function renderFigure(useUSD) {
-      const items = useUSD ? dataUSD : dataBps;
-      let html = "";
-      items.forEach(d => {
-        html += `
-          <tr>
-            <td><strong>${d.sleeve}</strong></td>
-            <td class="mono">${d.gross}</td>
-            <td class="mono" style="color: var(--signal-negative);">${d.drag}</td>
-            <td class="cell-highlight mono" style="color: var(--signal-positive);">${d.alpha}</td>
-          </tr>
-        `;
-      });
-      tbody.innerHTML = html;
-    }
-
-    renderFigure(false);
-
-    btnBps.addEventListener("click", () => {
-      btnBps.classList.remove("btn-secondary");
-      btnBps.classList.add("btn-primary");
-      btnUSD.classList.remove("btn-primary");
-      btnUSD.classList.add("btn-secondary");
-      renderFigure(false);
-    });
-
-    btnUSD.addEventListener("click", () => {
-      btnUSD.classList.remove("btn-secondary");
-      btnUSD.classList.add("btn-primary");
-      btnBps.classList.remove("btn-primary");
-      btnBps.classList.add("btn-secondary");
-      renderFigure(true);
-    });
-
-    // Download Briefing Simulation
-    const dlBtn = document.getElementById("download-pdf-btn");
-    dlBtn.addEventListener("click", () => {
-      dlBtn.textContent = "VERIFYING PGP SIGNATURE & COMPILING...";
-      dlBtn.disabled = true;
-      setTimeout(() => {
-        dlBtn.textContent = "\u2713 CRYPTOGRAPHIC RECEIPT DOWNLOADED (.ASC)";
-        dlBtn.disabled = false;
-        alert("SIMULATION: Monograph No. 14 cryptographic brief verified by Zurich Enclave Root (0x8e2c...679a). SHA-256 signature confirmed.");
-      }, 700);
-    });
-  </script>
 </body>
 </html>

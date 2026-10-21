@@ -118,7 +118,13 @@ class AureliusCharts {
 
       ctx.textAlign = "right";
       ctx.textBaseline = "middle";
-      const formatted = val >= 1e9 ? `$${(val / 1e9).toFixed(1)}B` : `$${(val / 1e6).toFixed(0)}M`;
+      const formatted = val >= 1e9 
+        ? `$${(val / 1e9).toFixed(1)}B` 
+        : val >= 1e6 
+        ? `$${(val / 1e6).toFixed(1)}M` 
+        : val >= 1e3 
+        ? `$${(val / 1e3).toFixed(0)}k` 
+        : `$${Math.round(val)}`;
       ctx.fillText(formatted, padL - 8, y);
     }
 

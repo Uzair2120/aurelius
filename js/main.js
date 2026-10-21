@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const AureliusCore = {
-  currentTheme: "obsidian",
+  currentTheme: "light",
   currentCurrency: "USD",
   cmdSelectedIndex: 0,
   cmdFilteredItems: [],
@@ -25,16 +25,17 @@ const AureliusCore = {
   },
 
   /* ==========================================================================
-     THEME MANAGEMENT (Obsidian / Ivory)
+     THEME MANAGEMENT (Light / Dark)
      ========================================================================== */
   initTheme() {
-    const savedTheme = localStorage.getItem("aurelius_theme") || "obsidian";
-    this.setTheme(savedTheme);
+    const savedTheme = localStorage.getItem("aurelius_theme");
+    const initialTheme = savedTheme === "obsidian" || savedTheme === "dark" ? "obsidian" : "light";
+    this.setTheme(initialTheme);
 
     const toggleButtons = document.querySelectorAll(".theme-toggle-btn");
     toggleButtons.forEach(btn => {
       btn.addEventListener("click", () => {
-        const nextTheme = this.currentTheme === "obsidian" ? "ivory" : "obsidian";
+        const nextTheme = this.currentTheme === "light" ? "obsidian" : "light";
         this.setTheme(nextTheme);
       });
     });
@@ -50,7 +51,7 @@ const AureliusCore = {
     toggleButtons.forEach(btn => {
       const label = btn.querySelector(".theme-label");
       if (label) {
-        label.textContent = theme === "obsidian" ? "IVORY" : "OBSIDIAN";
+        label.textContent = theme === "light" ? "DARK" : "LIGHT";
       }
     });
 
@@ -177,7 +178,7 @@ const AureliusCore = {
       chip.addEventListener("click", () => {
         const action = chip.getAttribute("data-action");
         if (action === "toggle-theme") {
-          const next = this.currentTheme === "obsidian" ? "ivory" : "obsidian";
+          const next = this.currentTheme === "light" ? "obsidian" : "light";
           this.setTheme(next);
           closePalette();
         } else if (action === "terminal") {
@@ -225,13 +226,13 @@ const AureliusCore = {
     if (this.cmdFilteredItems.length === 0) {
       container.innerHTML = `
         <div style="padding: 2.5rem 1.5rem; text-align: center; color: var(--text-muted); font-size: 13px;">
-          No architectural modules or sovereign pages matching criteria.
+          No pages or guides matching your search.
         </div>
       `;
       return;
     }
 
-    let html = `<div class="cmd-section-label">All Sovereign Pages & Modules (${this.cmdFilteredItems.length})</div>`;
+    let html = `<div class="cmd-section-label">All Pages & Helpful Guides (${this.cmdFilteredItems.length})</div>`;
 
     this.cmdFilteredItems.forEach((item, idx) => {
       const isSelected = idx === this.cmdSelectedIndex ? "selected" : "";

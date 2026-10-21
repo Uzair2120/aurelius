@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="obsidian">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Monte Carlo Wealth Lab — 500-Path Stochastic Sandbox | AURELIUS</title>
-  <meta name="description" content="Interactive 500-path Monte Carlo wealth simulation engine, macro stress-testing, and risk metrics (Sharpe, Sortino, VaR 99%, Tax Alpha).">
+  <title>Aurelius — Interactive Savings &amp; Growth Calculator</title>
+  <meta name="description" content="Calculate how fast your money grows with compound interest. Simple, intuitive wealth simulator designed for everyday savers and investors.">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -13,32 +13,20 @@
 </head>
 <body>
 
-  <!-- TOP TELEMETRY BAR -->
-  <aside class="telemetry-bar" aria-label="Live Telemetry">
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <aside class="telemetry-bar" aria-label="Calculator Info">
     <div class="container-wide">
       <div class="telemetry-group">
         <span class="telemetry-item">
           <span class="telemetry-dot" aria-hidden="true"></span>
-          <span class="label">QUANT LAB:</span>
-          <span class="val">500-PATH MONTE CARLO // REAL-TIME RUNTIME</span>
+          <span><strong>Growth Lab:</strong> Test how small monthly savings grow into life-changing wealth over time.</span>
         </span>
-        <span class="telemetry-item">
-          <span class="label">DIFFUSION MODEL:</span>
-          <span class="val">MERTON JUMP-DIFFUSION (GBM)</span>
-        </span>
-      </div>
-
-      <div class="telemetry-group secondary-telemetry">
-        <span class="telemetry-item"><span class="label">UTC:</span> <span class="val" id="clock-utc">18:00:00</span></span>
-        <span class="telemetry-item"><span class="label">ZRH:</span> <span class="val" id="clock-zrh">20:00:00</span></span>
-        <span class="telemetry-item"><span class="label">SGP:</span> <span class="val" id="clock-sgp">02:00:00</span></span>
-        <span class="telemetry-item"><span class="label">NYC:</span> <span class="val" id="clock-nyc">14:00:00</span></span>
       </div>
 
       <div class="telemetry-group">
-        <button class="theme-toggle-btn" type="button" aria-label="Toggle Obsidian and Ivory Theme">
+        <button class="theme-toggle-btn" type="button" aria-label="Toggle Light and Dark Theme">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-          <span class="theme-label">IVORY</span>
+          <span class="theme-label">DARK</span>
         </button>
       </div>
     </div>
@@ -47,64 +35,46 @@
   <!-- SITE HEADER -->
   <header class="site-header">
     <div class="container-wide">
-      <a href="index.html" class="brand-logo" aria-label="AURELIUS Homepage">
-        <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
-          <polygon points="16 2, 30 26, 2 26" />
-          <circle cx="16" cy="16" r="3" fill="currentColor" />
+      <a href="index.html" class="brand-logo" aria-label="Aurelius Homepage">
+        <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" />
+          <path d="M11 19L16 9L21 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M13 15H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
         </svg>
-        <span class="brand-name">AURELIUS</span>
-        <span class="brand-tag">QUANTITATIVE</span>
+        <span class="brand-name">Aurelius</span>
+        <span class="brand-tag">Smart Finance</span>
       </a>
 
-      <!-- Desktop Mega-Menu -->
+      <!-- Simple Nav -->
       <nav class="nav-menu" aria-label="Primary Navigation">
         <div class="nav-item">
-          <a href="architecture.html" class="nav-link">Platform <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
-          <div class="mega-dropdown">
-            <a href="architecture.html" class="dropdown-link"><div class="dropdown-title"><span>The Aurelius Core</span><span class="page-num">02</span></div><div class="dropdown-desc">5-layer adversarial multi-agent reasoning stack.</div></a>
-            <a href="advisory-suite.html" class="dropdown-link"><div class="dropdown-title"><span>Autonomous Advisory Suite</span><span class="page-num">03</span></div><div class="dropdown-desc">Voice synthesis briefings & encrypted execution.</div></a>
-            <a href="security-enclave.html" class="dropdown-link"><div class="dropdown-title"><span>Zero-Knowledge Enclave</span><span class="page-num">04</span></div><div class="dropdown-desc">Air-gapped Zurich bunker & dedicated silicon.</div></a>
-          </div>
+          <a href="index.html" class="nav-link">Home</a>
         </div>
-
         <div class="nav-item">
-          <a href="family-offices.html" class="nav-link">Sovereign Solutions <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
-          <div class="mega-dropdown wide">
-            <a href="family-offices.html" class="dropdown-link"><div class="dropdown-title"><span>Family Office Integration</span><span class="page-num">05</span></div><div class="dropdown-desc">Unified ledger consolidating 10+ custodians.</div></a>
-            <a href="sovereign-tax.html" class="dropdown-link"><div class="dropdown-title"><span>Cross-Border Tax Arbitrage</span><span class="page-num">06</span></div><div class="dropdown-desc">Residency day-counts & treaty optimization.</div></a>
-            <a href="alternative-assets.html" class="dropdown-link"><div class="dropdown-title"><span>Alternative & Illiquid Assets</span><span class="page-num">07</span></div><div class="dropdown-desc">Aviation, superyachts, freeports & PE pacing.</div></a>
-            <a href="dynasty-estate.html" class="dropdown-link"><div class="dropdown-title"><span>Dynasty & Succession AI</span><span class="page-num">08</span></div><div class="dropdown-desc">100-year multi-generational trust modeling.</div></a>
-            <a href="geopolitical-risk.html" class="dropdown-link" style="grid-column: span 2;"><div class="dropdown-title"><span>Geopolitical Risk & Tail Hedging</span><span class="page-num">09</span></div><div class="dropdown-desc">Black-swan telemetry and sanctions immunity.</div></a>
-          </div>
+          <a href="architecture.html" class="nav-link">How It Works</a>
         </div>
-
         <div class="nav-item">
-          <a href="simulator.html" class="nav-link active">Intelligence &amp; Lab <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
-          <div class="mega-dropdown">
-            <a href="simulator.html" class="dropdown-link"><div class="dropdown-title"><span>Monte Carlo Wealth Lab</span><span class="page-num">10</span></div><div class="dropdown-desc">500-path stochastic modeling sandbox.</div></a>
-            <a href="case-studies.html" class="dropdown-link"><div class="dropdown-title"><span>Anonymized Principal Ledgers</span><span class="page-num">11</span></div><div class="dropdown-desc">Verified Swiss banking secrecy outcomes.</div></a>
-            <a href="intelligence.html" class="dropdown-link"><div class="dropdown-title"><span>Quantitative Intelligence</span><span class="page-num">12</span></div><div class="dropdown-desc">Institutional monographs & macro dispatches.</div></a>
-            <a href="dispatch-article.html" class="dropdown-link"><div class="dropdown-title"><span>Whitepaper Monograph No. 14</span><span class="page-num">13</span></div><div class="dropdown-desc">Autonomous tax-loss harvesting in private debt.</div></a>
-          </div>
+          <a href="simulator.html" class="nav-link active">Savings Calculator</a>
         </div>
-
         <div class="nav-item">
-          <a href="charter.html" class="nav-link">Institution <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
-          <div class="mega-dropdown">
-            <a href="charter.html" class="dropdown-link"><div class="dropdown-title"><span>Institutional Charter & Ethics</span><span class="page-num">14</span></div><div class="dropdown-desc">The 5 immutable fiduciary manifesto rules.</div></a>
-            <a href="membership.html" class="dropdown-link"><div class="dropdown-title"><span>Allocation Tiers & Access</span><span class="page-num">15</span></div><div class="dropdown-desc">Strictly capped at 150 global principals.</div></a>
-          </div>
+          <a href="client-terminal.html" class="nav-link">Live Demo</a>
+        </div>
+        <div class="nav-item">
+          <a href="membership.html" class="nav-link">Pricing</a>
+        </div>
+        <div class="nav-item">
+          <a href="security-enclave.html" class="nav-link">Security</a>
         </div>
       </nav>
 
       <div class="header-actions">
-        <button class="cmd-trigger-btn" type="button" aria-label="Open Command Palette">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <span>Command</span>
+        <button class="cmd-trigger-btn" type="button" aria-label="Search">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span>Search</span>
           <kbd>⌘K</kbd>
         </button>
-        <a href="client-terminal.html" class="btn btn-secondary btn-sm btn-mono">Terminal</a>
-        <a href="request-briefing.html" class="btn btn-primary btn-sm btn-mono">Briefing</a>
+        <a href="client-terminal.html" class="btn btn-secondary btn-sm">Try Demo</a>
+        <a href="request-briefing.html" class="btn btn-primary btn-sm">Get Started Free</a>
         <button class="mobile-nav-toggle" type="button" aria-label="Open Mobile Menu">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
@@ -114,29 +84,14 @@
 
   <!-- Mobile Drawer -->
   <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
-    <div class="mobile-pillar-title">Pillar I: Platform</div>
-    <a href="architecture.html" class="mobile-drawer-link">02 — The Aurelius Core</a>
-    <a href="advisory-suite.html" class="mobile-drawer-link">03 — Autonomous Advisory Suite</a>
-    <a href="security-enclave.html" class="mobile-drawer-link">04 — Security &amp; Zero-Knowledge Enclave</a>
-
-    <div class="mobile-pillar-title">Pillar II: Sovereign Solutions</div>
-    <a href="family-offices.html" class="mobile-drawer-link">05 — Family Office Integration</a>
-    <a href="sovereign-tax.html" class="mobile-drawer-link">06 — Sovereign Tax &amp; Jurisdictions</a>
-    <a href="alternative-assets.html" class="mobile-drawer-link">07 — Alternative &amp; Illiquid Assets</a>
-    <a href="dynasty-estate.html" class="mobile-drawer-link">08 — Dynasty &amp; Succession AI</a>
-    <a href="geopolitical-risk.html" class="mobile-drawer-link">09 — Geopolitical Risk &amp; Tail Hedging</a>
-
-    <div class="mobile-pillar-title">Pillar III: Intelligence &amp; Lab</div>
-    <a href="simulator.html" class="mobile-drawer-link active">10 — Monte Carlo Wealth Lab</a>
-    <a href="case-studies.html" class="mobile-drawer-link">11 — Anonymized Principal Ledgers</a>
-    <a href="intelligence.html" class="mobile-drawer-link">12 — Quantitative Intelligence</a>
-    <a href="dispatch-article.html" class="mobile-drawer-link">13 — Whitepaper Monograph No. 14</a>
-
-    <div class="mobile-pillar-title">Pillar IV: Institution</div>
-    <a href="charter.html" class="mobile-drawer-link">14 — Institutional Charter &amp; Ethics</a>
-    <a href="membership.html" class="mobile-drawer-link">15 — Allocation Tiers &amp; Pricing</a>
-    <a href="request-briefing.html" class="mobile-drawer-link">16 — Request Private Briefing</a>
-    <a href="client-terminal.html" class="mobile-drawer-link" style="color: var(--accent-primary); font-weight: 600;">17 — Live Client Terminal</a>
+    <div class="mobile-pillar-title">Explore Aurelius</div>
+    <a href="index.html" class="mobile-drawer-link">Home Overview</a>
+    <a href="architecture.html" class="mobile-drawer-link">How It Works &amp; Features</a>
+    <a href="simulator.html" class="mobile-drawer-link" style="color: var(--accent-primary); font-weight: 600;">Savings Calculator</a>
+    <a href="client-terminal.html" class="mobile-drawer-link">Live Dashboard Demo</a>
+    <a href="membership.html" class="mobile-drawer-link">Pricing Plans</a>
+    <a href="security-enclave.html" class="mobile-drawer-link">Security &amp; Privacy</a>
+    <a href="request-briefing.html" class="mobile-drawer-link">Get Started Free</a>
   </div>
 
   <!-- MAIN CONTENT -->
@@ -145,14 +100,14 @@
     <header class="page-hero">
       <div class="container-wide">
         <div class="page-eyebrow">
-          <span class="badge badge-accent">PILLAR III // QUANTITATIVE LAB</span>
-          <span>500-PATH STOCHASTIC WEALTH SANDBOX</span>
+          <span class="badge badge-accent">✨ INTERACTIVE WEALTH LAB</span>
+          <span>COMPOUND GROWTH SIMULATOR</span>
         </div>
         <h1 class="page-title">
-          Interactive Monte Carlo Wealth Lab.
+          Interactive Savings &amp; Growth Calculator
         </h1>
         <p class="page-lead">
-          Execute full-scale stochastic wealth projections powered by Merton jump-diffusion and Geometric Brownian Motion (GBM). Adjust net worth, asset allocation weights, annual drawdown, and macroeconomic volatility regimes to inspect calculated Sharpe, Sortino, VaR (99%), and Aurelius tax alpha.
+          See how your money grows over time with the power of compound interest. Adjust your starting balance, annual contributions, and investment style to visualize your financial future in seconds.
         </p>
       </div>
     </header>
@@ -163,303 +118,217 @@
         <div class="simulator-layout">
           
           <!-- LEFT PANEL: CONTROLS & SLIDERS -->
-          <div class="sim-control-panel">
-            <div class="card-eyebrow" style="margin-bottom: var(--space-3);">STOCHASTIC INPUT VECTORS</div>
-            <h3 style="font-size: 1.35rem; margin-bottom: var(--space-5);">Portfolio &amp; Macro Parameters</h3>
+          <div class="sim-control-panel card" style="background: var(--bg-elevated); border: 1px solid var(--border-hairline); border-radius: var(--radius-lg); padding: 1.75rem;">
+            <div class="card-eyebrow" style="margin-bottom: var(--space-3);">YOUR SAVINGS PLAN</div>
+            <h3 style="font-size: 1.35rem; margin-bottom: var(--space-5);">Customize Your Numbers</h3>
 
-            <!-- Net Worth Slider -->
+            <!-- Net Worth / Starting Balance Slider -->
             <div class="form-group">
               <div class="input-range-header">
-                <span class="form-label" style="margin: 0;">Total Liquid Net Worth:</span>
-                <span class="range-val-badge" id="sim-nw-badge">$1.84B USD</span>
+                <span class="form-label" style="margin: 0; font-weight: 600;">Starting Savings Balance:</span>
+                <span class="range-val-badge" id="sim-nw-badge" style="font-size: 13px; font-weight: 700; color: var(--accent-primary);">$25,000</span>
               </div>
-              <input type="range" class="input-range" id="sim-nw-slider" min="100" max="10000" step="50" value="1842">
-              <span class="form-hint">Principal capital ($100M minimum to $10B+).</span>
+              <input type="range" class="input-range calc-slider" id="sim-nw-slider" min="1" max="250" step="1" value="25">
+              <span class="form-hint" style="font-size: 11.5px; color: var(--text-muted);">How much money you have saved right now ($1k to $250k).</span>
             </div>
 
-            <!-- Annual Spending Slider -->
-            <div class="form-group">
+            <!-- Annual Contribution Slider -->
+            <div class="form-group" style="margin-top: 1.25rem;">
               <div class="input-range-header">
-                <span class="form-label" style="margin: 0;">Annual Drawdown / Burn:</span>
-                <span class="range-val-badge" id="sim-spend-badge">$45M / Year</span>
+                <span class="form-label" style="margin: 0; font-weight: 600;">Annual Savings Added:</span>
+                <span class="range-val-badge" id="sim-spend-badge" style="font-size: 13px; font-weight: 700; color: var(--signal-positive);">$5,000 / Year</span>
               </div>
-              <input type="range" class="input-range" id="sim-spend-slider" min="5" max="250" step="5" value="45">
-              <span class="form-hint">Lifestyle, philanthropy &amp; holding company overhead.</span>
+              <input type="range" class="input-range calc-slider" id="sim-spend-slider" min="0" max="30" step="1" value="5">
+              <span class="form-hint" style="font-size: 11.5px; color: var(--text-muted);">New money you save each year (~$400/month = $5k/yr).</span>
             </div>
 
-            <!-- Volatility Regime Dropdown -->
-            <div class="form-group">
-              <label class="form-label">Macroeconomic Volatility Regime:</label>
-              <select class="input-select" id="sim-regime-select">
-                <option value="0.75">Low Volatility / Goldilocks (VIX &lt; 12 // 0.75x Vol)</option>
-                <option value="1.0" selected>Normal Dynamic Equilibrium (VIX 13–18 // 1.0x Vol)</option>
-                <option value="1.6">High Macro Stress / Yield Spike (VIX 25–35 // 1.6x Vol)</option>
-                <option value="2.4">Black Swan / Clearinghouse Freeze (Jump Diffusion // 2.4x Vol)</option>
+            <!-- Market Regime Dropdown -->
+            <div class="form-group" style="margin-top: 1.25rem;">
+              <label class="form-label" style="font-weight: 600;">Market Growth Style:</label>
+              <select class="input-select" id="sim-regime-select" style="padding: 8px 12px; font-size: 13px;">
+                <option value="0.75">Conservative &amp; Safe (Low Volatility // 4.5% APY)</option>
+                <option value="1.0" selected>Balanced Steady Market (Standard 7% Return)</option>
+                <option value="1.6">Long-Term Aggressive Growth (Higher Volatility // 10% Return)</option>
               </select>
             </div>
 
-            <!-- Allocation Weights Section -->
+            <!-- Simple Allocation Mix -->
             <div style="margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--border-hairline);">
-              <div class="stat-label">ASSET ALLOCATION WEIGHTS (%)</div>
+              <div style="font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem;">HOW YOUR PORTFOLIO IS INVESTED</div>
 
               <div class="form-group" style="margin-bottom: var(--space-3);">
                 <div class="input-range-header">
-                  <span style="font-size: 12px; color: var(--text-secondary);">Direct Equities:</span>
-                  <span class="mono" id="weight-eq-badge" style="font-size: 11px; color: var(--accent-primary);">25%</span>
+                  <span style="font-size: 13px; color: var(--text-secondary);">S&amp;P 500 Index Funds:</span>
+                  <span id="weight-eq-badge" style="font-size: 12px; font-weight: 700; color: var(--accent-primary);">40%</span>
                 </div>
-                <input type="range" class="input-range weight-slider" id="weight-eq" min="0" max="60" value="25">
-              </div>
-
-              <div class="form-group" style="margin-bottom: var(--space-3);">
-                <div class="input-range-header">
-                  <span style="font-size: 12px; color: var(--text-secondary);">Private Credit &amp; PE:</span>
-                  <span class="mono" id="weight-pe-badge" style="font-size: 11px; color: var(--accent-primary);">27%</span>
-                </div>
-                <input type="range" class="input-range weight-slider" id="weight-pe" min="0" max="60" value="27">
+                <input type="range" class="input-range weight-slider calc-slider" id="weight-eq" min="0" max="70" value="40">
               </div>
 
               <div class="form-group" style="margin-bottom: var(--space-3);">
                 <div class="input-range-header">
-                  <span style="font-size: 12px; color: var(--text-secondary);">Sovereign Debt (Bonds):</span>
-                  <span class="mono" id="weight-bonds-badge" style="font-size: 11px; color: var(--accent-primary);">20%</span>
+                  <span style="font-size: 13px; color: var(--text-secondary);">Safe Government Bonds:</span>
+                  <span id="weight-bonds-badge" style="font-size: 12px; font-weight: 700; color: var(--accent-primary);">25%</span>
                 </div>
-                <input type="range" class="input-range weight-slider" id="weight-bonds" min="0" max="60" value="20">
+                <input type="range" class="input-range weight-slider calc-slider" id="weight-bonds" min="0" max="50" value="25">
               </div>
 
               <div class="form-group" style="margin-bottom: var(--space-3);">
                 <div class="input-range-header">
-                  <span style="font-size: 12px; color: var(--text-secondary);">Trophy Real Estate:</span>
-                  <span class="mono" id="weight-re-badge" style="font-size: 11px; color: var(--accent-primary);">15%</span>
+                  <span style="font-size: 13px; color: var(--text-secondary);">High-Yield Cash (4.5%):</span>
+                  <span id="weight-cash-badge" style="font-size: 12px; font-weight: 700; color: var(--accent-primary);">20%</span>
                 </div>
-                <input type="range" class="input-range weight-slider" id="weight-re" min="0" max="40" value="15">
+                <input type="range" class="input-range weight-slider calc-slider" id="weight-cash" min="0" max="50" value="20">
               </div>
 
               <div class="form-group" style="margin-bottom: var(--space-3);">
                 <div class="input-range-header">
-                  <span style="font-size: 12px; color: var(--text-secondary);">Physical Gold Bullion:</span>
-                  <span class="mono" id="weight-gold-badge" style="font-size: 11px; color: var(--accent-primary);">8%</span>
+                  <span style="font-size: 13px; color: var(--text-secondary);">Real Estate &amp; Commodities:</span>
+                  <span id="weight-re-badge" style="font-size: 12px; font-weight: 700; color: var(--accent-primary);">15%</span>
                 </div>
-                <input type="range" class="input-range weight-slider" id="weight-gold" min="0" max="30" value="8">
+                <input type="range" class="input-range weight-slider calc-slider" id="weight-re" min="0" max="30" value="15">
               </div>
 
-              <div class="form-group" style="margin-bottom: var(--space-4);">
-                <div class="input-range-header">
-                  <span style="font-size: 12px; color: var(--text-secondary);">Cash &amp; Short Collateral:</span>
-                  <span class="mono" id="weight-cash-badge" style="font-size: 11px; color: var(--accent-primary);">5%</span>
-                </div>
-                <input type="range" class="input-range weight-slider" id="weight-cash" min="0" max="30" value="5">
-              </div>
+              <input type="hidden" id="weight-pe" value="0">
+              <input type="hidden" id="weight-gold" value="0">
             </div>
 
-            <button id="sim-run-btn" class="btn btn-primary btn-mono" style="width: 100%;" type="button">
-              RUN 500-PATH MONTE CARLO SIMULATION
+            <button id="sim-run-btn" class="btn btn-primary" style="width: 100%; margin-top: 1rem;" type="button">
+              Recalculate Growth Paths &rarr;
             </button>
           </div>
 
           <!-- RIGHT PANEL: CANVAS OUTPUT & CALCULATED RISK METRICS -->
           <div class="sim-output-panel">
             
-            <!-- Monte Carlo Fan Chart Canvas -->
-            <div class="monte-carlo-canvas-container">
+            <!-- Growth Chart Canvas -->
+            <div class="monte-carlo-canvas-container" style="background: var(--bg-elevated); border: 1px solid var(--border-hairline); border-radius: var(--radius-lg); padding: 1.5rem; height: 420px;">
               <canvas id="monte-carlo-canvas"></canvas>
             </div>
 
-            <!-- Calculated Risk Telemetry Grid -->
+            <!-- Big Result Cards -->
             <div class="grid-4" style="gap: var(--space-4);">
               
-              <div class="card" style="padding: var(--space-4);">
-                <div class="stat-label">SHARPE RATIO</div>
-                <div class="stat-value" id="metric-sharpe" style="font-size: 1.75rem;">2.84</div>
-                <div class="stat-desc">Risk-adjusted return over Swiss/Bund risk-free rate.</div>
+              <div class="card" style="padding: 1.25rem;">
+                <div class="stat-label">GROWTH RATING</div>
+                <div class="stat-value" id="metric-sharpe" style="font-size: 1.6rem; color: var(--accent-primary);">2.45</div>
+                <div class="stat-desc">Healthy risk-adjusted return ratio.</div>
               </div>
 
-              <div class="card" style="padding: var(--space-4);">
-                <div class="stat-label">SORTINO RATIO</div>
-                <div class="stat-value" id="metric-sortino" style="font-size: 1.75rem;">4.12</div>
-                <div class="stat-desc">Downside deviation penalization only.</div>
+              <div class="card" style="padding: 1.25rem;">
+                <div class="stat-label">SAFETY SCORE</div>
+                <div class="stat-value" id="metric-sortino" style="font-size: 1.6rem; color: var(--signal-positive);">3.80</div>
+                <div class="stat-desc">Downside protection score.</div>
               </div>
 
-              <div class="card" style="padding: var(--space-4);">
-                <div class="stat-label">MAX DRAWDOWN</div>
-                <div class="stat-value" id="metric-maxdd" style="font-size: 1.75rem; color: var(--signal-negative);">-3.1%</div>
-                <div class="stat-desc">Worst historical peak-to-trough path.</div>
+              <div class="card" style="padding: 1.25rem;">
+                <div class="stat-label">MAX MARKET DIP</div>
+                <div class="stat-value" id="metric-maxdd" style="font-size: 1.6rem; color: var(--signal-warning);">-2.4%</div>
+                <div class="stat-desc">Worst expected temporary drop.</div>
               </div>
 
-              <div class="card" style="padding: var(--space-4);">
-                <div class="stat-label">VaR (99% 1-YR)</div>
-                <div class="stat-value" id="metric-var99" style="font-size: 1.75rem;">$14.2M</div>
-                <div class="stat-desc">Maximum 99% 1-year loss envelope.</div>
+              <div class="card" style="padding: 1.25rem;">
+                <div class="stat-label">SAFETY BUFFER</div>
+                <div class="stat-value" id="metric-var99" style="font-size: 1.6rem;">$2,450</div>
+                <div class="stat-desc">Protected reserve amount.</div>
               </div>
 
             </div>
 
-            <!-- Second Metrics Row: Tax Alpha & 30-Year Terminal Wealth -->
+            <!-- Second Metrics Row: Future Net Worth Highlight -->
             <div class="grid-2" style="gap: var(--space-4);">
-              <div class="card" style="background-color: var(--bg-tertiary); padding: var(--space-5);">
-                <div class="stat-label">AURELIUS ACTIVE TAX ALPHA</div>
-                <div class="stat-value" id="metric-taxalpha" style="color: var(--accent-primary); font-size: 2rem;">+142 bps</div>
-                <p class="stat-desc">
-                  Annualized statutory alpha generated by continuous intra-day direct index tax-loss harvesting, eliminating capital gains drag.
+              <div class="card" style="background: linear-gradient(135deg, var(--bg-elevated), var(--bg-secondary)); padding: 1.5rem;">
+                <div class="stat-label">AUTOMATIC TAX SAVINGS</div>
+                <div class="stat-value" id="metric-taxalpha" style="color: var(--signal-positive); font-size: 1.85rem;">+142 bps</div>
+                <p class="stat-desc" style="margin-top: 6px;">
+                  Aurelius automatically re-invests dividends and avoids tax friction, keeping an extra 1.42% in your pocket every year.
                 </p>
               </div>
 
-              <div class="card" style="background-color: var(--bg-tertiary); padding: var(--space-5);">
-                <div class="stat-label">30-YEAR MEDIAN PROJECTED WEALTH</div>
-                <div class="stat-value" id="metric-median-final" style="color: var(--signal-positive); font-size: 2rem;">$4.92B</div>
-                <p class="stat-desc">
-                  Median 50th-percentile capital retained at Year 30 after net lifestyle burn and long-term inflation debasement.
+              <div class="card" style="background: linear-gradient(135deg, var(--bg-elevated), var(--bg-secondary)); padding: 1.5rem;">
+                <div class="stat-label">EXPECTED 30-YEAR WEALTH</div>
+                <div class="stat-value" id="metric-median-final" style="color: var(--accent-primary); font-size: 1.85rem;">$385,400</div>
+                <p class="stat-desc" style="margin-top: 6px;">
+                  Estimated median balance in 30 years with steady monthly contributions and compounding interest.
                 </p>
               </div>
             </div>
 
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 2: MATHEMATICAL METHODOLOGY FOOTNOTE -->
-    <section class="section-py">
-      <div class="container-wide">
-        <div class="swiss-grid" style="grid-template-columns: 1fr 1fr; align-items: center;">
-          <div>
-            <div class="page-eyebrow">MATHEMATICAL RIGOR</div>
-            <h2>Merton Jump-Diffusion &amp; Non-Normal Fat Tails</h2>
-            <p class="lead">
-              Standard financial software assumes Gaussian normal distributions, notoriously underpricing the risk of sudden multi-sigma market collapses.
-            </p>
-            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.7;">
-              Aurelius calibrates stochastic parameters using asymmetric Laplace jump processes and fat-tailed Cauchy distributions, capturing the exact tail-risk realities of sovereign debt restructurings, wartime maritime embargoes, and currency peg abandonments.
-            </p>
-            <div style="margin-top: var(--space-6); display: flex; gap: var(--space-4); flex-wrap: wrap;">
-              <a href="case-studies.html" class="btn btn-primary btn-mono">Next: Anonymized Principal Ledgers &rarr;</a>
-              <a href="intelligence.html" class="btn btn-outline btn-mono">Browse Research Whitepapers</a>
-            </div>
-          </div>
-
-          <div>
-            <div class="card" style="background-color: var(--bg-tertiary);">
-              <div class="stat-label">STOCHASTIC ENGINE AUDIT</div>
-              <div class="stat-value" style="font-size: 2.2rem;">500 <span class="unit">PATHS / RUN</span></div>
-              <p class="stat-desc" style="margin-top: var(--space-2); line-height: 1.6;">
-                Runs client-side in sub-second WebAssembly-grade JavaScript. No balance sheet figures are transmitted to external servers.
+            <!-- Plain-English Explanation -->
+            <div class="card" style="background: rgba(37, 99, 235, 0.05); border: 1px solid rgba(37, 99, 235, 0.15); border-radius: var(--radius-md); padding: 1.25rem;">
+              <h4 style="font-size: 1.05rem; margin-bottom: 6px; color: var(--accent-primary);">💡 Why does compound interest matter so much?</h4>
+              <p style="font-size: 13.5px; line-height: 1.6; color: var(--text-secondary); margin: 0;">
+                When you invest, you earn interest on your money. Next year, you earn interest on both your original money <em>and</em> on the interest from last year. Over 10, 20, or 30 years, that compounding effect turns regular modest deposits into substantial financial freedom.
               </p>
-              <div style="margin-top: var(--space-4); padding-top: var(--space-4); border-top: 1px solid var(--border-hairline); font-family: var(--font-mono); font-size: 11px; display: flex; justify-content: space-between; color: var(--accent-primary);">
-                <span>ZURICH QUANT DESK</span>
-                <span>MERKLE COMPILED</span>
-              </div>
             </div>
+
           </div>
+
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- COMMAND PALETTE MODAL -->
-  <div id="cmd-palette" class="cmd-modal-backdrop" role="dialog" aria-modal="true" aria-label="Command Palette">
-    <div class="cmd-modal">
-      <div class="cmd-header">
-        <svg class="cmd-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="text" class="cmd-input" placeholder="Search all 17 sovereign pages..." aria-label="Command search">
-        <span class="cmd-esc">ESC</span>
-      </div>
-      <div class="cmd-quick-actions">
-        <button class="cmd-chip" data-action="toggle-theme" type="button">Toggle Theme</button>
-        <button class="cmd-chip" data-action="terminal" type="button">Client Terminal</button>
-        <button class="cmd-chip" data-action="simulator" type="button">Monte Carlo Lab</button>
-        <button class="cmd-chip" data-action="briefing" type="button">Request Briefing</button>
-      </div>
-      <div class="cmd-results" role="listbox"></div>
-      <div class="cmd-footer">
-        <div class="cmd-hints"><span>&uarr;&darr; Navigate</span><span>&crarr; Select</span><span>ESC Close</span></div>
-        <span class="mono" style="color: var(--accent-primary);">AURELIUS OS v4.2</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ARCHITECTURAL FOOTER -->
+  <!-- Clean Footer -->
   <footer class="site-footer">
     <div class="footer-top">
       <div class="container-wide">
         <div class="footer-grid">
           <div class="footer-brand-col">
             <a href="index.html" class="brand-logo" style="margin-bottom: var(--space-3);">
-              <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="16 2, 30 26, 2 26" /><circle cx="16" cy="16" r="3" fill="currentColor" /></svg>
-              <span class="brand-name">AURELIUS</span>
+              <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" />
+                <path d="M11 19L16 9L21 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M13 15H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <span class="brand-name">Aurelius</span>
             </a>
-            <p>Autonomous Sovereign Wealth Architecture for $100M+ Liquid Net Worth Principals.</p>
-            <div style="margin-top: var(--space-4);"><span class="badge badge-accent">AIR-GAPPED SILICON</span></div>
+            <p style="font-size: 14px; line-height: 1.6; color: var(--text-secondary);">
+              Smart money management and wealth tools made simple.
+            </p>
           </div>
+
           <div>
-            <div class="footer-col-title">Platform</div>
+            <div class="footer-col-title">Navigation</div>
             <ul class="footer-nav-list">
-              <li><a href="index.html" class="footer-nav-link"><span>Overview</span><span class="page-badge">01</span></a></li>
-              <li><a href="architecture.html" class="footer-nav-link"><span>The Aurelius Core</span><span class="page-badge">02</span></a></li>
-              <li><a href="advisory-suite.html" class="footer-nav-link"><span>Autonomous Advisory</span><span class="page-badge">03</span></a></li>
-              <li><a href="security-enclave.html" class="footer-nav-link"><span>Security &amp; ZK Enclave</span><span class="page-badge">04</span></a></li>
+              <li><a href="index.html" class="footer-nav-link"><span>Home</span></a></li>
+              <li><a href="architecture.html" class="footer-nav-link"><span>How It Works</span></a></li>
+              <li><a href="simulator.html" class="footer-nav-link"><span>Savings Calculator</span></a></li>
+              <li><a href="client-terminal.html" class="footer-nav-link"><span>Live Demo</span></a></li>
             </ul>
           </div>
+
           <div>
-            <div class="footer-col-title">Sovereign Solutions</div>
+            <div class="footer-col-title">Plans &amp; Support</div>
             <ul class="footer-nav-list">
-              <li><a href="family-offices.html" class="footer-nav-link"><span>Family Offices</span><span class="page-badge">05</span></a></li>
-              <li><a href="sovereign-tax.html" class="footer-nav-link"><span>Sovereign Tax</span><span class="page-badge">06</span></a></li>
-              <li><a href="alternative-assets.html" class="footer-nav-link"><span>Alternative Assets</span><span class="page-badge">07</span></a></li>
-              <li><a href="dynasty-estate.html" class="footer-nav-link"><span>Dynasty AI</span><span class="page-badge">08</span></a></li>
-              <li><a href="geopolitical-risk.html" class="footer-nav-link"><span>Geopolitical Risk</span><span class="page-badge">09</span></a></li>
-            </ul>
-          </div>
-          <div>
-            <div class="footer-col-title">Intelligence &amp; Lab</div>
-            <ul class="footer-nav-list">
-              <li><a href="simulator.html" class="footer-nav-link"><span>Monte Carlo Lab</span><span class="page-badge">10</span></a></li>
-              <li><a href="case-studies.html" class="footer-nav-link"><span>Principal Ledgers</span><span class="page-badge">11</span></a></li>
-              <li><a href="intelligence.html" class="footer-nav-link"><span>Quantitative Research</span><span class="page-badge">12</span></a></li>
-              <li><a href="dispatch-article.html" class="footer-nav-link"><span>Monograph No. 14</span><span class="page-badge">13</span></a></li>
-            </ul>
-          </div>
-          <div>
-            <div class="footer-col-title">Institution</div>
-            <ul class="footer-nav-list">
-              <li><a href="charter.html" class="footer-nav-link"><span>Institutional Charter</span><span class="page-badge">14</span></a></li>
-              <li><a href="membership.html" class="footer-nav-link"><span>Membership Tiers</span><span class="page-badge">15</span></a></li>
-              <li><a href="request-briefing.html" class="footer-nav-link"><span>Request Briefing</span><span class="page-badge">16</span></a></li>
-              <li><a href="client-terminal.html" class="footer-nav-link" style="color: var(--accent-primary);"><span>Live Client Terminal</span><span class="page-badge">17</span></a></li>
+              <li><a href="membership.html" class="footer-nav-link"><span>Pricing Plans</span></a></li>
+              <li><a href="security-enclave.html" class="footer-nav-link"><span>Security &amp; Privacy</span></a></li>
+              <li><a href="request-briefing.html" class="footer-nav-link"><span>Get Started Free</span></a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-    <div class="footer-enclaves">
-      <div class="container-wide">
-        <div class="enclaves-grid">
-          <div class="enclave-card"><div class="enclave-city"><span>Zurich Vault</span><span>CH-8001</span></div><div class="enclave-address">Bahnhofstrasse 45, 8001 Zürich, Switzerland</div><div class="enclave-status">&#9679; Air-Gapped Dedicated Alpine Vault</div></div>
-          <div class="enclave-card"><div class="enclave-city"><span>Singapore Hub</span><span>SG-049315</span></div><div class="enclave-address">10 Collyer Quay, Ocean Financial Centre, Singapore</div><div class="enclave-status">&#9679; Asian Family Office Enclave</div></div>
-          <div class="enclave-card"><div class="enclave-city"><span>New York Desk</span><span>US-10153</span></div><div class="enclave-address">767 Fifth Avenue, General Motors Building, NYC</div><div class="enclave-status">&#9679; Institutional Telemetry Node</div></div>
-          <div class="enclave-card"><div class="enclave-city"><span>Geneva Freeport</span><span>CH-1204</span></div><div class="enclave-address">Rue du Rhône 42, 1204 Genève, Switzerland</div><div class="enclave-status">&#9679; Direct Bullion &amp; Freeport Custody</div></div>
-        </div>
-      </div>
-    </div>
+
     <div class="footer-bottom">
       <div class="container-wide">
-        <p class="footer-disclaimer">REGULATORY NOTICE: Aurelius Quantitative Systems AG operates as an autonomous sovereign wealth architecture and technology infrastructure provider. Aurelius does not hold commingled customer deposits, sell proprietary financial products, or accept third-party commissions.</p>
         <div class="footer-legal-bar">
-          <span>&copy; 2026 AURELIUS QUANTITATIVE SYSTEMS AG. ALL RIGHTS RESERVED. SWISS LAW GOVERNED.</span>
-          <span>ZK ROOT HASH: <span class="footer-hash">0x8e2c7a91bfd59104c8f2a64019de58c14f3b77209d841e2b5e0c679a</span></span>
+          <span>&copy; 2026 Aurelius Technologies. Simple, secure financial planning for everyone.</span>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="js/mock-data.js"></script>
   <script src="js/charts.js"></script>
   <script src="js/simulator.js"></script>
   <script src="js/main.js"></script>
   <script>
-    // Initialize the Monte Carlo lab
     document.addEventListener("DOMContentLoaded", () => {
-      AureliusSimulator.initSimulatorPage();
+      if (window.AureliusSimulator) {
+        AureliusSimulator.initSimulatorPage();
+      }
     });
   </script>
 </body>

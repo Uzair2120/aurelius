@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="obsidian">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Security & Zero-Knowledge Enclave — Air-Gapped Hardware | AURELIUS</title>
-  <meta name="description" content="Dedicated air-gapped silicon deployed in Swiss alpine vaults and private family enclaves. Zero cloud exposure, zk-SNARK custody proofs, and homomorphic privacy.">
+  <title>Aurelius — Bank-Grade Security &amp; Privacy</title>
+  <meta name="description" content="Learn how Aurelius protects your money and data with bank-level 256-bit encryption, biometric security, and strict zero-data-selling privacy.">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -13,32 +13,20 @@
 </head>
 <body>
 
-  <!-- TOP TELEMETRY BAR -->
-  <aside class="telemetry-bar" aria-label="Live Telemetry">
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <aside class="telemetry-bar" aria-label="Security overview">
     <div class="container-wide">
       <div class="telemetry-group">
         <span class="telemetry-item">
           <span class="telemetry-dot" aria-hidden="true"></span>
-          <span class="label">HARDWARE STATUS:</span>
-          <span class="val">AIR-GAPPED // TAMPER-SEALED</span>
+          <span><strong>Privacy Guarantee:</strong> We never sell your personal data. 256-bit bank encryption standard.</span>
         </span>
-        <span class="telemetry-item">
-          <span class="label">CRYPTO SUITE:</span>
-          <span class="val">CRYSTALS-Kyber // ZK-SNARK</span>
-        </span>
-      </div>
-
-      <div class="telemetry-group secondary-telemetry">
-        <span class="telemetry-item"><span class="label">UTC:</span> <span class="val" id="clock-utc">18:00:00</span></span>
-        <span class="telemetry-item"><span class="label">ZRH:</span> <span class="val" id="clock-zrh">20:00:00</span></span>
-        <span class="telemetry-item"><span class="label">SGP:</span> <span class="val" id="clock-sgp">02:00:00</span></span>
-        <span class="telemetry-item"><span class="label">NYC:</span> <span class="val" id="clock-nyc">14:00:00</span></span>
       </div>
 
       <div class="telemetry-group">
-        <button class="theme-toggle-btn" type="button" aria-label="Toggle Obsidian and Ivory Theme">
+        <button class="theme-toggle-btn" type="button" aria-label="Toggle Light and Dark Theme">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-          <span class="theme-label">IVORY</span>
+          <span class="theme-label">DARK</span>
         </button>
       </div>
     </div>
@@ -47,64 +35,41 @@
   <!-- SITE HEADER -->
   <header class="site-header">
     <div class="container-wide">
-      <a href="index.html" class="brand-logo" aria-label="AURELIUS Homepage">
-        <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
-          <polygon points="16 2, 30 26, 2 26" />
-          <circle cx="16" cy="16" r="3" fill="currentColor" />
+      <a href="index.html" class="brand-logo" aria-label="Aurelius Homepage">
+        <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" />
+          <path d="M11 19L16 9L21 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M13 15H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
         </svg>
-        <span class="brand-name">AURELIUS</span>
-        <span class="brand-tag">QUANTITATIVE</span>
+        <span class="brand-name">Aurelius</span>
+        <span class="brand-tag">Smart Finance</span>
       </a>
 
-      <!-- Desktop Mega-Menu -->
+      <!-- Simple Nav -->
       <nav class="nav-menu" aria-label="Primary Navigation">
         <div class="nav-item">
-          <a href="architecture.html" class="nav-link active">Platform <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
-          <div class="mega-dropdown">
-            <a href="architecture.html" class="dropdown-link"><div class="dropdown-title"><span>The Aurelius Core</span><span class="page-num">02</span></div><div class="dropdown-desc">5-layer adversarial multi-agent reasoning stack.</div></a>
-            <a href="advisory-suite.html" class="dropdown-link"><div class="dropdown-title"><span>Autonomous Advisory Suite</span><span class="page-num">03</span></div><div class="dropdown-desc">Voice synthesis briefings & encrypted execution.</div></a>
-            <a href="security-enclave.html" class="dropdown-link"><div class="dropdown-title"><span>Zero-Knowledge Enclave</span><span class="page-num">04</span></div><div class="dropdown-desc">Air-gapped Zurich bunker & dedicated silicon.</div></a>
-          </div>
+          <a href="index.html" class="nav-link">Home</a>
         </div>
-
         <div class="nav-item">
-          <a href="family-offices.html" class="nav-link">Sovereign Solutions <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
-          <div class="mega-dropdown wide">
-            <a href="family-offices.html" class="dropdown-link"><div class="dropdown-title"><span>Family Office Integration</span><span class="page-num">05</span></div><div class="dropdown-desc">Unified ledger consolidating 10+ custodians.</div></a>
-            <a href="sovereign-tax.html" class="dropdown-link"><div class="dropdown-title"><span>Cross-Border Tax Arbitrage</span><span class="page-num">06</span></div><div class="dropdown-desc">Residency day-counts & treaty optimization.</div></a>
-            <a href="alternative-assets.html" class="dropdown-link"><div class="dropdown-title"><span>Alternative & Illiquid Assets</span><span class="page-num">07</span></div><div class="dropdown-desc">Aviation, superyachts, freeports & PE pacing.</div></a>
-            <a href="dynasty-estate.html" class="dropdown-link"><div class="dropdown-title"><span>Dynasty & Succession AI</span><span class="page-num">08</span></div><div class="dropdown-desc">100-year multi-generational trust modeling.</div></a>
-            <a href="geopolitical-risk.html" class="dropdown-link" style="grid-column: span 2;"><div class="dropdown-title"><span>Geopolitical Risk & Tail Hedging</span><span class="page-num">09</span></div><div class="dropdown-desc">Black-swan telemetry and sanctions immunity.</div></a>
-          </div>
+          <a href="architecture.html" class="nav-link">How It Works</a>
         </div>
-
         <div class="nav-item">
-          <a href="simulator.html" class="nav-link">Intelligence &amp; Lab <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
-          <div class="mega-dropdown">
-            <a href="simulator.html" class="dropdown-link"><div class="dropdown-title"><span>Monte Carlo Wealth Lab</span><span class="page-num">10</span></div><div class="dropdown-desc">500-path stochastic modeling sandbox.</div></a>
-            <a href="case-studies.html" class="dropdown-link"><div class="dropdown-title"><span>Anonymized Principal Ledgers</span><span class="page-num">11</span></div><div class="dropdown-desc">Verified Swiss banking secrecy outcomes.</div></a>
-            <a href="intelligence.html" class="dropdown-link"><div class="dropdown-title"><span>Quantitative Intelligence</span><span class="page-num">12</span></div><div class="dropdown-desc">Institutional monographs & macro dispatches.</div></a>
-            <a href="dispatch-article.html" class="dropdown-link"><div class="dropdown-title"><span>Whitepaper Monograph No. 14</span><span class="page-num">13</span></div><div class="dropdown-desc">Autonomous tax-loss harvesting in private debt.</div></a>
-          </div>
+          <a href="simulator.html" class="nav-link">Savings Calculator</a>
         </div>
-
         <div class="nav-item">
-          <a href="charter.html" class="nav-link">Institution <svg class="caret" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1L5 5L9 1" stroke-width="1.5"/></svg></a>
-          <div class="mega-dropdown">
-            <a href="charter.html" class="dropdown-link"><div class="dropdown-title"><span>Institutional Charter & Ethics</span><span class="page-num">14</span></div><div class="dropdown-desc">The 5 immutable fiduciary manifesto rules.</div></a>
-            <a href="membership.html" class="dropdown-link"><div class="dropdown-title"><span>Allocation Tiers & Access</span><span class="page-num">15</span></div><div class="dropdown-desc">Strictly capped at 150 global principals.</div></a>
-          </div>
+          <a href="client-terminal.html" class="nav-link">Live Demo</a>
+        </div>
+        <div class="nav-item">
+          <a href="membership.html" class="nav-link">Pricing</a>
+        </div>
+        <div class="nav-item">
+          <a href="security-enclave.html" class="nav-link active">Security</a>
         </div>
       </nav>
 
       <div class="header-actions">
-        <button class="cmd-trigger-btn" type="button" aria-label="Open Command Palette">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <span>Command</span>
-          <kbd>⌘K</kbd>
-        </button>
-        <a href="client-terminal.html" class="btn btn-secondary btn-sm btn-mono">Terminal</a>
-        <a href="request-briefing.html" class="btn btn-primary btn-sm btn-mono">Briefing</a>
+        <a href="client-terminal.html" class="btn btn-secondary btn-sm">Try Demo</a>
+        <a href="request-briefing.html" class="btn btn-primary btn-sm">Get Started Free</a>
         <button class="mobile-nav-toggle" type="button" aria-label="Open Mobile Menu">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
@@ -112,31 +77,16 @@
     </div>
   </header>
 
-  <!-- Mobile Navigation Drawer -->
+  <!-- Mobile Drawer -->
   <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
-    <div class="mobile-pillar-title">Pillar I: Platform</div>
-    <a href="architecture.html" class="mobile-drawer-link">02 — The Aurelius Core</a>
-    <a href="advisory-suite.html" class="mobile-drawer-link">03 — Autonomous Advisory Suite</a>
-    <a href="security-enclave.html" class="mobile-drawer-link active">04 — Security &amp; Zero-Knowledge Enclave</a>
-
-    <div class="mobile-pillar-title">Pillar II: Sovereign Solutions</div>
-    <a href="family-offices.html" class="mobile-drawer-link">05 — Family Office Integration</a>
-    <a href="sovereign-tax.html" class="mobile-drawer-link">06 — Sovereign Tax &amp; Jurisdictions</a>
-    <a href="alternative-assets.html" class="mobile-drawer-link">07 — Alternative &amp; Illiquid Assets</a>
-    <a href="dynasty-estate.html" class="mobile-drawer-link">08 — Dynasty &amp; Succession AI</a>
-    <a href="geopolitical-risk.html" class="mobile-drawer-link">09 — Geopolitical Risk &amp; Tail Hedging</a>
-
-    <div class="mobile-pillar-title">Pillar III: Intelligence &amp; Lab</div>
-    <a href="simulator.html" class="mobile-drawer-link">10 — Monte Carlo Wealth Lab</a>
-    <a href="case-studies.html" class="mobile-drawer-link">11 — Anonymized Principal Ledgers</a>
-    <a href="intelligence.html" class="mobile-drawer-link">12 — Quantitative Intelligence</a>
-    <a href="dispatch-article.html" class="mobile-drawer-link">13 — Whitepaper Monograph No. 14</a>
-
-    <div class="mobile-pillar-title">Pillar IV: Institution</div>
-    <a href="charter.html" class="mobile-drawer-link">14 — Institutional Charter &amp; Ethics</a>
-    <a href="membership.html" class="mobile-drawer-link">15 — Allocation Tiers &amp; Pricing</a>
-    <a href="request-briefing.html" class="mobile-drawer-link">16 — Request Private Briefing</a>
-    <a href="client-terminal.html" class="mobile-drawer-link" style="color: var(--accent-primary); font-weight: 600;">17 — Live Client Terminal</a>
+    <div class="mobile-pillar-title">Explore Aurelius</div>
+    <a href="index.html" class="mobile-drawer-link">Home Overview</a>
+    <a href="architecture.html" class="mobile-drawer-link">How It Works &amp; Features</a>
+    <a href="simulator.html" class="mobile-drawer-link">Savings Calculator</a>
+    <a href="client-terminal.html" class="mobile-drawer-link">Live Dashboard Demo</a>
+    <a href="membership.html" class="mobile-drawer-link">Pricing Plans</a>
+    <a href="security-enclave.html" class="mobile-drawer-link" style="color: var(--accent-primary); font-weight: 600;">Security &amp; Privacy</a>
+    <a href="request-briefing.html" class="mobile-drawer-link">Get Started Free</a>
   </div>
 
   <!-- MAIN CONTENT -->
@@ -145,342 +95,120 @@
     <header class="page-hero">
       <div class="container-wide">
         <div class="page-eyebrow">
-          <span class="badge badge-accent">PILLAR I // CRYPTOGRAPHIC PRIVACY</span>
-          <span>AIR-GAPPED HARDWARE ARCHITECTURE</span>
+          <span class="badge badge-accent">🔒 SAFETY &amp; PRIVACY</span>
+          <span>BANK-GRADE PROTECTION</span>
         </div>
         <h1 class="page-title">
-          Your balance sheet never touches the public cloud.
+          How we keep your money and data 100% safe.
         </h1>
         <p class="page-lead">
-          Commercial SaaS financial tools run on shared cloud multitenancy, exposing billionaire wealth data to subpoenas, rogue engineers, and foreign intelligence wiretaps. Aurelius operates exclusively inside client-owned air-gapped silicon deployed in Swiss alpine vaults or on-premise private family estates.
+          Security shouldn't be confusing. Here is the plain truth about how we protect your personal information, encrypt your balances, and safeguard your financial future.
         </p>
       </div>
     </header>
 
-    <!-- SECTION 1: HARDWARE DEPLOYMENT OPTIONS (Interactive Tabs) -->
+    <!-- 4 CORE GUARANTEES -->
     <section class="section-py border-b">
       <div class="container-wide">
-        <div style="margin-bottom: var(--space-6);">
-          <div class="page-eyebrow">PHYSICAL INFRASTRUCTURE</div>
-          <h2>Hardware Deployment Models</h2>
-          <p class="lead">Select a deployment architecture to inspect physical specifications, jurisdiction protections, and failover topologies.</p>
-        </div>
-
-        <div class="tabs-container">
-          <div class="tabs-nav" role="tablist">
-            <button class="tab-btn active" data-tab="tab-zurich" type="button">OPTION A: ZURICH ALPINE BUNKER (DEDICATED RACK)</button>
-            <button class="tab-btn" data-tab="tab-onprem" type="button">OPTION B: RESIDENCE / YACHT ENCLAVE APPLIANCE</button>
-            <button class="tab-btn" data-tab="tab-singapore" type="button">OPTION C: SINGAPORE SGX BIOMETRIC VAULT</button>
+        <div class="swiss-grid" style="grid-template-columns: repeat(2, 1fr); gap: var(--space-6);">
+          
+          <div class="card" style="padding: 2rem;">
+            <div style="font-size: 32px; margin-bottom: 0.5rem;">🔐</div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">256-Bit Bank Encryption</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
+              Every byte of data sent between your device and our servers is encrypted using AES-256 and TLS 1.3 encryption — the exact same cryptographic standard mandated for national banks.
+            </p>
           </div>
 
-          <div class="tab-content">
-            <!-- Tab 1: Zurich Bunker -->
-            <div id="tab-zurich" class="tab-pane active">
-              <div class="swiss-grid" style="grid-template-columns: 1fr 1fr;">
-                <div>
-                  <div class="card-eyebrow">LOCATION: CANTON OF URI // SWITZERLAND</div>
-                  <h3 style="margin-bottom: var(--space-4);">Subterranean Alpine Military Bunker</h3>
-                  <p style="font-size: 14.5px; color: var(--text-secondary); line-height: 1.7; margin-bottom: var(--space-4);">
-                    Housed 300 meters inside granite bedrock in a decommissioned Swiss military installation. Fully protected under the Swiss Federal Act on Data Protection (FADP) and Article 13 of the Swiss Federal Constitution, impervious to foreign extraterritorial discovery orders.
-                  </p>
-                  <ul style="display: flex; flex-direction: column; gap: var(--space-2); font-size: 13.5px; color: var(--text-muted);">
-                    <li>&#10003; <strong>Faraday Cage &amp; EMP Shielding:</strong> MIL-STD-188-125 level 1 certified.</li>
-                    <li>&#10003; <strong>Power Autonomy:</strong> Dual diesel generators with 90-day sealed fuel reserves.</li>
-                    <li>&#10003; <strong>Telecommunications:</strong> Dedicated dark fiber directly into Swiss Interbank Clearing (SIC).</li>
-                    <li>&#10003; <strong>Physical Access:</strong> Armed biometric mantrap requiring dual key authorization.</li>
-                  </ul>
-                </div>
-                <div class="card" style="background-color: var(--bg-tertiary);">
-                  <div class="stat-label">DEDICATED SILICON SPECS</div>
-                  <div class="stat-value" style="font-size: 1.75rem;">ZH-RACK-8841</div>
-                  <div class="mono" style="font-size: 12px; color: var(--text-secondary); line-height: 1.8; margin-top: var(--space-3);">
-                    CPU: Dual AMD EPYC™ 9654 (192 Cores, 384 Threads)<br>
-                    Memory: 1.5 TB ECC DDR5-4800 (Fully Encrypted in RAM)<br>
-                    HSM: Securosys Primus HSM (FIPS 140-2 Level 3)<br>
-                    Storage: 8x Micron 7450 NVMe (Self-Encrypting AES-256-XTS)<br>
-                    Uplink: Laser satellite cross-link + Encrypted MPLS
-                  </div>
-                  <div style="margin-top: var(--space-4); padding-top: var(--space-4); border-top: 1px solid var(--border-hairline); display: flex; justify-content: space-between;">
-                    <span class="badge badge-emerald">AIR-GAPPED ACTIVE</span>
-                    <span class="mono" style="font-size: 11px; color: var(--accent-primary);">FAILOVER: 0.00ms</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tab 2: On-Premise Appliance -->
-            <div id="tab-onprem" class="tab-pane">
-              <div class="swiss-grid" style="grid-template-columns: 1fr 1fr;">
-                <div>
-                  <div class="card-eyebrow">LOCATION: PRINCIPAL PRIVATE RESIDENCE / SUPERYACHT</div>
-                  <h3 style="margin-bottom: var(--space-4);">Liquid-Cooled Sovereign Enclave Appliance</h3>
-                  <p style="font-size: 14.5px; color: var(--text-secondary); line-height: 1.7; margin-bottom: var(--space-4);">
-                    A discreet, silent, liquid-cooled titanium desktop or marine rack appliance delivered by armored diplomatic courier and provisioned on-site. Contains all localized models, portfolio memory, and execution bridges without external telemetry.
-                  </p>
-                  <ul style="display: flex; flex-direction: column; gap: var(--space-2); font-size: 13.5px; color: var(--text-muted);">
-                    <li>&#10003; <strong>Tamper-Zeroization Mesh:</strong> Chassis breach or voltage drop instantly erases cryptographic keys in 8 nanoseconds.</li>
-                    <li>&#10003; <strong>Acoustic Isolation:</strong> Sub-22dB whisper-quiet operation suitable for study or master suite.</li>
-                    <li>&#10003; <strong>Marine Hardened:</strong> Anti-corrosion salt-fog treatment and shock-mounted stabilization.</li>
-                  </ul>
-                </div>
-                <div class="card" style="background-color: var(--bg-tertiary);">
-                  <div class="stat-label">ENCLAVE APPLIANCE SPECS</div>
-                  <div class="stat-value" style="font-size: 1.75rem;">AURELIUS TITAN-IV</div>
-                  <div class="mono" style="font-size: 12px; color: var(--text-secondary); line-height: 1.8; margin-top: var(--space-3);">
-                    Chassis: CNC Milled Grade 5 Titanium Monoblock<br>
-                    Cooling: Closed-loop deionized liquid micro-channel<br>
-                    Weight: 18.4 kg (Portable diplomatic pouch spec)<br>
-                    Key Storage: Physical TPM 2.0 + YubiKey FIPS hardware token<br>
-                    Emergency Erase: Physical dual-key rotary switch
-                  </div>
-                  <div style="margin-top: var(--space-4); padding-top: var(--space-4); border-top: 1px solid var(--border-hairline); display: flex; justify-content: space-between;">
-                    <span class="badge badge-accent">ZEROIZATION ACTIVE</span>
-                    <span class="mono" style="font-size: 11px; color: var(--signal-positive);">ZERO CLOUD TRANSMISSION</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tab 3: Singapore Vault -->
-            <div id="tab-singapore" class="tab-pane">
-              <div class="swiss-grid" style="grid-template-columns: 1fr 1fr;">
-                <div>
-                  <div class="card-eyebrow">LOCATION: MARINA BAY // SINGAPORE</div>
-                  <h3 style="margin-bottom: var(--space-4);">Asia-Pacific Sovereign Enclave Node</h3>
-                  <p style="font-size: 14.5px; color: var(--text-secondary); line-height: 1.7; margin-bottom: var(--space-4);">
-                    Engineered for Asian family offices and Gulf principals operating across Singapore Variable Capital Companies (VCCs) and DIFC trusts. Synchronized with Singapore SGX bullion vaults and Swiss alpine nodes via quantum-resistant encryption.
-                  </p>
-                  <ul style="display: flex; flex-direction: column; gap: var(--space-2); font-size: 13.5px; color: var(--text-muted);">
-                    <li>&#10003; <strong>Regulatory Shield:</strong> Operates under Monetary Authority of Singapore (MAS) cyber hygiene guidelines.</li>
-                    <li>&#10003; <strong>Direct Vault Linking:</strong> Real-time cryptographic inventory validation with Malca-Amit and Le Freeport Singapore.</li>
-                    <li>&#10003; <strong>Sub-Millisecond Routing:</strong> Direct dark fiber to SGX, HKEX, and Tokyo Stock Exchange desks.</li>
-                  </ul>
-                </div>
-                <div class="card" style="background-color: var(--bg-tertiary);">
-                  <div class="stat-label">SINGAPORE NODE SPECS</div>
-                  <div class="stat-value" style="font-size: 1.75rem;">SG-NODE-0493</div>
-                  <div class="mono" style="font-size: 12px; color: var(--text-secondary); line-height: 1.8; margin-top: var(--space-3);">
-                    Certification: Tier IV Data Centre (MAS TRM Compliant)<br>
-                    Encryption: Post-Quantum Kyber-1024 + Dilithium-5<br>
-                    Bullion Integration: SGX Vault 100% Real-Time Proof<br>
-                    Biometrics: Iris scan + palm vein multi-factor custody<br>
-                    Latency to Zurich: 142ms Quantum-Secured Tunnel
-                  </div>
-                  <div style="margin-top: var(--space-4); padding-top: var(--space-4); border-top: 1px solid var(--border-hairline); display: flex; justify-content: space-between;">
-                    <span class="badge badge-emerald">SYNCHRONIZED</span>
-                    <span class="mono" style="font-size: 11px; color: var(--accent-primary);">SGX LINK 0.4MS</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 2: CRYPTOGRAPHIC VERIFICATION TABLE (Interactive Protocol Inspection) -->
-    <section class="section-py border-b" style="background-color: var(--bg-secondary);">
-      <div class="container-wide">
-        <div style="margin-bottom: var(--space-8);">
-          <div class="page-eyebrow">FORMAL MATHEMATICAL PROOFS</div>
-          <h2>Zero-Knowledge Proofs &amp; Cryptographic Verification</h2>
-          <p class="lead">How Aurelius verifies solvency, liquidity, and custody compliance without disclosing underlying portfolio assets to tax authorities, prime brokers, or external adversaries.</p>
-        </div>
-
-        <div class="table-container">
-          <table class="swiss-table">
-            <thead>
-              <tr>
-                <th style="width: 25%;">Cryptographic Protocol</th>
-                <th style="width: 35%;">Implementation in Aurelius</th>
-                <th style="width: 25%;">Security Guarantee</th>
-                <th style="width: 15%;">Audit Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>zk-SNARKs (PLONK Proofs)</strong></td>
-                <td>Proves to custodian banks and counterparty lenders that client maintains &gt; $500M unencumbered tier-1 assets for Lombard loans without disclosing holding tickers or quantities.</td>
-                <td><span class="badge badge-emerald">Zero Information Leakage</span></td>
-                <td><span class="mono">Formal Proof</span></td>
-              </tr>
-              <tr>
-                <td><strong>Fully Homomorphic Encryption (FHE)</strong></td>
-                <td>Calculates tax-loss harvesting and portfolio variance directly on encrypted memory states. Data is never decrypted during computation.</td>
-                <td><span class="badge badge-emerald">Side-Channel Immune</span></td>
-                <td><span class="mono">ISO/IEC 18033</span></td>
-              </tr>
-              <tr>
-                <td><strong>Post-Quantum Key Exchange</strong></td>
-                <td>All intra-enclave traffic between Zurich and on-premise appliances utilizes CRYSTALS-Kyber 1024 to protect against "Harvest Now, Decrypt Later" state actors.</td>
-                <td><span class="badge badge-accent">NIST FIPS 203 Validated</span></td>
-                <td><span class="mono">Quantum-Proof</span></td>
-              </tr>
-              <tr>
-                <td><strong>Dead-Man's Switch Protocol</strong></td>
-                <td>In the event of principal incapacitation or 90-day unresponsiveness, deterministic smart trusts release fractionalized cryptographic shards to designated family heirs.</td>
-                <td><span class="badge badge-amber">Shamir Secret Sharing (k-of-n)</span></td>
-                <td><span class="mono">Legal Enclave</span></td>
-              </tr>
-              <tr>
-                <td><strong>Hardware Cryptographic Zeroization</strong></td>
-                <td>Physical sensors trigger instant bit-level purge of volatile RAM and NVMe storage keys if tamper voltage or chassis opening is detected.</td>
-                <td><span class="badge badge-crimson">8ns Irreversible Erase</span></td>
-                <td><span class="mono">FIPS 140-2 L3</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 3: ARCHITECTURAL PARADIGM COMPARISON -->
-    <section class="section-py">
-      <div class="container-wide">
-        <div class="swiss-grid" style="grid-template-columns: repeat(3, 1fr);">
-          <div class="card">
-            <div class="card-eyebrow">PARADIGM 01 // COMMODITY</div>
-            <h4 style="font-size: 1.35rem; margin-bottom: var(--space-2);">Public Cloud SaaS</h4>
-            <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: var(--space-4);">Addepar, Black Diamond, Salesforce Wealth</p>
-            <ul style="display: flex; flex-direction: column; gap: var(--space-2); font-size: 13px; color: var(--signal-negative);">
-              <li>&#10007; Shared multitenant AWS/Azure servers</li>
-              <li>&#10007; Subject to US CLOUD Act &amp; FISA warrants</li>
-              <li>&#10007; Vulnerable to LLM training on private prompts</li>
-              <li>&#10007; Employee insider access risk</li>
-            </ul>
+          <div class="card" style="padding: 2rem;">
+            <div style="font-size: 32px; margin-bottom: 0.5rem;">🏦</div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Your Money Stays in Your Name</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
+              Aurelius is software, not a high-risk lender. Your deposits remain securely housed in your own name at regulated, insured partner banks. We never lend your money out.
+            </p>
           </div>
 
-          <div class="card">
-            <div class="card-eyebrow">PARADIGM 02 // TRADITIONAL</div>
-            <h4 style="font-size: 1.35rem; margin-bottom: var(--space-2);">Swiss Private Bank</h4>
-            <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: var(--space-4);">Legacy Mainframes &amp; Bank Custody</p>
-            <ul style="display: flex; flex-direction: column; gap: var(--space-2); font-size: 13px; color: var(--signal-warning);">
-              <li>&#10003; Strong Swiss banking secrecy laws</li>
-              <li>&#10007; Slow human relationship manager relay</li>
-              <li>&#10007; Blind to external holdings at competing banks</li>
-              <li>&#10007; Heavy 75 bps fee drag</li>
-            </ul>
+          <div class="card" style="padding: 2rem;">
+            <div style="font-size: 32px; margin-bottom: 0.5rem;">🚫</div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Zero Data Selling</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
+              Many free apps make money by selling your spending habits and personal details to advertisers. We never do this. Your private financial life stays strictly between you and your screen.
+            </p>
           </div>
 
-          <div class="card" style="border-color: var(--accent-primary); background-color: var(--bg-tertiary);">
-            <div class="card-eyebrow">PARADIGM 03 // AURELIUS</div>
-            <h4 style="font-size: 1.35rem; margin-bottom: var(--space-2); color: var(--accent-primary);">Air-Gapped ZK Enclave</h4>
-            <p style="font-size: 13.5px; color: var(--text-secondary); margin-bottom: var(--space-4);">Autonomous Sovereign Wealth Architecture</p>
-            <ul style="display: flex; flex-direction: column; gap: var(--space-2); font-size: 13px; color: var(--signal-positive);">
-              <li>&#10003; 100% Client-dedicated air-gapped silicon</li>
-              <li>&#10003; Homomorphic computation &amp; zk-SNARK proofs</li>
-              <li>&#10003; Sub-40ms autonomous multi-agent reasoning</li>
-              <li>&#10003; Zero commission &amp; flat infrastructure fee</li>
-            </ul>
+          <div class="card" style="padding: 2rem;">
+            <div style="font-size: 32px; margin-bottom: 0.5rem;">📱</div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Biometric &amp; 2-Factor Access</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
+              Log in securely using Face ID, Touch ID, or two-factor authentication codes. Even if someone obtains your password, they cannot access your dashboard without your physical phone.
+            </p>
           </div>
+
         </div>
 
-        <div style="margin-top: var(--space-8); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-4);">
-          <a href="architecture.html" class="btn btn-outline btn-mono">&larr; Return to Core Architecture</a>
-          <a href="family-offices.html" class="btn btn-primary btn-mono">Next: Family Office Integration (Pillar II) &rarr;</a>
+        <div style="text-align: center; margin-top: var(--space-10);">
+          <div class="card" style="display: inline-block; padding: 1.5rem 2.5rem; background: var(--bg-secondary);">
+            <div style="font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">Have questions about our security?</div>
+            <p style="font-size: 13.5px; color: var(--text-secondary); margin-bottom: 1rem;">Our engineering and compliance team is always happy to explain our protocols.</p>
+            <a href="request-briefing.html" class="btn btn-primary btn-sm">Contact Our Security Team &rarr;</a>
+          </div>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- COMMAND PALETTE MODAL -->
-  <div id="cmd-palette" class="cmd-modal-backdrop" role="dialog" aria-modal="true" aria-label="Command Palette">
-    <div class="cmd-modal">
-      <div class="cmd-header">
-        <svg class="cmd-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="text" class="cmd-input" placeholder="Search all 17 sovereign pages..." aria-label="Command search">
-        <span class="cmd-esc">ESC</span>
-      </div>
-      <div class="cmd-quick-actions">
-        <button class="cmd-chip" data-action="toggle-theme" type="button">Toggle Theme</button>
-        <button class="cmd-chip" data-action="terminal" type="button">Client Terminal</button>
-        <button class="cmd-chip" data-action="simulator" type="button">Monte Carlo Lab</button>
-        <button class="cmd-chip" data-action="briefing" type="button">Request Briefing</button>
-      </div>
-      <div class="cmd-results" role="listbox"></div>
-      <div class="cmd-footer">
-        <div class="cmd-hints"><span>&uarr;&darr; Navigate</span><span>&crarr; Select</span><span>ESC Close</span></div>
-        <span class="mono" style="color: var(--accent-primary);">AURELIUS OS v4.2</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ARCHITECTURAL FOOTER -->
+  <!-- Clean Footer -->
   <footer class="site-footer">
     <div class="footer-top">
       <div class="container-wide">
         <div class="footer-grid">
           <div class="footer-brand-col">
             <a href="index.html" class="brand-logo" style="margin-bottom: var(--space-3);">
-              <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="16 2, 30 26, 2 26" /><circle cx="16" cy="16" r="3" fill="currentColor" /></svg>
-              <span class="brand-name">AURELIUS</span>
+              <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" />
+                <path d="M11 19L16 9L21 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M13 15H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <span class="brand-name">Aurelius</span>
             </a>
-            <p>Autonomous Sovereign Wealth Architecture for $100M+ Liquid Net Worth Principals.</p>
-            <div style="margin-top: var(--space-4);"><span class="badge badge-accent">AIR-GAPPED SILICON</span></div>
+            <p style="font-size: 14px; line-height: 1.6; color: var(--text-secondary);">
+              Smart money management and wealth tools made simple.
+            </p>
           </div>
+
           <div>
-            <div class="footer-col-title">Platform</div>
+            <div class="footer-col-title">Navigation</div>
             <ul class="footer-nav-list">
-              <li><a href="index.html" class="footer-nav-link"><span>Overview</span><span class="page-badge">01</span></a></li>
-              <li><a href="architecture.html" class="footer-nav-link"><span>The Aurelius Core</span><span class="page-badge">02</span></a></li>
-              <li><a href="advisory-suite.html" class="footer-nav-link"><span>Autonomous Advisory</span><span class="page-badge">03</span></a></li>
-              <li><a href="security-enclave.html" class="footer-nav-link"><span>Security &amp; ZK Enclave</span><span class="page-badge">04</span></a></li>
+              <li><a href="index.html" class="footer-nav-link"><span>Home</span></a></li>
+              <li><a href="architecture.html" class="footer-nav-link"><span>How It Works</span></a></li>
+              <li><a href="simulator.html" class="footer-nav-link"><span>Savings Calculator</span></a></li>
+              <li><a href="client-terminal.html" class="footer-nav-link"><span>Live Demo</span></a></li>
             </ul>
           </div>
+
           <div>
-            <div class="footer-col-title">Sovereign Solutions</div>
+            <div class="footer-col-title">Plans &amp; Support</div>
             <ul class="footer-nav-list">
-              <li><a href="family-offices.html" class="footer-nav-link"><span>Family Offices</span><span class="page-badge">05</span></a></li>
-              <li><a href="sovereign-tax.html" class="footer-nav-link"><span>Sovereign Tax</span><span class="page-badge">06</span></a></li>
-              <li><a href="alternative-assets.html" class="footer-nav-link"><span>Alternative Assets</span><span class="page-badge">07</span></a></li>
-              <li><a href="dynasty-estate.html" class="footer-nav-link"><span>Dynasty AI</span><span class="page-badge">08</span></a></li>
-              <li><a href="geopolitical-risk.html" class="footer-nav-link"><span>Geopolitical Risk</span><span class="page-badge">09</span></a></li>
-            </ul>
-          </div>
-          <div>
-            <div class="footer-col-title">Intelligence &amp; Lab</div>
-            <ul class="footer-nav-list">
-              <li><a href="simulator.html" class="footer-nav-link"><span>Monte Carlo Lab</span><span class="page-badge">10</span></a></li>
-              <li><a href="case-studies.html" class="footer-nav-link"><span>Principal Ledgers</span><span class="page-badge">11</span></a></li>
-              <li><a href="intelligence.html" class="footer-nav-link"><span>Quantitative Research</span><span class="page-badge">12</span></a></li>
-              <li><a href="dispatch-article.html" class="footer-nav-link"><span>Monograph No. 14</span><span class="page-badge">13</span></a></li>
-            </ul>
-          </div>
-          <div>
-            <div class="footer-col-title">Institution</div>
-            <ul class="footer-nav-list">
-              <li><a href="charter.html" class="footer-nav-link"><span>Institutional Charter</span><span class="page-badge">14</span></a></li>
-              <li><a href="membership.html" class="footer-nav-link"><span>Membership Tiers</span><span class="page-badge">15</span></a></li>
-              <li><a href="request-briefing.html" class="footer-nav-link"><span>Request Briefing</span><span class="page-badge">16</span></a></li>
-              <li><a href="client-terminal.html" class="footer-nav-link" style="color: var(--accent-primary);"><span>Live Client Terminal</span><span class="page-badge">17</span></a></li>
+              <li><a href="membership.html" class="footer-nav-link"><span>Pricing Plans</span></a></li>
+              <li><a href="security-enclave.html" class="footer-nav-link"><span>Security &amp; Privacy</span></a></li>
+              <li><a href="request-briefing.html" class="footer-nav-link"><span>Get Started Free</span></a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-    <div class="footer-enclaves">
-      <div class="container-wide">
-        <div class="enclaves-grid">
-          <div class="enclave-card"><div class="enclave-city"><span>Zurich Vault</span><span>CH-8001</span></div><div class="enclave-address">Bahnhofstrasse 45, 8001 Zürich, Switzerland</div><div class="enclave-status">&#9679; Air-Gapped Dedicated Alpine Vault</div></div>
-          <div class="enclave-card"><div class="enclave-city"><span>Singapore Hub</span><span>SG-049315</span></div><div class="enclave-address">10 Collyer Quay, Ocean Financial Centre, Singapore</div><div class="enclave-status">&#9679; Asian Family Office Enclave</div></div>
-          <div class="enclave-card"><div class="enclave-city"><span>New York Desk</span><span>US-10153</span></div><div class="enclave-address">767 Fifth Avenue, General Motors Building, NYC</div><div class="enclave-status">&#9679; Institutional Telemetry Node</div></div>
-          <div class="enclave-card"><div class="enclave-city"><span>Geneva Freeport</span><span>CH-1204</span></div><div class="enclave-address">Rue du Rhône 42, 1204 Genève, Switzerland</div><div class="enclave-status">&#9679; Direct Bullion &amp; Freeport Custody</div></div>
-        </div>
-      </div>
-    </div>
+
     <div class="footer-bottom">
       <div class="container-wide">
-        <p class="footer-disclaimer">REGULATORY NOTICE: Aurelius Quantitative Systems AG operates as an autonomous sovereign wealth architecture and technology infrastructure provider. Aurelius does not hold commingled customer deposits, sell proprietary financial products, or accept third-party commissions.</p>
         <div class="footer-legal-bar">
-          <span>&copy; 2026 AURELIUS QUANTITATIVE SYSTEMS AG. ALL RIGHTS RESERVED. SWISS LAW GOVERNED.</span>
-          <span>ZK ROOT HASH: <span class="footer-hash">0x8e2c7a91bfd59104c8f2a64019de58c14f3b77209d841e2b5e0c679a</span></span>
+          <span>&copy; 2026 Aurelius Technologies. Simple, secure financial planning for everyone.</span>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="js/mock-data.js"></script>
   <script src="js/main.js"></script>
 </body>

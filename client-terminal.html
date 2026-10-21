@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="obsidian">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AURELIUS TERMINAL — Simulated Live Sovereign Dashboard</title>
-  <meta name="description" content="Full-viewport 100vh air-gapped billionaire client terminal. Multi-agent prompt console, live currency conversion, and biometric fiduciary approvals.">
+  <title>Aurelius — Live Interactive Dashboard Demo</title>
+  <meta name="description" content="Experience Aurelius in action. A clean, simple personal finance dashboard showing real-time savings, investment growth, and friendly AI guidance.">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -13,81 +13,70 @@
 </head>
 <body class="terminal-page">
 
-  <!-- TOP TELEMETRY BAR (32px) -->
-  <aside class="telemetry-bar" aria-label="Live Telemetry">
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <aside class="telemetry-bar" aria-label="Demo Status">
     <div class="container-wide">
       <div class="telemetry-group">
         <span class="telemetry-item">
           <span class="telemetry-dot" aria-hidden="true"></span>
-          <span class="label">ENCLAVE RUNTIME:</span>
-          <span class="val">AIR-GAPPED // PRIN-8841-ZH</span>
+          <span><strong>Live Interactive Demo:</strong> Welcome to Sarah's sample personal wealth dashboard.</span>
         </span>
-        <span class="telemetry-item">
-          <span class="label">CONSENSUS LATENCY:</span>
-          <span class="val">38.4ms FIX PROTOCOL</span>
-        </span>
-      </div>
-
-      <div class="telemetry-group secondary-telemetry">
-        <span class="telemetry-item"><span class="label">UTC:</span> <span class="val" id="clock-utc">18:00:00</span></span>
-        <span class="telemetry-item"><span class="label">ZRH:</span> <span class="val" id="clock-zrh">20:00:00</span></span>
-        <span class="telemetry-item"><span class="label">SGP:</span> <span class="val" id="clock-sgp">02:00:00</span></span>
-        <span class="telemetry-item"><span class="label">NYC:</span> <span class="val" id="clock-nyc">14:00:00</span></span>
       </div>
 
       <div class="telemetry-group">
-        <button class="theme-toggle-btn" type="button" aria-label="Toggle Obsidian and Ivory Theme">
+        <button class="theme-toggle-btn" type="button" aria-label="Toggle Light and Dark Theme">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-          <span class="theme-label">IVORY</span>
+          <span class="theme-label">DARK</span>
         </button>
       </div>
     </div>
   </aside>
 
-  <!-- FULL-VIEWPORT TERMINAL LAYOUT -->
+  <!-- FULL-VIEWPORT DASHBOARD LAYOUT -->
   <div class="terminal-layout-view">
     
-    <!-- TERMINAL LEFT SIDEBAR -->
+    <!-- DASHBOARD LEFT SIDEBAR -->
     <aside class="terminal-sidebar">
       <div class="terminal-sidebar-top">
         <!-- Brand / Identity -->
         <div class="terminal-sidebar-brand-row">
           <a href="index.html" class="brand-logo">
-            <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
-              <polygon points="16 2, 30 26, 2 26" />
-              <circle cx="16" cy="16" r="3" fill="currentColor" />
+            <svg class="brand-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" />
+              <path d="M11 19L16 9L21 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M13 15H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
             </svg>
-            <span class="brand-name" style="font-size: 1.15rem;">AURELIUS</span>
+            <span class="brand-name" style="font-size: 1.15rem;">Aurelius</span>
           </a>
-          <span class="badge badge-emerald terminal-mobile-badge">&#9679; AIR-GAPPED ZK</span>
+          <span class="badge badge-emerald terminal-mobile-badge">● Demo Mode</span>
         </div>
 
-        <!-- Principal Telemetry Profile -->
+        <!-- User Profile Card -->
         <div class="card terminal-principal-card" style="padding: var(--space-3) var(--space-4); background-color: var(--bg-tertiary); margin-bottom: var(--space-5);">
-          <div class="stat-label" style="margin-bottom: 2px;">PRINCIPAL CLEARED</div>
-          <div class="mono" style="font-size: 12px; color: var(--text-primary); font-weight: 600;">PRIN-8841-VON</div>
-          <div class="mono" style="font-size: 10px; color: var(--signal-positive);">STATUS: AIR-GAPPED ZK-ACTIVE</div>
+          <div class="stat-label" style="margin-bottom: 2px;">ACTIVE DEMO USER</div>
+          <div style="font-size: 13.5px; color: var(--text-primary); font-weight: 700;">Sarah Jenkins</div>
+          <div style="font-size: 11.5px; color: var(--signal-positive); font-weight: 600;">STATUS: ALL ACCOUNTS SYNCED</div>
         </div>
 
-        <!-- Terminal Sidebar Navigation -->
+        <!-- Dashboard Sidebar Navigation -->
         <nav class="terminal-sidebar-nav">
-          <a href="#view-overview" class="btn btn-secondary btn-sm btn-mono" style="border-left: 2px solid var(--accent-primary);">
-            &#9632; Consolidated NAV
+          <a href="#view-overview" class="btn btn-secondary btn-sm" style="border-left: 2px solid var(--accent-primary); justify-content: flex-start;">
+            📊 Overview &amp; Net Worth
           </a>
-          <a href="#view-console" class="btn btn-ghost btn-sm btn-mono">
-            &#9632; Multi-Agent AI Console
+          <a href="#view-console" class="btn btn-ghost btn-sm" style="justify-content: flex-start;">
+            💬 AI Financial Coach
           </a>
-          <a href="#view-custodians" class="btn btn-ghost btn-sm btn-mono">
-            &#9632; Custodian FIX Desks
+          <a href="#view-custodians" class="btn btn-ghost btn-sm" style="justify-content: flex-start;">
+            🏦 Connected Accounts
           </a>
-          <a href="#view-approvals" class="btn btn-ghost btn-sm btn-mono">
-            &#9632; Approvals Queue (3)
+          <a href="#view-approvals" class="btn btn-ghost btn-sm" style="justify-content: flex-start;">
+            🎯 Savings Goals (3)
           </a>
-          <a href="simulator.html" class="btn btn-ghost btn-sm btn-mono">
-            &rarr; Monte Carlo Lab
+          <a href="simulator.html" class="btn btn-ghost btn-sm" style="justify-content: flex-start;">
+            📈 Growth Calculator
           </a>
-          <a href="sovereign-tax.html" class="btn btn-ghost btn-sm btn-mono">
-            &rarr; Day-Count Tracker
+          <a href="index.html" class="btn btn-ghost btn-sm" style="justify-content: flex-start;">
+            🏠 Back to Home
           </a>
         </nav>
       </div>
@@ -95,67 +84,66 @@
       <!-- Bottom Sidebar Utilities -->
       <div class="terminal-sidebar-utils">
         <div class="form-group">
-          <label class="form-label" style="font-size: 10px;">Display Currency:</label>
-          <select class="input-select" id="terminal-currency-select" style="padding: 6px 10px; font-size: 11px; font-family: var(--font-mono);">
-            <option value="USD">USD ($) &mdash; US Dollar</option>
-            <option value="CHF">CHF &mdash; Swiss Franc</option>
-            <option value="EUR">EUR (&euro;) &mdash; Euro</option>
-            <option value="GBP">GBP (&pound;) &mdash; British Pound</option>
-            <option value="SGD">SGD (S$) &mdash; Singapore Dollar</option>
-            <option value="XAU">XAU &mdash; Gold Spot (Troy Oz)</option>
+          <label class="form-label" style="font-size: 11px; font-weight: 600;">Display Currency:</label>
+          <select class="input-select currency-select" id="terminal-currency-select" style="padding: 6px 10px; font-size: 12px;">
+            <option value="USD">USD ($) — US Dollar</option>
+            <option value="EUR">EUR (€) — Euro</option>
+            <option value="GBP">GBP (£) — British Pound</option>
+            <option value="CHF">CHF — Swiss Franc</option>
+            <option value="SGD">SGD (S$) — Singapore Dollar</option>
           </select>
         </div>
 
-        <a href="index.html" class="btn btn-outline btn-sm btn-mono terminal-exit-btn">
-          &larr; Exit to Public Site
+        <a href="index.html" class="btn btn-outline btn-sm terminal-exit-btn" style="text-align: center;">
+          &larr; Exit to Home Page
         </a>
       </div>
     </aside>
 
-    <!-- TERMINAL MAIN VIEWPORT -->
+    <!-- DASHBOARD MAIN VIEWPORT -->
     <main class="terminal-main-viewport">
       
       <!-- 1. CONSOLIDATED NET WORTH BANNER -->
-      <section id="view-overview" class="terminal-networth-banner">
+      <section id="view-overview" class="terminal-networth-banner" style="background: var(--bg-elevated); border: 1px solid var(--border-hairline); border-radius: var(--radius-lg); padding: 1.75rem;">
         <div>
-          <div class="stat-label">CONSOLIDATED MULTI-CUSTODIAN LIQUID NET WORTH</div>
-          <div class="stat-value" id="terminal-net-worth" style="font-size: clamp(1.85rem, 4vw, 3.25rem); color: var(--text-primary); margin-bottom: 2px;">
-            $1,842,910,400.00
+          <div class="stat-label">TOTAL PERSONAL NET WEALTH</div>
+          <div class="stat-value" id="terminal-net-worth" style="font-size: clamp(2rem, 4vw, 3rem); color: var(--text-primary); margin-bottom: 2px;">
+            $68,450.00
           </div>
-          <div class="stat-delta positive" id="terminal-ytd-delta" style="font-size: 12.5px;">
-            +2.41% YTD (+$43,210,850.00 USD)
+          <div class="stat-delta positive" id="terminal-ytd-delta" style="font-size: 13px; font-weight: 700;">
+            +12.4% this year (+$7,540.00)
           </div>
         </div>
 
-        <div class="terminal-networth-metrics">
+        <div class="terminal-networth-metrics" style="gap: var(--space-6);">
           <div>
-            <div class="stat-label" style="justify-content: flex-end;">DAILY VaR (99%)</div>
-            <div class="mono" id="terminal-var99" style="font-size: 1.35rem; color: var(--signal-negative); font-weight: 500;">
-              $14,200,000.00
+            <div class="stat-label" style="justify-content: flex-end;">MONTHLY SAVINGS</div>
+            <div style="font-size: 1.4rem; color: var(--signal-positive); font-weight: 700;">
+              +$850.00
             </div>
-            <span class="mono" style="font-size: 10.5px; color: var(--text-muted);">99.9% FLOOR PROTECTED</span>
+            <span style="font-size: 11.5px; color: var(--text-muted);">ON SCHEDULE</span>
           </div>
 
           <div>
-            <div class="stat-label" style="justify-content: flex-end;">HARVESTED TAX ALPHA</div>
-            <div class="mono" style="font-size: 1.35rem; color: var(--accent-primary); font-weight: 500;">
-              +142 bps
+            <div class="stat-label" style="justify-content: flex-end;">MONTHLY BUDGET</div>
+            <div style="font-size: 1.4rem; color: var(--accent-primary); font-weight: 700;">
+              $2,140 / $2,600
             </div>
-            <span class="mono" style="font-size: 10.5px; color: var(--signal-positive);">WASH-SALE IMMUNE</span>
+            <span style="font-size: 11.5px; color: var(--signal-positive);">82% USED • $460 LEFT</span>
           </div>
         </div>
       </section>
 
-      <!-- 2. ASSET ALLOCATION (DONUT) & CUSTODIAN DESKS TABLE (2-Col Grid) -->
+      <!-- 2. ASSET ALLOCATION (DONUT) & CONNECTED ACCOUNTS TABLE (2-Col Grid) -->
       <section class="grid-2" style="gap: var(--space-6);">
         
         <!-- Allocation Donut Chart -->
-        <div class="card" style="background-color: var(--bg-secondary);">
-          <div class="card-eyebrow">ASSET ALLOCATION SLEEVES</div>
-          <h3 style="font-size: 1.25rem; margin-bottom: var(--space-4);">Consolidated Multi-Asset Allocation</h3>
+        <div class="card">
+          <div class="card-eyebrow">MONEY BREAKDOWN</div>
+          <h3 style="font-size: 1.25rem; margin-bottom: var(--space-4);">Where Your Money Is Saved &amp; Invested</h3>
           
           <div class="terminal-donut-grid">
-            <div class="terminal-donut-canvas-box" style="width: 180px; height: 180px; position: relative;">
+            <div class="terminal-donut-canvas-box" style="width: 170px; height: 170px; position: relative;">
               <canvas id="terminal-donut-canvas" style="width: 100%; height: 100%;"></canvas>
             </div>
             <div id="terminal-donut-legend">
@@ -164,18 +152,18 @@
           </div>
         </div>
 
-        <!-- Custodian Desk Connectivity Table -->
-        <div class="card" id="view-custodians" style="background-color: var(--bg-secondary);">
-          <div class="card-eyebrow">TIER-1 CUSTODIAN BRIDGES</div>
-          <h3 style="font-size: 1.25rem; margin-bottom: var(--space-4);">Real-Time Connected Balances</h3>
+        <!-- Connected Accounts Table -->
+        <div class="card" id="view-custodians">
+          <div class="card-eyebrow">LINKED ACCOUNTS</div>
+          <h3 style="font-size: 1.25rem; margin-bottom: var(--space-4);">Your Bank &amp; Investment Accounts</h3>
           
-          <div class="table-container" style="border: 1px solid var(--border-hairline);">
+          <div class="table-container" style="border: 1px solid var(--border-hairline); border-radius: var(--radius-sm);">
             <table class="swiss-table">
               <thead>
                 <tr>
-                  <th>Custodian Bank</th>
-                  <th>Hub</th>
-                  <th class="num-col">Balance</th>
+                  <th>Account Name</th>
+                  <th>Category</th>
+                  <th class="num-col">Current Balance</th>
                   <th>Status</th>
                 </tr>
               </thead>
@@ -188,55 +176,59 @@
 
       </section>
 
-      <!-- 3. AURELIUS AI ADVISOR LIVE PROMPT CONSOLE -->
-      <section id="view-console" class="terminal-prompt-console">
+      <!-- 3. FRIENDLY AI FINANCIAL COACH CONSOLE -->
+      <section id="view-console" class="terminal-prompt-console card" style="background: var(--bg-elevated); border: 1px solid var(--border-hairline); border-radius: var(--radius-lg); padding: 1.75rem;">
         <div class="terminal-console-header">
           <div>
-            <div class="card-eyebrow" style="margin: 0;">ADVERSARIAL REASONING ENGINE</div>
-            <h3 style="font-size: 1.35rem; margin-top: 2px;">Aurelius AI Advisor Multi-Agent Console</h3>
+            <div class="card-eyebrow" style="margin: 0;">PLAIN-ENGLISH ADVICE</div>
+            <h3 style="font-size: 1.35rem; margin-top: 4px;">Friendly AI Financial Coach</h3>
           </div>
-          <span class="badge badge-emerald">&#9679; 5 SUB-AGENTS CONVENED // 38MS LATENCY</span>
+          <span class="badge badge-emerald">● Coach Ready to Help</span>
         </div>
 
-        <!-- Preset Billionaire Prompts -->
-        <div class="preset-prompts-row">
-          <span class="mono" style="font-size: 11px; color: var(--text-muted); align-self: center; margin-right: 4px;">Presets:</span>
+        <p style="font-size: 13.5px; color: var(--text-secondary); margin-bottom: 1rem;">
+          Ask any question about your budget, savings goals, or spending in plain English. Click a quick suggestion below to try it:
+        </p>
+
+        <!-- Preset Simple Prompts -->
+        <div class="preset-prompts-row" style="margin-bottom: 1rem;">
+          <span style="font-size: 12px; font-weight: 600; color: var(--text-muted); align-self: center; margin-right: 4px;">Try asking:</span>
           <button class="preset-prompt-pill" data-prompt-id="prompt_aviation" type="button">
-            &bull; Gulfstream G700 Acquisition ($65M)
+            🚗 Can I afford to buy a new car this year?
           </button>
           <button class="preset-prompt-pill" data-prompt-id="prompt_tax_harvest" type="button">
-            &bull; Direct Indexing Tax-Loss Harvest
+            🛡️ How big should my emergency fund be?
           </button>
           <button class="preset-prompt-pill" data-prompt-id="prompt_rate_shock" type="button">
-            &bull; Central Bank 150 bps Hike Stress-Test
+            📈 What happens if I save an extra $100/mo?
           </button>
         </div>
 
-        <!-- Output Terminal Window -->
-        <div class="terminal-card" style="margin-bottom: var(--space-4);">
-          <div class="terminal-body mono" id="terminal-console-output" style="min-height: 180px; max-height: 280px;">
-            <p class="line-prompt">> AURELIUS EXECUTIVE TERMINAL v4.2 INITIALIZED. AIR-GAPPED HARDWARE KEY VALIDATED.</p>
-            <p class="line-muted">Type a balance sheet query above or click a billionaire preset scenario to observe the 5 AI sub-agents debate the trade.</p>
+        <!-- Output Chat Window -->
+        <div class="terminal-card" style="margin-bottom: var(--space-4); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); background: var(--bg-secondary);">
+          <div class="terminal-body" id="terminal-console-output" style="min-height: 180px; max-height: 280px; font-family: var(--font-sans); font-size: 13.5px; line-height: 1.6;">
+            <p style="color: var(--text-primary); font-weight: 600;">👋 Hello Sarah! I am your Aurelius Financial Coach.</p>
+            <p style="color: var(--text-secondary);">Click any question above or type your own below to see clear, plain-English guidance with zero confusing jargon.</p>
           </div>
         </div>
 
         <!-- Console Input Box -->
         <div class="terminal-input-bar">
-          <input type="text" id="terminal-console-input" class="input-text" placeholder="Instruct the 5 AI sub-agents... (e.g. 'Model liquidity for $45M London trophy acquisition')">
-          <button id="terminal-console-submit" class="btn btn-primary btn-mono" type="button">
-            TRANSMIT &rarr;
+          <input type="text" id="terminal-console-input" class="input-text" placeholder="Ask a financial question... (e.g. 'Can I afford to take a vacation in July?')">
+          <button id="terminal-console-submit" class="btn btn-primary" type="button">
+            Ask Coach &rarr;
           </button>
         </div>
       </section>
 
-      <!-- 4. PENDING FIDUCIARY APPROVALS QUEUE -->
-      <section id="view-approvals" class="card" style="background-color: var(--bg-secondary);">
+      <!-- 4. SAVINGS GOALS & MILESTONES -->
+      <section id="view-approvals" class="card">
         <div class="terminal-console-header">
           <div>
-            <div class="card-eyebrow" style="margin: 0;">HARDWARE-SECURED EXECUTION</div>
-            <h3 style="font-size: 1.25rem; margin-top: 2px;">Pending Fiduciary Approvals Queue</h3>
+            <div class="card-eyebrow" style="margin: 0;">GOAL TRACKING</div>
+            <h3 style="font-size: 1.25rem; margin-top: 2px;">Your Active Savings Milestones &amp; Tips</h3>
           </div>
-          <span class="badge badge-accent">3 ACTIONS REQUIRE BIOMETRIC KEY</span>
+          <span class="badge badge-accent">3 Active Goals</span>
         </div>
 
         <div id="terminal-approvals-list">
