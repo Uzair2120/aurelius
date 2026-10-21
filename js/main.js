@@ -334,7 +334,7 @@ const AureliusCore = {
 
       // Close if resized past tablet breakpoint
       window.addEventListener("resize", () => {
-        if (window.innerWidth > 992 && drawer.classList.contains("active")) {
+        if (window.innerWidth > 1024 && drawer.classList.contains("active")) {
           drawer.classList.remove("active");
           toggleBtn.setAttribute("aria-expanded", "false");
           document.body.style.overflow = "";

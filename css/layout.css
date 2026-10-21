@@ -850,8 +850,15 @@
 
 /* 1. Large Laptops & Standard Desktops (<= 1200px) */
 @media (max-width: 1200px) {
+  .nav-link {
+    padding: 0 var(--space-2);
+    font-size: 13.5px;
+  }
+  .header-actions {
+    gap: var(--space-2);
+  }
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-6);
   }
   .enclaves-grid {
@@ -859,16 +866,16 @@
   }
 }
 
-/* 2. Tablets Landscape & Small Laptops (<= 992px) */
-@media (max-width: 992px) {
+/* 2. Tablets Landscape & Small Laptops (<= 1024px) */
+@media (max-width: 1024px) {
   :root {
     --header-height: 68px;
   }
   .nav-menu {
-    display: none;
+    display: none !important;
   }
   .mobile-nav-toggle {
-    display: inline-flex;
+    display: inline-flex !important;
   }
   .telemetry-group.secondary-telemetry {
     display: none;
@@ -886,6 +893,11 @@
   .swiss-grid.onboarding-protocol-grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }
+  .swiss-grid[style*="1.15fr"],
+  .swiss-grid[style*="1.2fr"],
+  .swiss-grid[style*="1.1fr"] {
+    grid-template-columns: 1fr !important;
+  }
   .cmd-trigger-btn span {
     display: none;
   }
@@ -898,30 +910,39 @@
 @media (max-width: 768px) {
   :root {
     --header-height: 64px;
-    --telemetry-height: 32px;
+    --telemetry-height: 34px;
   }
   .container, .container-wide, .container-narrow {
-    padding-left: clamp(1rem, 4vw, 1.5rem);
-    padding-right: clamp(1rem, 4vw, 1.5rem);
+    padding-left: clamp(1rem, 3.5vw, 1.5rem);
+    padding-right: clamp(1rem, 3.5vw, 1.5rem);
   }
-  .grid-2, .grid-3, .grid-4 {
-    grid-template-columns: 1fr;
-  }
-  .grid-12 {
+  .grid-2, .grid-3, .grid-4, .grid-12 {
     grid-template-columns: 1fr;
   }
   .swiss-grid,
   .swiss-grid[style*="grid-template-columns"],
+  .swiss-grid[style*="repeat"],
   .swiss-grid.agent-council-grid,
   .swiss-grid.onboarding-protocol-grid {
     grid-template-columns: 1fr !important;
-    border-left: 1px solid var(--border-hairline);
-    border-right: 1px solid var(--border-hairline);
   }
   .swiss-grid > * {
-    border-right: none;
-    border-bottom: 1px solid var(--border-hairline);
-    padding: clamp(1.25rem, 4vw, 2rem);
+    border: 1px solid var(--border-hairline) !important;
+    border-radius: var(--radius-md) !important;
+    padding: clamp(1.25rem, 3.5vw, 1.75rem);
+  }
+  /* Charter promise cards & inline 3-col card protection */
+  .card[style*="grid-template-columns: 60px 1fr 200px"],
+  .charter-promise-card {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-4) !important;
+    text-align: left;
+  }
+  .card[style*="grid-template-columns: 60px 1fr 200px"] > div:last-child,
+  .charter-promise-card > div:last-child {
+    text-align: left !important;
+    justify-self: start;
+    width: 100%;
   }
   .footer-grid {
     grid-template-columns: 1fr;
@@ -935,51 +956,89 @@
     gap: var(--space-3);
     align-items: flex-start;
   }
-  .cmd-trigger-btn {
-    padding: 6px 8px;
+  /* Header actions on mobile: Hide secondary Try Demo button to prevent clutter */
+  .header-actions .btn-secondary {
+    display: none !important;
   }
-  .cmd-trigger-btn kbd {
-    display: none;
+  .header-actions .btn-sm {
+    padding: 7px 12px;
+    font-size: 12px;
   }
   .telemetry-bar {
     font-size: 11px;
   }
   .telemetry-bar .container-wide {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: clamp(0.75rem, 3vw, 1rem);
+    padding-right: clamp(0.75rem, 3vw, 1rem);
   }
-  .telemetry-item:nth-child(2) {
-    display: none;
+  /* Hide secondary telemetry info (bank encryption text) to fit small screens */
+  .telemetry-group:last-child .telemetry-item {
+    display: none !important;
   }
   .section-py {
-    padding-top: clamp(2.75rem, 6vw, 4.5rem);
-    padding-bottom: clamp(2.75rem, 6vw, 4.5rem);
+    padding-top: clamp(2.5rem, 6vw, 4rem);
+    padding-bottom: clamp(2.5rem, 6vw, 4rem);
   }
   .section-py-lg {
-    padding-top: clamp(3.5rem, 8vw, 6rem);
-    padding-bottom: clamp(3.5rem, 8vw, 6rem);
+    padding-top: clamp(3.25rem, 7vw, 5.5rem);
+    padding-bottom: clamp(3.25rem, 7vw, 5.5rem);
   }
 }
 
 /* 4. Small Tablets & Standard Mobile (<= 576px) */
 @media (max-width: 576px) {
   .brand-tag {
-    display: none;
+    display: none !important;
   }
   .brand-name {
-    font-size: 1.2rem;
-    letter-spacing: 0.12em;
+    font-size: 1.15rem;
+    letter-spacing: -0.01em;
   }
   .header-actions {
     gap: var(--space-2);
   }
-  .header-actions .btn-sm {
-    padding: 6px 10px;
-    font-size: 11px;
+  .cmd-trigger-btn {
+    padding: 8px;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+  }
+  .cmd-trigger-btn kbd {
+    display: none !important;
+  }
+  .header-actions .btn-primary {
+    padding: 7px 12px;
+    font-size: 11.5px;
+  }
+  /* Telemetry announcement text truncation for neat single line */
+  .telemetry-item {
+    max-width: calc(100vw - 110px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .mobile-drawer {
+    padding: calc(var(--header-height) + 1rem) var(--space-4) 5rem;
+  }
+  .mobile-drawer-link {
+    font-size: 15px;
+    padding: 13px 0;
+    min-height: 48px;
   }
   .cmd-modal {
-    margin: 1rem auto;
-    max-height: 90vh;
+    margin: 0.75rem auto;
+    width: calc(100% - 1.5rem);
+    max-height: 88vh;
+  }
+  .cmd-quick-actions {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cmd-chip {
+    flex-shrink: 0;
+    white-space: nowrap;
   }
   .cmd-item {
     flex-direction: column;
@@ -995,37 +1054,57 @@
 @media (max-width: 420px) {
   :root {
     --header-height: 60px;
+    --telemetry-height: 30px;
   }
   .brand-name {
-    font-size: 1.1rem;
-    letter-spacing: 0.08em;
+    font-size: 1.05rem;
   }
   .brand-emblem {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
+  }
+  .header-actions .btn-primary {
+    padding: 6px 10px;
+    font-size: 11px;
   }
   .telemetry-bar {
     font-size: 10px;
   }
-  .telemetry-item .label {
+  .telemetry-item {
+    max-width: calc(100vw - 85px);
+    font-size: 10px;
+  }
+  .theme-toggle-btn {
+    padding: 3px 6px;
+  }
+  .theme-toggle-btn .theme-label {
     display: none;
   }
-  .header-actions .btn-secondary {
-    display: none; /* Hide 'Terminal' button in header on tiny screens; accessible in mobile menu */
-  }
-  .btn-lg {
-    padding: 12px 20px;
-    font-size: var(--text-sm);
+  .section-py {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
   }
 }
 
 /* 6. Very Small Screens / Foldables (<= 360px) */
 @media (max-width: 360px) {
-  .theme-toggle-btn .theme-label {
-    display: none;
+  .container, .container-wide, .container-narrow {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  .brand-name {
+    font-size: 0.95rem;
+  }
+  .header-actions {
+    gap: 4px;
   }
   .header-actions .btn-primary {
-    padding: 6px 8px;
+    padding: 5px 8px;
     font-size: 10px;
+  }
+  .cmd-trigger-btn {
+    width: 32px;
+    height: 32px;
+    padding: 6px;
   }
 }

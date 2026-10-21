@@ -895,6 +895,15 @@ body.terminal-page {
   align-items: baseline;
 }
 
+/* Charter Promise Card (Charter) */
+.charter-promise-card {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 60px 1fr 200px;
+  gap: var(--space-6);
+  align-items: center;
+}
+
 /* Agent Council Grid (Architecture) */
 .agent-council-grid {
   grid-template-columns: repeat(5, 1fr);
@@ -1298,12 +1307,6 @@ body.terminal-page {
   align-items: center;
 }
 
-@media (max-width: 900px) {
-  .calc-widget-card {
-    grid-template-columns: 1fr;
-  }
-}
-
 .calc-controls {
   display: flex;
   flex-direction: column;
@@ -1415,12 +1418,6 @@ body.terminal-page {
   gap: var(--space-6);
 }
 
-@media (max-width: 850px) {
-  .steps-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .step-card {
   background: var(--bg-elevated);
   border: 1px solid var(--border-hairline);
@@ -1452,12 +1449,6 @@ body.terminal-page {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-6);
-}
-
-@media (max-width: 850px) {
-  .reviews-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 .review-card {
@@ -1536,5 +1527,200 @@ body.terminal-page {
   color: var(--text-secondary);
   font-size: 15px;
   line-height: 1.6;
+}
+
+/* ==========================================================================
+   HOMEPAGE & INTERACTIVE MODULES COMPREHENSIVE RESPONSIVE QUERIES
+   ========================================================================== */
+
+/* 1. Tablet Landscape & Small Laptops (<= 1024px) */
+@media (max-width: 1024px) {
+  .calc-widget-card {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  .steps-grid,
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+  .steps-grid > *:last-child,
+  .reviews-grid > *:last-child {
+    grid-column: 1 / -1;
+  }
+  /* Estimator layout on tablet */
+  .swiss-grid[style*="1fr 1fr; gap: var(--space-8)"] {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-6) !important;
+  }
+  /* Sign up / Briefing form layout */
+  .swiss-grid[style*="1.15fr 0.85fr"] {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-6) !important;
+  }
+  /* Case studies & guides banner */
+  .swiss-grid[style*="1.2fr 0.8fr"] {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-6) !important;
+  }
+}
+
+/* 2. Tablet Portrait (<= 768px) */
+@media (max-width: 768px) {
+  .steps-grid,
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  .steps-grid > *:last-child,
+  .reviews-grid > *:last-child {
+    grid-column: auto;
+  }
+  .calc-widget-card {
+    padding: 1.75rem 1.25rem;
+  }
+  .preset-prompts-row {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .preset-prompt-pill {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+}
+
+/* 3. Standard Mobile (<= 576px) */
+@media (max-width: 576px) {
+  /* Hero section buttons & stacked flow */
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: var(--space-2);
+  }
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  /* Hero interactive preview card */
+  .hero-preview-card {
+    padding: 1.25rem 1rem;
+  }
+  .hero-preview-balance {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .hero-preview-balance > div:last-child {
+    text-align: left;
+  }
+  .goal-info {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .hero-preview-user {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .hero-preview-ai {
+    padding: 0.75rem 0.85rem;
+    font-size: 12.5px;
+  }
+  .page-lead {
+    font-size: 15px;
+    margin-bottom: var(--space-4);
+  }
+
+  /* Interactive Compound Savings Calculator Widget */
+  .calc-rate-selector {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+  .rate-btn {
+    min-width: 0;
+    padding: 8px 4px;
+    font-size: 11px;
+  }
+  .calc-big-value {
+    font-size: clamp(2rem, 6vw, 2.5rem);
+  }
+
+  /* Interactive Retirement / Tax / Geopolitical Estimators */
+  div[style*="grid-template-columns: 1fr 1fr; gap: 1rem"],
+  div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+  #ret-total-pot,
+  #tax-total-savings,
+  #risk-net-loss,
+  #estate-total-pot {
+    font-size: clamp(2rem, 7vw, 2.75rem) !important;
+  }
+
+  /* FAQ Accordion on Mobile */
+  .faq-question {
+    padding: 1rem 1.15rem;
+    font-size: 0.95rem;
+  }
+  .faq-answer {
+    padding: 0 1.15rem 1rem 1.15rem;
+    font-size: 14px;
+  }
+
+  /* Step cards & Review cards */
+  .step-card,
+  .review-card {
+    padding: 1.25rem 1rem;
+  }
+
+  /* Fluid typography scaling */
+  .page-title {
+    font-size: clamp(1.75rem, 6.5vw, 2.25rem) !important;
+  }
+}
+
+/* 4. Compact Mobile (<= 420px) */
+@media (max-width: 420px) {
+  .calc-rate-selector {
+    grid-template-columns: 1fr;
+  }
+  .rate-btn {
+    width: 100%;
+  }
+  .calc-breakdown-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  .calc-big-value {
+    font-size: 1.85rem;
+  }
+  .hero-preview-avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+  }
+  .hero-preview-balance div:first-child div:last-child {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* 5. Ultra-Compact & Foldables (<= 360px) */
+@media (max-width: 360px) {
+  .hero-preview-card {
+    padding: 1rem 0.75rem;
+  }
+  .calc-widget-card {
+    padding: 1rem 0.75rem;
+  }
+  .step-card,
+  .review-card {
+    padding: 1rem 0.75rem;
+  }
+  .page-title {
+    font-size: 1.6rem !important;
+  }
 }
 
